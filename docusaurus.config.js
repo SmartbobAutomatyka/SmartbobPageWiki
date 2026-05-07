@@ -1,6 +1,8 @@
 // @ts-check
 import {themes as prismThemes} from 'prism-react-renderer';
 
+const isCI = process.env.GITHUB_ACTIONS === 'true';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'SmartBob — Dokumentacja',
@@ -11,8 +13,8 @@ const config = {
     v4: true,
   },
 
-  url: 'https://smartbobautomatyka.github.io',
-  baseUrl: '/SmartbobPageWiki/',
+  url: isCI ? 'https://smartbobautomatyka.github.io' : 'http://localhost:3000',
+  baseUrl: isCI ? '/SmartbobPageWiki/' : '/',
 
   organizationName: 'SmartbobAutomatyka',
   projectName: 'SmartbobPageWiki',
