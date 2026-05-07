@@ -1,0 +1,275 @@
+/**
+ * SmartBob — nadpisania domyślnych stylów Docusaurusa (Infima).
+ * Bazuje na design tokenach z motywu WordPress `smartbob`.
+ */
+
+/* DM Sans */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+
+:root {
+  /* Primary — niebieski SmartBob (#0076D1) */
+  --ifm-color-primary: #0076D1;
+  --ifm-color-primary-dark: #005EA7;
+  --ifm-color-primary-darker: #00477D;
+  --ifm-color-primary-darkest: #002F54;
+  --ifm-color-primary-light: #3391DA;
+  --ifm-color-primary-lighter: #66ADE3;
+  --ifm-color-primary-lightest: #99C8ED;
+
+  /* Typografia */
+  --ifm-font-family-base: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ifm-heading-font-family: 'DM Sans', sans-serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-font-weight-semibold: 600;
+
+  /* Tło off-white ze Style Guide motywu */
+  --ifm-background-color: #FAF8F7;
+  --ifm-background-surface-color: #FFFFFF;
+
+  /* Karty / radius */
+  --ifm-card-border-radius: 1rem;
+  --ifm-global-radius: 0.5rem;
+  --ifm-button-border-radius: 9999px; /* pill */
+
+  /* Kolor tekstu */
+  --ifm-color-content: #26272A;
+  --ifm-heading-color: #26272A;
+
+  /* Code highlight */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 118, 209, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #66ADE3;
+  --ifm-color-primary-dark: #3391DA;
+  --ifm-color-primary-darker: #0076D1;
+  --ifm-color-primary-darkest: #005EA7;
+  --ifm-color-primary-light: #99C8ED;
+  --ifm-color-primary-lighter: #CCE4F6;
+  --ifm-color-primary-lightest: #E5F1FA;
+
+  --ifm-background-color: #1a1b1e;
+  --ifm-background-surface-color: #26272A;
+
+  /* Tekst — jasny w ciemnym trybie (brakowało tych nadpisań) */
+  --ifm-color-content: #e5e5e5;
+  --ifm-color-content-secondary: #a1a1aa;
+  --ifm-heading-color: #ffffff;
+  --ifm-font-color-base: #e5e5e5;
+
+  --docusaurus-highlighted-code-line-bg: rgba(102, 173, 227, 0.15);
+}
+
+/* Nagłówki — ujemny tracking jak w motywie (klasy t-h*) */
+h1 { letter-spacing: -0.09375rem; }
+h2 { letter-spacing: -0.0625rem; }
+h3 { letter-spacing: -0.0625rem; }
+
+/* Buttony — pill, większy padding poziomy */
+.button {
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.button--primary {
+  background-color: #005EA7;
+  border-color: #005EA7;
+}
+.button--primary:hover {
+  background-color: #00477D;
+  border-color: #00477D;
+}
+
+/* Sidebar — aktywny element jak w dashboardzie SmartBob */
+.menu__link--active {
+  background-color: rgba(0, 118, 209, 0.08);
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+}
+.menu__link--active:hover {
+  background-color: rgba(0, 118, 209, 0.12);
+}
+.menu__link {
+  border-radius: 0.5rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Karty na stronie głównej (Features) — białe z lekkim borderem i radiusem */
+.markdown img {
+  border-radius: 1rem;
+}
+
+/* Subtelne wyróżnienie code block i tabel */
+.theme-code-block {
+  border-radius: 0.75rem;
+}
+table {
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+/* ────────────────────────────────────────────────────────────
+   NAVBAR — czysty, z subtelną linią pod spodem (jak na new.smartbob.pl)
+   ──────────────────────────────────────────────────────────── */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  height: 4.5rem;
+}
+.navbar__title {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.navbar__link {
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: #26272A;
+}
+.navbar__link:hover {
+  color: var(--ifm-color-primary);
+}
+.navbar__link--active {
+  color: var(--ifm-color-primary);
+}
+
+/* Dark mode — ciemniejszy navbar niż treść, z subtelną linią */
+[data-theme='dark'] .navbar {
+  background-color: #1e1f22;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+[data-theme='dark'] .navbar__title,
+[data-theme='dark'] .navbar__link {
+  color: #e5e5e5;
+}
+[data-theme='dark'] .navbar__link:hover,
+[data-theme='dark'] .navbar__link--active {
+  color: var(--ifm-color-primary);
+}
+
+/* Sidebar — w dark mode lekko jaśniejsze tło, by oddzielić od treści */
+[data-theme='dark'] .theme-doc-sidebar-container {
+  background-color: #1e1f22;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+[data-theme='dark'] .menu__link {
+  color: #d4d4d4;
+}
+[data-theme='dark'] .menu__link:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+}
+[data-theme='dark'] .menu__link--active {
+  background-color: rgba(102, 173, 227, 0.12);
+  color: var(--ifm-color-primary);
+}
+
+/* Breadcrumby — pill jak w dashboardzie */
+.breadcrumbs__item--active .breadcrumbs__link {
+  background-color: rgba(0, 118, 209, 0.08);
+  color: var(--ifm-color-primary);
+}
+[data-theme='dark'] .breadcrumbs__item--active .breadcrumbs__link {
+  background-color: rgba(102, 173, 227, 0.12);
+}
+
+/* Pagination (Poprzednia / Następna) — czystsze w dark mode */
+[data-theme='dark'] .pagination-nav__link {
+  border-color: rgba(255, 255, 255, 0.08);
+  background-color: #1e1f22;
+}
+[data-theme='dark'] .pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+/* ────────────────────────────────────────────────────────────
+   PRZYCISKI IKON (toggle motywu, hamburger, search) w dark mode
+   ──────────────────────────────────────────────────────────── */
+[data-theme='dark'] .clean-btn,
+[data-theme='dark'] .navbar__toggle,
+[data-theme='dark'] .toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module {
+  color: #e5e5e5;
+}
+[data-theme='dark'] .clean-btn:hover,
+[data-theme='dark'] .navbar__toggle:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+[data-theme='dark'] .clean-btn svg {
+  fill: currentColor;
+}
+
+/* Tabela treści (TOC) po prawej */
+[data-theme='dark'] .table-of-contents__link {
+  color: #a1a1aa;
+}
+[data-theme='dark'] .table-of-contents__link:hover,
+[data-theme='dark'] .table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+}
+
+/* Karty na stronie głównej (Features) w dark mode — żeby nie wtapiały się w tło */
+[data-theme='dark'] .card {
+  background-color: #1e1f22;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Tekst w treści — gwarancja jasnego koloru w dark mode */
+[data-theme='dark'] .markdown,
+[data-theme='dark'] .markdown p,
+[data-theme='dark'] .markdown li,
+[data-theme='dark'] article {
+  color: #e5e5e5;
+}
+[data-theme='dark'] .markdown h1,
+[data-theme='dark'] .markdown h2,
+[data-theme='dark'] .markdown h3,
+[data-theme='dark'] .markdown h4,
+[data-theme='dark'] .markdown h5,
+[data-theme='dark'] .markdown h6 {
+  color: #ffffff;
+}
+
+/* Hero (homepage) — tło off-white zamiast primary */
+.hero--primary {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-color-content);
+}
+.hero--primary .hero__subtitle {
+  color: #525252;
+}
+
+/* ────────────────────────────────────────────────────────────
+   FOOTER — pojedynczy pasek zgodny z navbarem
+   ──────────────────────────────────────────────────────────── */
+.footer {
+  background-color: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 1.25rem 0;
+}
+
+.footer__bottom {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.footer__copyright {
+  font-size: 0.875rem;
+  color: #525252;
+  text-align: center;
+  max-width: var(--ifm-container-width);
+  margin: 0 auto;
+  padding: 0 var(--ifm-spacing-horizontal);
+}
+
+[data-theme='dark'] .footer {
+  background-color: #1e1f22;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .footer__copyright {
+  color: #a1a1aa;
+}
