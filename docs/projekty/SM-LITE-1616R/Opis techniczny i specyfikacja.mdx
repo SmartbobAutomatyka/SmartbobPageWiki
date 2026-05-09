@@ -15,8 +15,6 @@ Poznaj centralną jednostkę sterującą SMARTBOB do automatyki budynkowej, wypo
 
 SM-LITE-1616R to sterownik oparty o nowoczesny mikrokontroler ESP32, zaprojektowany do pracy z otwartymi środowiskami integracyjnymi, takimi jak SUPLA, Home Assistant czy ESPHome. Stanowi uniwersalne i skalowalne centrum sterowania automatyką budynkową.
 
-Urządzenie przeznaczone jest do montażu w rozdzielnicy i umożliwia centralne zarządzanie instalacją domową — od oświetlenia i rolet, przez ogrzewanie, aż po bramy oraz inne elementy wykonawcze.
-
 Dzięki otwartej architekturze sterownik może być stosowany zarówno w instalacjach komercyjnych, jak i projektach DIY, bez ograniczenia do jednego ekosystemu czy producenta.
 
 ## Kluczowe cechy
@@ -31,3 +29,137 @@ Dzięki otwartej architekturze sterownik może być stosowany zarówno w instala
 - 2x wbudowany czujnik temperatury TMP102 – sprzętowa ochrona termiczna (do 80°C, definiowana w YAML)
 - Zasilanie 24V DC (max 0.5A) – stabilna i energooszczędna praca
 - Dodatkowe funkcje serwisowe – programator USB 3.0, testowe przyciski wejść, funkcja resetu
+
+Urządzenie przeznaczone jest do montażu w rozdzielnicy i umożliwia centralne zarządzanie instalacją domową — od oświetlenia i rolet, przez ogrzewanie, aż po bramy oraz inne elementy wykonawcze.
+
+## Zastosowania
+- Kompleksowa automatyzacja domów jednorodzinnych, apartamentów oraz większych instalacji mieszkalnych
+- Sterowanie wieloma obwodami oświetlenia, roletami oraz urządzeniami wykonawczymi z jednego systemu
+- Integracja z systemami alarmowymi poprzez odczyt sygnałów z czujników ruchu, kontaktronów, czujników zalania czy pożaru
+- Tworzenie zaawansowanych scenariuszy automatyki w oparciu o czujniki, harmonogramy oraz logikę systemową
+- Automatyzacja ogrzewania, wentylacji i klimatyzacji (HVAC) z możliwością integracji urządzeń przez RS485 / Modbus
+- Integracja z systemami smart home i platformami automatyki, takimi jak SUPLA, Home Assistant czy MQTT
+- Monitorowanie parametrów instalacji, pomiar energii oraz rozbudowa systemu o dodatkowe moduły i sensory
+
+---
+## Opis Złącz i Komponentów
+<div style={{display: 'flex', gap: '20px', alignItems: 'center'}}>
+
+  <a href="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-OZNACZENIA.webp.png" target="_blank">
+    <img src="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-OZNACZENIA.webp.png" style={{
+      width: '200px',
+      height: '150px',
+      objectFit: 'cover',
+      cursor: 'pointer'
+    }} />
+  </a>
+</div>
+1. **Wyjścia przekaźnikowe** – wyjścia sterujące do obsługi oświetlenia, rolet, urządzeń oraz innych obwodów AC/DC.
+2. **Wejścia sterujące** – wejścia cyfrowe 24V do podłączenia przycisków, przełączników, czujników oraz sygnałów sterujących.
+3. **Złącze zasilania (24V DC)** – główne zasilanie urządzenia.
+4. **Kanały ADC** – wejścia analogowe umożliwiające odczyt napięcia oraz podłączenie czujników analogowych (np. 0–10V).
+5. **Interfejs RS485** – komunikacja z urządzeniami zewnętrznymi wykorzystującymi protokół Modbus RS485.
+6. **Wejście przekładnika CT** – możliwość pomiaru prądu za pomocą przekładnika prądowego.
+7. **Port Ethernet (RJ45)** – połączenie urządzenia z siecią LAN.
+8. **Wejścia uniwersalne i interfejsy rozszerzeń** – złącza dla magistrali I2C, 1-Wire oraz dodatkowych interfejsów komunikacyjnych.
+9. **Złącze USB-C** – programowanie, konfiguracja oraz serwis urządzenia.
+10. **Przycisk konfiguracji** – przycisk serwisowy wykorzystywany podczas konfiguracji oraz resetu urządzenia.
+11. **Ekran OLED** – wyświetlanie podstawowych informacji o stanie urządzenia, komunikacji i pracy systemu.
+12. **Wskaźniki LED** – diody sygnalizujące stan wejść, wyjść oraz pracy sterownika.
+
+---
+## Specyfikacja Techniczna
+
+| Parametr | Wartość |
+|---|---|
+| Moduł | ESP32 |
+| Zasilanie | 24V DC |
+| Pobór mocy | 3W – 15W |
+| Wejścia cyfrowe | 16 |
+| Napięcie wejść | 24V DC |
+| Wyjścia przekaźnikowe | 16 |
+| Maks. napięcie wyjść | 230V AC / 30V DC |
+| Maks. prąd wyjść | 10A |
+| Wejścia analogowe | 2x ADC do 24V |
+| Interfejsy zewnętrzne | RS485, I2C, 1-Wire |
+| Komunikacja | Ethernet 10/100Mbit, Wi-Fi, USB-C |
+| Szerokość montażowa | 12 modułów DIN |
+| Obudowa | RT-212-24 Altinkaya|
+| Stopień ochrony | IP20 |
+| Materiał obudowy | ABS UL-94-HB klasa V0|
+| Montaż | Szyna DIN 35 mm lub uchwyty na ścianę|
+| Temperatura pracy | 0°C – 55°C |
+| Wilgotność pracy | 5% – 95% bez kondensacji |
+
+---
+
+## Parametry zasilania
+
+| Parametr | Wartość |
+|---|---|
+| Znamionowe napięcie zasilania | 24V DC |
+| Zakres napięcia zasilania | 22V – 26V DC |
+| Maksymalny pobór prądu | 0.5A |
+| Zabezpieczenie | Bezpiecznik polimerowy (Polyfuse) |
+---
+:::tip
+Wszystkie sterowniki SMARTBOB w jednej instalacji mogą być zasilane z tego samego zasilacza,
+o ile posiada on odpowiednią wydajność prądową i pozwalają na to warunki techniczne instalacji.
+Zalecane jest stosowanie dedykowanego zasilacza dla systemu SMARTBOB.
+:::
+:::tip
+Przy zasilaniu tylko z USB nie będą działać poprawnie wejścia oraz wyjścia, sterownik jednak się urchomi i podłączy do
+sieci
+:::
+
+
+
+## Parametry wyjść przekaźnikowych
+
+| Parametr | Wartość |
+|---|---|
+| Napięcie sterowania | 0–250V AC / 0–30V DC |
+| Obciążenie długotrwałe pojedynczego wyjścia | 8A |
+| Obciążenie krótkotrwałe (do 30 min) | 10A |
+| Maksymalna moc całkowita | 20A lub 5000W |
+| Maksymalna temperatura pracy | 80°C (automatyczne odcięcie wyjść) |
+
+---
+
+## Komunikacja
+
+| Interfejs | Opis |
+|---|---|
+| LAN | IEEE 802.3 10BASE-T / 100BASE-TX |
+| Wi-Fi | 802.11 b/g/n |
+| USB-C | Programowanie i serwis |
+
+---
+
+## Oprogramowanie
+
+Sterownik SMARTBOB jest uniwersalną platformą kompatybilną z wieloma systemami automatyki budynkowej. Informacja o aktualnie zainstalowanym oprogramowaniu znajduje się na opakowaniu, obudowie lub jest przekazywana podczas składania zamówienia.
+
+W zależności od wersji urządzenie może współpracować m.in. z:
+- SUPLA
+- Home Assistant (ESPHome)
+- LOXONE
+- AMPIO
+- MQTT
+- Systemami oparte o ESP32
+
+Sposób konfiguracji może różnić się zależnie od zainstalowanego środowiska.
+
+---
+
+## Bezpieczeństwo użytkowania
+
+> Przed rozpoczęciem instalacji należy upewnić się, że na przewodach przyłączeniowych nie występuje napięcie.
+
+> Instalacja urządzenia powinna być wykonywana zgodnie z obowiązującymi normami oraz wyłącznie przez wykwalifikowanych elektryków.
+
+> Nie należy używać urządzenia bez obudowy lub z uszkodzoną obudową — grozi to porażeniem prądem elektrycznym.
+
+> Zabronione jest przekraczanie dopuszczalnych parametrów pracy urządzenia, w szczególności maksymalnych obciążeń wyjść przekaźnikowych.
+
+> Sterowniki SMARTBOB mogą wymagać do działania zewnętrznego serwera, chmury lub dodatkowego oprogramowania zależnie od używanej platformy.
