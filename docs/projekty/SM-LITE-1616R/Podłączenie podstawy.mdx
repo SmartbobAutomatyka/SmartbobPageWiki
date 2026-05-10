@@ -1,0 +1,97 @@
+---
+sidebar_position: 2
+---
+
+## Podłączenie sterownika
+Podstawy zasilania, komunikacjikacji oraz poprawnego podłączenia przewodów do gniazd sterownika
+
+---
+## Wstęp do instalacji gwiazdę
+
+<a href="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-GWIAZDA.webp" target="_blank">
+ <img src="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-GWIAZDA.webp" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
+
+Sterowniki SMARTBOB zostały zaprojektowane do pracy w instalacjach wykonywanych w topologii gwiazdy.
+
+> W tradycyjnej instalacji przewód zasilający światło przechodzi przez włącznik ścienny.
+
+> W instalacji gwiazdowej przewody prowadzone są:
+> - osobne z rozdzielnicy do klawisza (sygnał sterujący),
+> - osobne z rozdzielnicy do lampy / obwodu oświetlenia.
+
+Dzięki temu sterownik centralnie zarządza oświetleniem i automatyką z poziomu rozdzielnicy,
+co pozwala na łatwiejszą rozbudowę systemu, integrację smart home oraz tworzenie scen automatyki.
+
+---
+## Podstawowe podłączenie
+Aby uruchomić sterownik SMARTBOB w podstawowej konfiguracji, wymagane jest zapewnienie zasilania
+oraz dostępu do sieci lokalnej.
+
+<a href="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-PODLACZENIE.webp" target="_blank">
+ <img src="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-PODLACZENIE.webp" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
+
+
+### Zasilanie
+Sterownik wymaga zasilania **24V DC** z odpowiednio dobranego zasilacza.
+- Napięcie: 24V DC
+- Minimalny prąd: **0.5A na jeden sterownik**, jeden większy zasilacz może zasilać kilka sterowników
+- Zalecenie: stosowanie zasilacza z zapasem mocy (np. +0.25A więcej)
+
+Sterownik wymaga dostępu do sieci lokalnej w celu konfiguracji oraz komunikacji z systemem.
+### Opcja 1: LAN (zalecana)
+- Połączenie przewodowe Ethernet
+- Stabilna i niezawodna komunikacja
+- Rekomendowane rozwiązanie dla instalacji stałych
+
+### Opcja 2: WiFi
+- Bezprzewodowe połączenie z siecią lokalną
+- Ułatwia instalację tam, gdzie brak okablowania LAN
+- Wymaga poprawnego zasięgu sieci WiFi
+
+---
+## Rodzaje przewodów, okablowanie i szybko złącza
+
+Sterownik SMARTBOB posiada na wejściach i wyjściach **szybko złącza**, które pozwalają na demontaż urządzenia
+bez konieczności odpinania pojedynczych przewodów. Końcówki przewodów należy odpowiednio zarobić przed montażem,
+zgodnie z wymaganiami przekrojów i długości odizolowania.
+
+### Table zalecanych przekrojów i siły dokręcenia zacisków przewodów:
+| Typ gniazda | Przekrój przewodu | Długość odizolowania | Siła dokręcenia |
+|------------|-------------------|----------------------|-----------------|
+| Gniazdo przekaźnika | 0.4–2.5 mm² | 7–8 mm | 0.4 Nm |
+| Gniazdo wejść | 0.4–2.5 mm² | 7–8 mm | 0.4 Nm |
+| Gniazdo zasilania | 0.4–2.5 mm² | 7–8 mm | 0.4 Nm |
+| Gniazdo pomiaru napięcia | 0.4–1.5 mm² | 5–6 mm | 0.2 Nm |
+| RS485 | 0.3–1 mm² | 5–6 mm | 0.2 Nm |
+| 1-WIRE / I2C | 0.3–1 mm² | 5–6 mm | 0.2 Nm |
+
+Zalecenia montażowe:
+- końcówki gniazd **nie mogą być wypinane pod napięciem**,
+- wszystkie luźne przewody muszą być zabezpieczone przed przypadkowym zwarciem lub uszkodzeniem,
+- w przypadku uszkodzenia końcówki lub gniazda należy je **natychmiast wymienić**,
+
+Do podłączenia urządzenia należy stosować przewody dopasowane do warunków instalacji.
+
+### Tabla typu przewodów i zalecanych odległości:
+| Typ gniazda | Zalecany rodzaj przewodu | Zalecana odległość |
+|------------|--------------------------|----------------------|
+| Gniazdo przekaźnika | YDY + LgY w rozdzielnicy | Brak uwag, zgodnie z projektem |
+| Gniazdo wejść | YDY + (LgY lub skrętka Cat5/6/7 / przewód alarmowy) | Brak uwag, zgodnie z projektem |
+| Gniazdo zasilania | LgY | do 5 m |
+| Gniazdo pomiaru napięcia | LgY / skrętka Cat5/6/7 / przewód alarmowy | do 5 m |
+| RS485 | skrętka Cat5/6/7 lub przewód magistralny | do 50 m |
+| 1-WIRE | skrętka Cat5/6/7 lub przewód alarmowy | do 10 m |
+| I2C | skrętka Cat5/6/7 lub przewód alarmowy | do 2 m |
+
+Zalecenia układania instalacji:
+- separować przewody sygnałowe od przewodów 230V,
+- unikać prowadzenia kabli sygnałowych równolegle do przewodów zasilających,
+- planować trasy przewodów już na etapie projektu instalacji,
+- stosować osobne prowadnice lub peszle dla różnych typów sygnałów
+
+:::info
+Nieprawidłowe prowadzenie okablowania może skutkować:
+- zakłóceniami transmisji,
+- błędnymi odczytami,
+- niestabilną pracą sterownika.
+:::
