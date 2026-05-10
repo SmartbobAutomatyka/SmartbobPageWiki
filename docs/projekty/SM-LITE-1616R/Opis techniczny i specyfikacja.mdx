@@ -2,20 +2,23 @@
 sidebar_position: 1
 ---
 
-## Opis techniczny i specyfikacja
-Poznaj centralną jednostkę sterującą SMARTBOB do automatyki budynkowej, wyposażoną w 16 wejść i 16 wyjść przekaźnikowych. Urządzenie zostało zaprojektowane do sterowania oświetleniem, roletami, ogrzewaniem oraz innymi elementami instalacji domowej, zapewniając elastyczną integrację całego systemu.
+## Sterownik SM-LITE-1616R
+Poznaj centralną jednostkę sterującą SMARTBOB do automatyki budynkowej, wyposażoną w 16 wejść i 16 wyjść przekaźnikowych.
+Urządzenie zostało zaprojektowane do sterowania oświetleniem, roletami, ogrzewaniem oraz innymi elementami instalacji domowej,
+zapewniając elastyczną integrację całego systemu.
 
 👉 Sterownik kupisz tutaj:
 <a href="https://smartbob.pl/pl/lite-1-poziom/3-sm-lite-1616r.html" target="_blank">SM-LITE-1616R</a>
 
 ---
-## SM-LITE-1616R
+## Wygląd sterownika
 <a href="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R.webp" target="_blank">
  <img src="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R.webp" style={{ width: '800px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
 
-SM-LITE-1616R to sterownik oparty o nowoczesny mikrokontroler ESP32, zaprojektowany do pracy z otwartymi środowiskami integracyjnymi, takimi jak SUPLA, Home Assistant czy ESPHome. Stanowi uniwersalne i skalowalne centrum sterowania automatyką budynkową.
-
-Dzięki otwartej architekturze sterownik może być stosowany zarówno w instalacjach komercyjnych, jak i projektach DIY, bez ograniczenia do jednego ekosystemu czy producenta.
+SM-LITE-1616R to sterownik oparty o nowoczesny mikrokontroler ESP32, zaprojektowany do pracy z otwartymi środowiskami
+integracyjnymi, takimi jak SUPLA, Home Assistant czy ESPHome. Stanowi uniwersalne i skalowalne centrum sterowania
+automatyką budynkową. Dzięki otwartej architekturze sterownik może być stosowany zarówno w instalacjach komercyjnych,
+jak i projektach DIY, bez ograniczenia do jednego ekosystemu czy producenta.
 
 ## Kluczowe cechy
 - 16 wejść sterujących – logika 24V (sygnał GND lub VCC), do odczytu stanu klawiszy, przełączników, czujników alarmowych itp.
@@ -93,7 +96,7 @@ Urządzenie przeznaczone jest do montażu w rozdzielnicy i umożliwia centralne 
 | Zakres napięcia zasilania | 22V – 26V DC |
 | Maksymalny pobór prądu | 0.5A |
 | Zabezpieczenie | Bezpiecznik polimerowy (Polyfuse) |
----
+
 :::tip
 Wszystkie sterowniki SMARTBOB w jednej instalacji mogą być zasilane z tego samego zasilacza,
 o ile posiada on odpowiednią wydajność prądową i pozwalają na to warunki techniczne instalacji.
@@ -104,8 +107,7 @@ Przy zasilaniu tylko z USB nie będą działać poprawnie wejścia oraz wyjścia
 sieci
 :::
 
-
-
+---
 ## Parametry wyjść przekaźnikowych
 
 | Parametr | Wartość |
@@ -117,7 +119,6 @@ sieci
 | Maksymalna temperatura pracy | 80°C (automatyczne odcięcie wyjść) |
 
 ---
-
 ## Komunikacja
 
 | Interfejs | Opis |
@@ -127,7 +128,6 @@ sieci
 | USB-C | Programowanie i serwis |
 
 ---
-
 ## Oprogramowanie
 
 Sterownik SMARTBOB jest uniwersalną platformą kompatybilną z wieloma systemami automatyki budynkowej. Informacja o aktualnie zainstalowanym oprogramowaniu znajduje się na opakowaniu, obudowie lub jest przekazywana podczas składania zamówienia.
@@ -139,19 +139,66 @@ W zależności od wersji urządzenie może współpracować m.in. z:
 - AMPIO
 - MQTT
 - Systemami oparte o ESP32
-
 Sposób konfiguracji może różnić się zależnie od zainstalowanego środowiska.
 
 ---
+## Pierwsze kroki
+Sterowniki SMARTBOB mogą pracować z różnymi platformami automatyki budynkowej.
+Sposób pierwszej konfiguracji zależy od zainstalowanego oprogramowania.
 
+:::info
+Dla każdej platformy w pierwszym kroku podłącz zasilanie 24V DC lub 5V DC z USB
+( w trybie USB nie działają wejścia i wyjścia)
+:::
+
+# SUPLA
+1. Po uruchomieniu sterownika wyszukaj sieć Wi-Fi o nazwie:
+   - `SUPLA-XXX`
+2. Połącz się z nią z telefonu lub komputera.
+3. Otwórz przeglądarkę i przejdź na adres:
+   - `192.168.4.1`
+4. Skonfiguruj:
+   - dane sieci Wi-Fi/LAN
+   - dane konta SUPLA
+   - podstawowe ustawienia sterownika
+5. Po zapisaniu ustawień urządzenie połączy się z platformą SUPLA (włącz rejestrację urządzeń).
+
+# Home Assistant / ESPHome
+1. Podłącz sterownik do sieci lokalnej przewodem Ethernet (LAN).
+2. Odczytaj adres IP urządzenia i otwórz go w przeglądarce.
+3. Wejdź na adres IP sterownika w przeglądarce, aby sprawdzić poprawność działania urządzenia.
+4. W Home Assistant:
+   - dodaj integrację `ESPHome`
+   - dodaj nowe urządzenie
+   - skonfiguruj projekt na podstawie gotowego szablonu SMARTBOB
+5. Gotowe szablony konfiguracji:
+   - 👉 <a href="https://github.com/SmartbobAutomatyka/SmartbobAutomatyka-GIT/tree/main/ESPHOME" target="_blank">Szablony SMARTBOB ESPHome</a>
+
+# LOXONE
+1. Podłącz sterownik do sieci LAN.
+2. Odczytaj adres IP urządzenia i otwórz go w przeglądarce.
+3. Skonfiguruj:
+   - adres serwera LOXONE
+   - porty komunikacyjne
+   - parametry integracji
+4. Następnie wykonaj konfigurację zgodnie z poradnikiem wideo:
+   - 👉 <a href="https://youtu.be/zObzBJjrbxQ?si=pTFjHp6Gg5ECCzf3" target="_blank">Poradniki SMARTBOB YouTube</a>
+
+---
 ## Bezpieczeństwo użytkowania
+Przed rozpoczęciem instalacji należy upewnić się, że na przewodach przyłączeniowych nie występuje napięcie.
+Instalacja urządzenia powinna być wykonywana zgodnie z obowiązującymi normami oraz wyłącznie przez wykwalifikowanych elektryków.
+Nie należy używać urządzenia bez obudowy lub z uszkodzoną obudową — grozi to porażeniem prądem elektrycznym.
+Zabronione jest przekraczanie dopuszczalnych parametrów pracy urządzenia, w szczególności maksymalnych obciążeń wyjść przekaźnikowych.
+Sterowniki SMARTBOB mogą wymagać do działania zewnętrznego serwera, chmury lub dodatkowego oprogramowania zależnie od używanej platformy.
 
-> Przed rozpoczęciem instalacji należy upewnić się, że na przewodach przyłączeniowych nie występuje napięcie.
+---
+## Deklaracja zgodności UE (CE)
+Dokumentacja zgodności urządzeń SMARTBOB dostępna jest do pobrania poniżej:
 
-> Instalacja urządzenia powinna być wykonywana zgodnie z obowiązującymi normami oraz wyłącznie przez wykwalifikowanych elektryków.
+👉 <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">Pobierz deklarację zgodności UE (PDF)</a>
 
-> Nie należy używać urządzenia bez obudowy lub z uszkodzoną obudową — grozi to porażeniem prądem elektrycznym.
+---
+## Co dalej?
 
-> Zabronione jest przekraczanie dopuszczalnych parametrów pracy urządzenia, w szczególności maksymalnych obciążeń wyjść przekaźnikowych.
-
-> Sterowniki SMARTBOB mogą wymagać do działania zewnętrznego serwera, chmury lub dodatkowego oprogramowania zależnie od używanej platformy.
+Szczegółowe instrukcje konfiguracji, integracji oraz przykłady zastosowań znajdziesz na kolejnych podstronach dokumentacji SMARTBOB.
