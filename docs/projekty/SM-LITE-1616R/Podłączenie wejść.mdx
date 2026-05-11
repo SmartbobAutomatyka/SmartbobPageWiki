@@ -7,8 +7,15 @@ Instrukcja podłączenia przycisków, klawiszy, czujników i innych elementów d
 
 ---
 ## Podstawowe wejścia sterowania
-
 Sterownik SMARTBOB posiada podstawowe 16x wejść sterowania wyprowadzone na zielonych dwóch szybkozłączach 8-pinowych.
+
+# Konfiguracja sterowania do **GND**, podstawowa konfiguracja
+<a href="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-GWEJSCIA-GND.webp" target="_blank">
+<img src="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-WEJSCIA-GND.webp" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
+
+# Konfiguracja sterowania do **VCC**,
+<a href="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-WEJSCIA-24V.webp" target="_blank">
+<img src="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-WEJSCIA-24V.webp" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
 
 # Wejścia te służą do podłączania:
 - przycisków,
@@ -25,23 +32,6 @@ Sterownik SMARTBOB posiada podstawowe 16x wejść sterowania wyprowadzone na zie
 
 Dzięki temu możliwe jest podłączenie wielu różnych typów urządzeń sterujących oraz czujników.
 
-:::tip
-Sterownik posiada również dodatkowe piny i interfejsy, które w zależności od konfiguracji mogą pełnić funkcję wejść.
-Niniejszy rozdział opisuje podstawowe wejścia sterowania dostępne na zielonych konektorach 8-pinowych.
-:::
-
----
-## Konfiguracja typu wejścia
-Sterownik SMARTBOB umożliwia pracę wejść w różnych konfiguracjach:
-
-# Konfiguracja sterowania do **GND**, podstawowa konfiguracja
-<a href="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-GWEJSCIA-24GND.webp" target="_blank">
-<img src="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-WEJSCIA-24GND.webp" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
-
-# Konfiguracja sterowania do **VCC**,
-<a href="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-WEJSCIA-24V.webp" target="_blank">
-<img src="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-WEJSCIA-24V.webp" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
-
 W zależności od wersji urządzenia konfiguracja realizowana jest:
 - za pomocą zworki na PCB
 - lub programowo z poziomu oprogramowania (nowsze modele)
@@ -49,6 +39,10 @@ W zależności od wersji urządzenia konfiguracja realizowana jest:
 :::tip
 Technicznie możliwa jest również reakcja na oba zbocza, jednak tryb ten nie jest zalecany w standardowych instalacjach
 ze względu na większą wrażliwość na zakłócenia.
+:::
+:::tip
+Sterownik posiada również dodatkowe piny i interfejsy, które w zależności od konfiguracji mogą pełnić funkcję wejść.
+Niniejszy rozdział opisuje podstawowe wejścia sterowania dostępne na zielonych konektorach 8-pinowych.
 :::
 
 ---
@@ -68,6 +62,10 @@ W momencie aktywacji zapali się na sterowniku wskaźnik LED od danego wejścia
 ## Podłączanie czujników
 
 Do wejść można podłączać również czujniki wyposażone w wyjście przekaźnikowe lub tranzystorowe.
+# Konfiguracja sterowania do **GND**, podstawowa konfiguracja
+<a href="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-GWEJSCIA-CZUJNIK.webp" target="_blank">
+<img src="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-WEJSCIA-CZUJNIK.webp" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
+
 
 ### Ważne informacje:
 - Czujników wymaga zewnętrznego zasilania
@@ -76,6 +74,19 @@ Jeśli czujnik posiada wyjście inne niż przekaźnik lub styk mechaniczny, np. 
 GND zasilacza sterownika z GND zasilacza od czujników
 - Wejścia SMARTBOB służą wyłącznie do wykrywania sygnału sterującego
 - Sposób zasilania czujników zależy od ich modelu oraz producenta
+
+W przypadku typowych czujników alarmowych najczęściej wykorzystywany jest:
+- tryb pracy **NO** (Normal Open),
+- lub **NC** (Normal Close).
+
+Sterownik SMARTBOB standardowo współpracuje z czujnikami:
+- bez rezystorów parametryzujących,
+- bez konfiguracji EOL / 2EOL.
+
+Najczęściej wykorzystywane jest wyjście czujnika oznaczone jako:
+- **ALARM**,
+- **OUT**,
+- lub styk przekaźnika alarmowego.
 
 Aby sprawdzić kompatybilność czujnika, należy upewnić się, że jego styk roboczy lub wyjście:
 - Może pracować z napięciem 24V DC (znaczna cześć czujników dopuszcza 30-60V DC)
