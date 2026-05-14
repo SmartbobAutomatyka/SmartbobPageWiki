@@ -1,0 +1,65 @@
+---
+sidebar_position: 3
+---
+
+## Podłączenie wyjść
+
+Instrukcja podłączenia oświetlenia, rolet, sygnałów sterujących oraz innych odbiorników za pomocą wyjść
+przekaźnikowych sterownika.
+
+---
+## Wyjścia przekaźnikowe
+
+Sterownik SMARTBOB 1616R posiada 16 wyjść przekaźnikowych wyprowadzonych na 8 zielonych szybkozłączach 5-pinowych.
+Wyjścia zostały podzielone na pary po 2 przekaźniki.
+
+Parametry pojedynczego przekaźnika:
+
+| Parametr | Wartość |
+|----------|----------|
+| Typ wyjścia | Bezpotencjałowe |
+| Maksymalne napięcie AC | 230V AC |
+| Maksymalne napięcie DC | 30V DC |
+| Maksymalny prąd | 10A |
+| Typ styku | NO lub NO/NC |
+
+Dzięki temu możliwe jest zarówno standardowe załączanie odbiorników, jak i realizacja bardziej zaawansowanych
+układów sterowania wymagających styku przełączającego np. sterowanie rolet (z zabezpieczeniem przed jednoczesnym
+załączeniem dwóch kierunków silnika)
+
+---
+## Podłączanie obwodów:
+
+# Przykładowa konfiguracja sterowania oświetlenia:
+<a href="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-WYJSCIA-SWIATLO.webp" target="_blank">
+<img src="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-WYJSCIA-SWIATLO.webp" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
+
+# Przykładowa konfiguracja sterowania rolety:
+<a href="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-WYJSCIA-ROLETY.webp" target="_blank">
+<img src="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-WYJSCIA-ROLETY.webp" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
+
+:::tip
+Aby wykonać blokadę roletową należy założyć zworkę miedzy wyjściami COM i NC
+:::
+
+# Przykładowa konfiguracja sterowania sygnałem bramy:
+<a href="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-WYJSCIA-SYGNAL.webp" target="_blank">
+<img src="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-WYJSCIA-SYGNAL.webp" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
+
+:::tip
+Każde wyjście może pracować całkowicie niezależnie i sterować innym napięciem lub obwodem.
+Przykład konfiguracji:
+- Przekaźnik 1 → Faza 1 — oświetlenie
+- Przekaźnik 2 → Faza 2 — oświetlenie
+- Przekaźnik 3 → Faza 3 — oświetlenie
+- Przekaźnik 4 + Przekaźnik 5 → Sterowanie roletą góra/dół
+- Przekaźnik 6 → Sygnał sterowania bramą
+- Przekaźnik 7 → Elektrozawór 24V AC
+- Przekaźnik 8 → Cewka stycznika 12V DC
+
+Dzięki bezpotencjałowym przekaźnikom możliwe jest jednoczesne sterowanie obwodami:
+- 24/230V AC,
+- 5/12/24V DC,
+- sygnałami logicznymi,
+- wejściami innych sterowników i urządzeń automatyki.
+:::
