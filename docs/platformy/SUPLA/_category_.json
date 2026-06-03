@@ -1,8 +1,8 @@
 {
   "label": "SUPLA",
-  "position": 1,
+  "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "SUPLA opis platformy"
+    "description": "SUPLA prosta Polska platforma wspierana przez wielu producentów, nie wymaga dodatkowego serwera"
   }
 }
