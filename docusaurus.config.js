@@ -60,7 +60,7 @@ const config = {
         },
         items: [
           {
-            href: 'https://smartbob.jcd.pl',
+            href: 'https://smartbob.pl',
             label: 'Sklep',
             position: 'right',
           },
