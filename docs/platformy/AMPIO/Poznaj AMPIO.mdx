@@ -1,0 +1,50 @@
+---
+sidebar_position: 5
+---
+
+## Platforma AMPIO
+
+AMPIO to polska platforma automatyki budynkowej, oparta o magistralę CAN oraz własne sterowniki i moduły
+(m.in. UCM, M-SERV). System jest rozwijany przez polskiego producenta i cieszy się dużą popularnością
+w instalacjach domowych oraz komercyjnych realizowanych przez integratorów.
+
+# Platforma pozwala sterować, monitorować oraz automatyzować między innymi:
+- Oświetlenie
+- Rolety i żaluzje
+- Ogrzewanie i klimatyzację
+- Wentylację
+- Alarm i kontrolę dostępu
+- Multimedia i audio
+- Monitoring zużycia energii
+
+:::tip
+AMPIO to rozwiązanie w pełni Polskie, ze wsparciem technicznym i dokumentacją w języku polskim,
+co znacznie ułatwia wdrożenie i późniejszy serwis instalacji.
+:::
+:::warning
+Pełne wykorzystanie możliwości AMPIO wymaga sterownika systemowego (np. UCM) oraz podstawowej
+znajomości konfiguracji magistrali CAN.
+:::
+
+---
+
+## SMARTBOB + AMPIO
+
+SMARTBOB integruje się z systemem AMPIO za pomocą protokołu **MQTT**. Sterownik SMARTBOB publikuje oraz
+subskrybuje odpowiednie tematy (topiki) na brokerze MQTT, dzięki czemu stany wejść i wyjść SMARTBOB mogą być
+na bieżąco odczytywane oraz sterowane z poziomu systemu AMPIO.
+
+Dzięki takiej integracji SMARTBOB może pełnić rolę dodatkowego, niezależnego od magistrali CAN systemu
+wejść/wyjść, rozszerzającego możliwości instalacji AMPIO bez konieczności stosowania dodatkowych modułów
+systemowych producenta.
+
+### Oprogramowanie SMARTBOBSOFT
+Integracja z AMPIO, podobnie jak z LOXONE, oparta jest o to samo, dedykowane oprogramowanie sterowników
+SMARTBOB, nazywane **SMARTBOBSOFT**. W przeciwieństwie do integracji z Home Assistant (bazującej na ESPHome),
+SMARTBOBSOFT to własne firmware SMARTBOB, wgrywane bezpośrednio na sterownik.
+
+Aktualne wersje oprogramowania dla poszczególnych modeli sterowników SMARTBOB dostępne są w repozytorium GitHub:
+
+**SMARTBOBSOFT — GitHub**
+https://github.com/SmartbobAutomatyka/SmartbobAutomatyka-GIT/tree/main/SMARTBOBSOFT
+

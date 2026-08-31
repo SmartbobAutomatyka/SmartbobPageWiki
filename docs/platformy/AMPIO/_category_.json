@@ -1,0 +1,8 @@
+{
+  "label": "AMPIO",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "AMPIO Polska platforma automatyki budynkowej oparta o magistralę CAN, wymaga sterownika AMPIO"
+  }
+}
