@@ -1,0 +1,39 @@
+---
+sidebar_position: 5
+sidebar_label: Erste Inbetriebnahme
+---
+
+## Erste Inbetriebnahme
+
+SMARTBOB-Steuerungen arbeiten mit verschiedenen Plattformen der Gebäudeautomation. Die Erstkonfiguration hängt von der installierten Software ab – sie ist auf der Verpackung, auf dem Gehäuse oder in der Bestellung angegeben.
+
+:::info
+Schließen Sie bei jeder Plattform zuerst die Versorgung 24 V DC oder 5 V DC über USB an (im USB-Modus funktionieren Ein- und Ausgänge nicht).
+:::
+
+Plattformbeschreibungen: [SUPLA](/platformy/SUPLA/Poznaj%20SUPLA) · [Home Assistant](/platformy/HOME%20ASSISTANT/Poznaj%20HOME%20ASSISTANT) · [LOXONE](/platformy/LOXONE/Poznaj%20LOXONE) · [AMPIO](/platformy/AMPIO/Poznaj%20AMPIO)
+
+---
+## SUPLA
+
+1. Suchen Sie nach dem Start der Steuerung das WLAN namens `SUPLA-XXX`.
+2. Verbinden Sie sich damit per Smartphone oder Computer.
+3. Öffnen Sie den Browser und rufen Sie `192.168.4.1` auf.
+4. Konfigurieren Sie WLAN / LAN, das SUPLA-Konto und die Grundeinstellungen der Steuerung.
+5. Nach dem Speichern verbindet sich das Gerät mit der SUPLA-Plattform (Geräteregistrierung aktivieren).
+
+---
+## Home Assistant / ESPHome
+
+1. Verbinden Sie die Steuerung per Ethernet-Kabel (LAN) mit dem lokalen Netzwerk.
+2. Lesen Sie die IP-Adresse des Geräts ab und öffnen Sie sie im Browser, um die Funktion zu prüfen.
+3. Fügen Sie in Home Assistant die Integration `ESPHome` hinzu, legen Sie ein neues Gerät an und konfigurieren Sie es mit der fertigen SMARTBOB-Vorlage.
+4. Fertige Konfigurationsvorlagen: 👉 <a href="https://github.com/SmartbobAutomatyka/SmartbobAutomatyka-GIT/tree/main/ESPHOME" target="_blank">SMARTBOB-ESPHome-Vorlagen</a>
+
+---
+## LOXONE
+
+1. Verbinden Sie die Steuerung mit dem LAN.
+2. Lesen Sie die IP-Adresse des Geräts ab und öffnen Sie sie im Browser.
+3. Konfigurieren Sie die LOXONE-Serveradresse, die Kommunikationsports und die Integrationsparameter.
+4. Folgen Sie dann dem Video-Tutorial: 👉 <a href="https://youtu.be/zObzBJjrbxQ?si=pTFjHp6Gg5ECCzf3" target="_blank">SMARTBOB-Tutorials auf YouTube</a>
