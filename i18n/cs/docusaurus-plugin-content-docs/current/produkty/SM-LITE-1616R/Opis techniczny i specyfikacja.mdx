@@ -1,0 +1,166 @@
+---
+sidebar_position: 1
+title: Technical description and specification
+sidebar_label: Technical description and specification
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Řídicí jednotka SM-LITE-1616R
+
+SM-LITE-1616R je centrální jednotka automatizace budov založená na modulu ESP32 – 16 vstupů a 16 reléových výstupů pro ovládání osvětlení, rolet, vytápění a dalších spotřebičů.
+
+👉 <a href="https://smartbob.pl/pl/lite-1-poziom/3-sm-lite-1616r.html" target="_blank">Řídicí jednotku koupíte zde</a>
+
+---
+## Vzhled řídicí jednotky
+
+<img src={useBaseUrl('/img/SM-LITE-1616R/gen/wyglad.jpg')} alt="SM-LITE-1616R" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px' }} />
+
+Řídicí jednotka postavená na ESP32 a připravená pro otevřené platformy – SUPLA, Home Assistant, ESPHome.
+
+Univerzální, škálovatelná centrála – hodí se pro komerční instalace i pro projekty DIY.
+
+<div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.2fr .6fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/widok-przod.svg')} alt="Front view" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Front view</figcaption></figure>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/widok-gora.svg')} alt="Top view" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Top view</figcaption></figure>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/widok-bok.svg')} alt="Side view" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Side view</figcaption></figure>
+</div>
+
+---
+## Klíčové vlastnosti
+
+- 16 logických vstupů 24 V (signál GND nebo VCC)
+- 2 kanály ADC do 24 V
+- 16 nezávislých relé 10 A, bezpotenciálové kontakty
+- Komunikace LAN nebo Wi-Fi
+- Dvě sběrnice I2C (vnější a vnitřní)
+- RS485, 1-Wire a Bluetooth
+- Displej OLED 0,96"
+- Dva teplotní senzory TMP102 – tepelná ochrana (do 80 °C, nastavitelná v YAML)
+- Napájení 24 V DC (max 0,5 A)
+- Servisní vybavení: USB programátor, tlačítka testu vstupů, reset
+
+Řídicí jednotka je určena k montáži do elektrického rozvaděče.
+
+---
+## Použití
+
+- Automatizace celého domu
+- Ovládání mnoha světelných okruhů a rolet
+- Integrace s alarmem přes senzory
+- Scény a harmonogramy
+- HVAC přes RS485 / Modbus
+- Integrace chytré domácnosti (SUPLA, Home Assistant, MQTT)
+- Monitorování energie a parametrů
+
+---
+## Periferie
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/peryferia-zamkniety-cs.svg')} alt="Kryt zavřený" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Kryt zavřený</figcaption></figure>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/peryferia-otwarty-cs.svg')} alt="Kryt otevřený (bez víka)" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Kryt otevřený (bez víka)</figcaption></figure>
+</div>
+
+1. **Reléové výstupy** – Reléové výstupy pro ovládání osvětlení, rolet, zařízení a obvodů AC/DC.
+2. **Ovládací vstupy** – Digitální vstupy 24 V – tlačítka, vypínače, senzory.
+3. **Napájecí konektor (24V DC)** – Hlavní napájení řídicí jednotky.
+4. **Kanály ADC** – Analogové vstupy – měření napětí a analogové senzory (např. 0–10 V).
+5. **Rozhraní RS485** – Komunikace Modbus RS485 s externími zařízeními.
+6. **Port Ethernet (RJ45)** – Připojení k síti LAN.
+7. **Univerzální vstupy a rozšiřující rozhraní** – Konektory I2C, 1-Wire a dalších sběrnic.
+8. **Konektor USB-C** – Programování, konfigurace a servis.
+9. **Konfigurační tlačítko** – Servisní tlačítko pro konfiguraci a reset.
+10. **Displej OLED** – Stavový displej, viditelný přes kryt.
+11. **LED indikátory** – Stavové LED vstupů, výstupů a provozu – viditelné přes kryt.
+
+---
+## Technická specifikace
+
+| Parametr | Hodnota |
+|---|---|
+| Modul | ESP32 |
+| Digitální vstupy | 16 |
+| Napětí vstupů | 24V DC |
+| Reléové výstupy | 16 |
+| Max. napětí výstupů | 230V AC / 30V DC |
+| Max. proud výstupů | 10A |
+| Analogové vstupy | 2x ADC do 24V |
+| Externí rozhraní | RS485, I2C, 1-Wire |
+| Komunikace | Ethernet 10/100Mbit, Wi-Fi, USB-C |
+| Montážní šířka | 12 modulů DIN |
+| Kryt | RT-212-24 Altinkaya – 212 × 90 × 59 mm |
+| Stupeň krytí | IP20 |
+| Materiál krytu | ABS UL-94-HB třída V0 |
+| Montáž | Lišta DIN 35 mm nebo držáky na zeď |
+| Provozní teplota | 0°C – 55°C |
+| Provozní vlhkost | 5% – 95% bez kondenzace |
+
+---
+## Parametry napájení
+
+| Parametr | Hodnota |
+|---|---|
+| Jmenovité napájecí napětí | 24V DC |
+| Rozsah napájecího napětí | 22V – 26V DC |
+| Odběr proudu (max.) | 0,5 A (12 W) |
+| Ochrana | Polymerová pojistka (Polyfuse) |
+
+:::tip
+Několik řídicích jednotek SMARTBOB v jedné instalaci může sdílet jeden zdroj s dostatečným proudem, doporučuje se však samostatný zdroj.
+:::
+
+:::tip
+Při napájení pouze z USB vstupy a výstupy nefungují – řídicí jednotka se spustí a připojí k síti.
+:::
+
+---
+## Parametry reléových výstupů
+
+| Parametr | Hodnota |
+|---|---|
+| Ovládací napětí | 0–250V AC / 0–30V DC |
+| Trvalé zatížení jednoho výstupu | 8A |
+| Krátkodobé zatížení (do 30 min) | 10A |
+| Maximální celkový výkon | 20A nebo 5000W |
+| Maximální provozní teplota | 80°C (automatické odpojení výstupů) |
+
+---
+## Komunikace
+
+| Rozhraní | Description |
+|---|---|
+| LAN | IEEE 802.3 10BASE-T / 100BASE-TX |
+| Wi-Fi | 802.11 b/g/n |
+| USB-C | Programování a servis |
+
+---
+## Software
+
+Řídicí jednotka SMARTBOB je univerzální platforma – nainstalovaný software je uveden na obalu, na krytu nebo v objednávce.
+
+- SUPLA
+- Home Assistant (ESPHome)
+- LOXONE
+- AMPIO
+- MQTT
+- Systémy založené na ESP32
+
+Konfigurace závisí na zvolené platformě.
+
+První spuštění a konfigurace na zvolené platformě (SUPLA, Home Assistant, LOXONE, AMPIO): [Platformy – návody](/category/platformy)
+
+---
+## Bezpečnost používání
+
+Před montáží se ujistěte, že vodiče nejsou pod napětím. Montáž smí provádět pouze osoba s oprávněním v souladu s platnými normami. Nepoužívejte řídicí jednotku bez krytu ani s poškozeným krytem. Nepřekračujte provozní parametry – zejména zatížení relé. Některé platformy vyžadují externí server, cloud nebo další software.
+
+---
+## EU prohlášení o shodě (CE)
+
+Řídicí jednotka splňuje požadavky směrnic EU. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">Stáhnout EU prohlášení o shodě (PDF)</a>
+
+---
+## Co dál?
+
+Podrobnosti o zapojení a konfiguraci najdete na dalších stránkách dokumentace: [Návody a odkazy](/Instrukcje%20i%20linki/Linki%20i%20pliki).

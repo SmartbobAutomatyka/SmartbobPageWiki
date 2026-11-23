@@ -25,7 +25,10 @@ const config = {
 
   i18n: {
     defaultLocale: 'pl',
-    locales: ['pl'],
+    locales: ['pl', 'en', 'de', 'cs'],
+    localeConfigs: {
+      pl: { label: 'Polski' }, en: { label: 'English' }, de: { label: 'Deutsch' }, cs: { label: 'Čeština' },
+    },
   },
 
   presets: [
@@ -59,6 +62,7 @@ const config = {
           srcDark: 'img/logo-dark.svg',
         },
         items: [
+          { type: 'localeDropdown', position: 'right' },
           {
             href: 'https://smartbob.pl',
             label: 'Sklep',

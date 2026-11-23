@@ -1,0 +1,166 @@
+---
+sidebar_position: 1
+title: Technical description and specification
+sidebar_label: Technical description and specification
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Controller SM-LITE-1616R
+
+SM-LITE-1616R is a central building automation unit based on the ESP32 module – 16 inputs and 16 relay outputs for controlling lighting, shutters, heating and other loads.
+
+👉 <a href="https://smartbob.pl/pl/lite-1-poziom/3-sm-lite-1616r.html" target="_blank">Buy the controller here</a>
+
+---
+## Controller appearance
+
+<img src={useBaseUrl('/img/SM-LITE-1616R/gen/wyglad.jpg')} alt="SM-LITE-1616R" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px' }} />
+
+A controller built on the ESP32 and ready to work with open platforms – SUPLA, Home Assistant, ESPHome.
+
+A universal, scalable central unit – suitable for commercial installations as well as DIY projects.
+
+<div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.2fr .6fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/widok-przod.svg')} alt="Front view" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Front view</figcaption></figure>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/widok-gora.svg')} alt="Top view" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Top view</figcaption></figure>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/widok-bok.svg')} alt="Side view" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Side view</figcaption></figure>
+</div>
+
+---
+## Key features
+
+- 16 logic inputs 24 V (GND or VCC signal)
+- 2 ADC channels up to 24 V
+- 16 independent 10 A relays, potential-free contacts
+- LAN or Wi-Fi communication
+- Two I2C buses (external and internal)
+- RS485, 1-Wire and Bluetooth
+- 0.96" OLED display
+- Two TMP102 temperature sensors – thermal protection (up to 80 °C, set in YAML)
+- 24 V DC supply (max 0.5 A)
+- Service features: USB programmer, input test buttons, reset
+
+The controller is designed for installation in an electrical distribution board.
+
+---
+## Applications
+
+- Whole-house automation
+- Control of many lighting circuits and shutters
+- Alarm integration via sensors
+- Scenes and schedules
+- HVAC via RS485 / Modbus
+- Smart home integration (SUPLA, Home Assistant, MQTT)
+- Energy and parameter monitoring
+
+---
+## Peripherals
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/peryferia-zamkniety-en.svg')} alt="Enclosure closed" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Enclosure closed</figcaption></figure>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/peryferia-otwarty-en.svg')} alt="Enclosure open (cover removed)" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Enclosure open (cover removed)</figcaption></figure>
+</div>
+
+1. **Relay outputs** – Relay outputs for controlling lighting, shutters, devices and AC/DC circuits.
+2. **Control inputs** – 24 V digital inputs – push buttons, switches, sensors.
+3. **Power connector (24V DC)** – Main power supply of the controller.
+4. **ADC channels** – Analog inputs – voltage measurement and analog sensors (e.g. 0–10 V).
+5. **RS485 interface** – Modbus RS485 communication with external devices.
+6. **Ethernet port (RJ45)** – LAN connection.
+7. **Universal inputs and expansion interfaces** – I2C, 1-Wire and other bus connectors.
+8. **USB-C connector** – Programming, configuration and service.
+9. **Configuration button** – Service button for configuration and reset.
+10. **OLED display** – Status display, visible through the housing.
+11. **LED indicators** – Input, output and operation status LEDs – visible through the housing.
+
+---
+## Technical specification
+
+| Parameter | Value |
+|---|---|
+| Module | ESP32 |
+| Digital inputs | 16 |
+| Input voltage | 24V DC |
+| Relay outputs | 16 |
+| Max. output voltage | 230V AC / 30V DC |
+| Max. output current | 10A |
+| Analog inputs | 2x ADC up to 24V |
+| External interfaces | RS485, I2C, 1-Wire |
+| Communication | Ethernet 10/100Mbit, Wi-Fi, USB-C |
+| Mounting width | 12 DIN modules |
+| Enclosure | RT-212-24 Altinkaya – 212 × 90 × 59 mm |
+| Degree of protection | IP20 |
+| Housing material | ABS UL-94-HB class V0 |
+| Mounting | 35 mm DIN rail or wall brackets |
+| Operating temperature | 0°C – 55°C |
+| Operating humidity | 5% – 95% non-condensing |
+
+---
+## Power supply parameters
+
+| Parameter | Value |
+|---|---|
+| Rated supply voltage | 24V DC |
+| Supply voltage range | 22V – 26V DC |
+| Current consumption (max.) | 0,5 A (12 W) |
+| Protection | Polymer fuse (Polyfuse) |
+
+:::tip
+Several SMARTBOB controllers in one installation can share one power supply with sufficient current capacity, but a separate power supply is recommended.
+:::
+
+:::tip
+When powered only from USB, the inputs and outputs do not work – the controller starts and connects to the network.
+:::
+
+---
+## Relay output parameters
+
+| Parameter | Value |
+|---|---|
+| Control voltage | 0–250V AC / 0–30V DC |
+| Continuous load of a single output | 8A |
+| Short-term load (up to 30 min) | 10A |
+| Maximum total power | 20A or 5000W |
+| Maximum operating temperature | 80°C (automatic output cut-off) |
+
+---
+## Communication
+
+| Interface | Description |
+|---|---|
+| LAN | IEEE 802.3 10BASE-T / 100BASE-TX |
+| Wi-Fi | 802.11 b/g/n |
+| USB-C | Programming and service |
+
+---
+## Software
+
+The SMARTBOB controller is a universal platform – the installed software is stated on the packaging, on the housing or in the order.
+
+- SUPLA
+- Home Assistant (ESPHome)
+- LOXONE
+- AMPIO
+- MQTT
+- ESP32-based systems
+
+The configuration depends on the chosen platform.
+
+First start-up and configuration on the chosen platform (SUPLA, Home Assistant, LOXONE, AMPIO): [Platforms – guides](/category/platformy)
+
+---
+## Safe use
+
+Before installation make sure the wires are not live. Installation should only be carried out by a qualified person in accordance with applicable standards. Do not use the controller without a housing or with a damaged housing. Do not exceed the operating parameters – especially the relay load. Some platforms require an external server, cloud or additional software.
+
+---
+## EU declaration of conformity (CE)
+
+The controller meets the requirements of EU directives. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">Download the EU declaration of conformity (PDF)</a>
+
+---
+## What next?
+
+Connection and configuration details can be found on the following documentation pages: [Manuals and links](/Instrukcje%20i%20linki/Linki%20i%20pliki).

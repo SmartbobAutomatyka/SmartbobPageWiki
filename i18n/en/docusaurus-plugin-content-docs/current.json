@@ -1,0 +1,114 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Wprowadzenie": {
+    "message": "Introduction",
+    "description": "The label for category 'Wprowadzenie' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Wprowadzenie.link.generated-index.description": {
+    "message": "Introduction to SMARTBOB",
+    "description": "The generated-index page description for category 'Wprowadzenie' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Produkty": {
+    "message": "Products",
+    "description": "The label for category 'Produkty' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Produkty.link.generated-index.description": {
+    "message": "Documentation for every controller and expander",
+    "description": "The generated-index page description for category 'Produkty' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-LITE-1616R": {
+    "message": "SM-LITE-1616R",
+    "description": "The label for category 'SM-LITE-1616R' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-LITE-1616R.link.generated-index.description": {
+    "message": "Meet SM-LITE-1616R – the SMARTBOB central control unit for building automation",
+    "description": "The generated-index page description for category 'SM-LITE-1616R' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-PRO-3236D": {
+    "message": "SM-PRO-3236D",
+    "description": "The label for category 'SM-PRO-3236D' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-PRO-3236D.link.generated-index.description": {
+    "message": "Meet SM-PRO-3236D – the flagship 36-channel SMARTBOB automation controller",
+    "description": "The generated-index page description for category 'SM-PRO-3236D' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-LITE-1624D": {
+    "message": "SM-LITE-1624D",
+    "description": "The label for category 'SM-LITE-1624D' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-LITE-1624D.link.generated-index.description": {
+    "message": "Meet SM-LITE-1624D – a 24-channel SMARTBOB DC/LED PWM controller",
+    "description": "The generated-index page description for category 'SM-LITE-1624D' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-MINI-0808R": {
+    "message": "SM-MINI-0808R",
+    "description": "The label for category 'SM-MINI-0808R' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-MINI-0808R.link.generated-index.description": {
+    "message": "Meet SM-MINI-0808R – a compact 8-channel SMARTBOB controller",
+    "description": "The generated-index page description for category 'SM-MINI-0808R' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-GATE-0202R": {
+    "message": "SM-GATE-0202R",
+    "description": "The label for category 'SM-GATE-0202R' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-GATE-0202R.link.generated-index.description": {
+    "message": "Meet SM-GATE-0202R – a 2-channel SMARTBOB controller for gates and wickets",
+    "description": "The generated-index page description for category 'SM-GATE-0202R' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-EXP-16IN": {
+    "message": "SM-EXP-16IN",
+    "description": "The label for category 'SM-EXP-16IN' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-EXP-16IN.link.generated-index.description": {
+    "message": "Meet SM-EXP-16IN – a 16-input I2C expander for SMARTBOB controllers",
+    "description": "The generated-index page description for category 'SM-EXP-16IN' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Platformy": {
+    "message": "Platforms",
+    "description": "The label for category 'Platformy' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Platformy.link.generated-index.description": {
+    "message": "Get to know the platforms supported by SMARTBOB and choose the right one for you:",
+    "description": "The generated-index page description for category 'Platformy' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SUPLA": {
+    "message": "SUPLA",
+    "description": "The label for category 'SUPLA' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SUPLA.link.generated-index.description": {
+    "message": "SUPLA – a simple Polish platform supported by many manufacturers, no extra server needed",
+    "description": "The generated-index page description for category 'SUPLA' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.LOXONE": {
+    "message": "LOXONE",
+    "description": "The label for category 'LOXONE' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.LOXONE.link.generated-index.description": {
+    "message": "LOXONE – advanced Austrian premium platform with many integrations, requires a server and training",
+    "description": "The generated-index page description for category 'LOXONE' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.HOME ASSISTANT": {
+    "message": "HOME ASSISTANT",
+    "description": "The label for category 'HOME ASSISTANT' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.HOME ASSISTANT.link.generated-index.description": {
+    "message": "HOME ASSISTANT – the world’s best-known open platform, requires a server and learning the system",
+    "description": "The generated-index page description for category 'HOME ASSISTANT' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.AMPIO": {
+    "message": "AMPIO",
+    "description": "The label for category 'AMPIO' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.AMPIO.link.generated-index.description": {
+    "message": "AMPIO – Polish building automation platform based on the CAN bus, requires an AMPIO controller",
+    "description": "The generated-index page description for category 'AMPIO' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Instrukcje i linki": {
+    "message": "Manuals and links",
+    "description": "The label for category 'Instrukcje i linki' in sidebar 'tutorialSidebar'"
+  }
+}

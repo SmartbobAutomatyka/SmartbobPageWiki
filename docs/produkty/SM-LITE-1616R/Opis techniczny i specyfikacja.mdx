@@ -2,65 +2,75 @@
 sidebar_position: 1
 ---
 
-## Sterownik SM-LITE-1616R
-Poznaj centralną jednostkę sterującą SMARTBOB do automatyki budynkowej, wyposażoną w 16 wejść i 16 wyjść przekaźnikowych.
-Urządzenie zostało zaprojektowane do sterowania oświetleniem, roletami, ogrzewaniem oraz innymi elementami instalacji domowej,
-zapewniając elastyczną integrację całego systemu.
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-👉 Sterownik kupisz tutaj:
-<a href="https://smartbob.pl/pl/lite-1-poziom/3-sm-lite-1616r.html" target="_blank">SM-LITE-1616R</a>
+## Sterownik SM-LITE-1616R
+
+SM-LITE-1616R to centralna jednostka automatyki budynkowej oparta na module ESP32 – 16 wejść i 16 wyjść przekaźnikowych do sterowania oświetleniem, roletami, ogrzewaniem i innymi odbiornikami.
+
+👉 <a href="https://smartbob.pl/pl/lite-1-poziom/3-sm-lite-1616r.html" target="_blank">Sterownik kupisz tutaj</a>
 
 ---
 ## Wygląd sterownika
-<a href="https://smartbob.pl/wp-content/uploads/2026/04/242.png" target="_blank">
- <img src="https://smartbob.pl/wp-content/uploads/2026/04/242.png" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
 
-SM-LITE-1616R to sterownik oparty o nowoczesny mikrokontroler ESP32, zaprojektowany do pracy z otwartymi środowiskami
-integracyjnymi, takimi jak SUPLA, Home Assistant czy ESPHome. Stanowi uniwersalne i skalowalne centrum sterowania
-automatyką budynkową. Dzięki otwartej architekturze sterownik może być stosowany zarówno w instalacjach komercyjnych,
-jak i projektach DIY, bez ograniczenia do jednego ekosystemu czy producenta.
+<img src={useBaseUrl('/img/SM-LITE-1616R/gen/wyglad.jpg')} alt="SM-LITE-1616R" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px' }} />
 
+Sterownik zbudowany na ESP32 i przygotowany do pracy z otwartymi platformami – SUPLA, Home Assistant, ESPHome.
+
+Uniwersalna, skalowalna centrala – sprawdzi się zarówno w instalacjach komercyjnych, jak i w projektach DIY.
+
+<div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.2fr .6fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/widok-przod.svg')} alt="Widok z przodu" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Widok z przodu</figcaption></figure>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/widok-gora.svg')} alt="Widok z góry" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Widok z góry</figcaption></figure>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/widok-bok.svg')} alt="Widok z boku" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Widok z boku</figcaption></figure>
+</div>
+
+---
 ## Kluczowe cechy
-- 16 wejść sterujących – logika 24V (sygnał GND lub VCC), do odczytu stanu klawiszy, przełączników, czujników alarmowych itp.
-- 2 kanały pomiaru napięcia ADC do 24V – np. do czujników 0–10V lub jako dodatkowe wejścia sterujące
-- 16 niezależnych przekaźników 10A – bezpotencjałowe, z możliwością sterowania roletami, obwodami AC i DC
-- Komunikacja LAN lub Wi-Fi – elastyczna integracja systemowa
-- Dwie magistrale I2C (zewnętrzna i wewnętrzna) – możliwość rozbudowy o dodatkowe moduły
-- Obsługa RS485, 1-WIRE oraz Bluetooth – dodatkowe protokoły komunikacyjne
-- Zintegrowany wyświetlacz OLED 0.96” – podgląd statusu urządzenia w czasie rzeczywistym
-- Wejście przekładnika SCT – możliwość pomiaru prądu
-- 2x wbudowany czujnik temperatury TMP102 – sprzętowa ochrona termiczna (do 80°C, definiowana w YAML)
-- Zasilanie 24V DC (max 0.5A) – stabilna i energooszczędna praca
-- Dodatkowe funkcje serwisowe – programator USB 3.0, testowe przyciski wejść, funkcja resetu
 
-Urządzenie przeznaczone jest do montażu w rozdzielnicy i umożliwia centralne zarządzanie instalacją domową — od oświetlenia i rolet, przez ogrzewanie, aż po bramy oraz inne elementy wykonawcze.
+- 16 wejść logicznych 24 V (sygnał GND lub VCC)
+- 2 kanały ADC do 24 V
+- 16 niezależnych przekaźników 10 A, styki bezpotencjałowe
+- Komunikacja LAN lub Wi-Fi
+- Dwie magistrale I2C (zewnętrzna i wewnętrzna)
+- RS485, 1-Wire i Bluetooth
+- Wyświetlacz OLED 0,96"
+- Dwa czujniki temperatury TMP102 – zabezpieczenie termiczne (do 80 °C, ustawiane w YAML)
+- Zasilanie 24 V DC (max 0,5 A)
+- Udogodnienia serwisowe: programator USB, przyciski testu wejść, reset
 
+Sterownik przeznaczony do montażu w rozdzielnicy elektrycznej.
+
+---
 ## Zastosowania
-- Kompleksowa automatyzacja domów jednorodzinnych, apartamentów oraz większych instalacji mieszkalnych
-- Sterowanie wieloma obwodami oświetlenia, roletami oraz urządzeniami wykonawczymi z jednego systemu
-- Integracja z systemami alarmowymi poprzez odczyt sygnałów z czujników ruchu, kontaktronów, czujników zalania czy pożaru
-- Tworzenie zaawansowanych scenariuszy automatyki w oparciu o czujniki, harmonogramy oraz logikę systemową
-- Automatyzacja ogrzewania, wentylacji i klimatyzacji (HVAC) z możliwością integracji urządzeń przez RS485 / Modbus
-- Integracja z systemami smart home i platformami automatyki, takimi jak SUPLA, Home Assistant czy MQTT
-- Monitorowanie parametrów instalacji, pomiar energii oraz rozbudowa systemu o dodatkowe moduły i sensory
+
+- Automatyka całego domu
+- Sterowanie wieloma obwodami oświetlenia i roletami
+- Integracja z alarmem przez czujniki
+- Scenariusze i harmonogramy
+- HVAC przez RS485 / Modbus
+- Integracja smart home (SUPLA, Home Assistant, MQTT)
+- Monitorowanie energii i parametrów
 
 ---
 ## Peryferia
-<a href="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-OZNACZENIA.webp" target="_blank">
-<img src="https://smartbobautomatyka.github.io/SmartbobPageWiki/img/SM-LITE-1616R/SM-LITE-1616R-OZNACZENIA.webp" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
 
-1. **Wyjścia przekaźnikowe** – wyjścia sterujące do obsługi oświetlenia, rolet, urządzeń oraz innych obwodów AC/DC.
-2. **Wejścia sterujące** – wejścia cyfrowe 24V do podłączenia przycisków, przełączników, czujników oraz sygnałów sterujących.
-3. **Złącze zasilania (24V DC)** – główne zasilanie urządzenia.
-4. **Kanały ADC** – wejścia analogowe umożliwiające odczyt napięcia oraz podłączenie czujników analogowych (np. 0–10V).
-5. **Interfejs RS485** – komunikacja z urządzeniami zewnętrznymi wykorzystującymi protokół Modbus RS485.
-6. **Wejście przekładnika CT** – możliwość pomiaru prądu za pomocą przekładnika prądowego.
-7. **Port Ethernet (RJ45)** – połączenie urządzenia z siecią LAN.
-8. **Wejścia uniwersalne i interfejsy rozszerzeń** – złącza dla magistrali I2C, 1-Wire oraz dodatkowych interfejsów komunikacyjnych.
-9. **Złącze USB-C** – programowanie, konfiguracja oraz serwis urządzenia.
-10. **Przycisk konfiguracji** – przycisk serwisowy wykorzystywany podczas konfiguracji oraz resetu urządzenia.
-11. **Ekran OLED** – wyświetlanie podstawowych informacji o stanie urządzenia, komunikacji i pracy systemu (widoczne przez obudowę).
-12. **Wskaźniki LED** – diody sygnalizujące stan wejść, wyjść oraz pracy sterownika (widoczne przez obudowę).
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/peryferia-zamkniety-pl.svg')} alt="Obudowa zamknięta" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Obudowa zamknięta</figcaption></figure>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/peryferia-otwarty-pl.svg')} alt="Obudowa otwarta (bez pokrywy)" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Obudowa otwarta (bez pokrywy)</figcaption></figure>
+</div>
+
+1. **Wyjścia przekaźnikowe** – Wyjścia przekaźnikowe do sterowania oświetleniem, roletami, urządzeniami i obwodami AC/DC.
+2. **Wejścia sterujące** – Wejścia cyfrowe 24 V – przyciski, łączniki, czujniki.
+3. **Złącze zasilania (24V DC)** – Główne zasilanie sterownika.
+4. **Kanały ADC** – Wejścia analogowe – pomiar napięcia i czujniki analogowe (np. 0–10 V).
+5. **Interfejs RS485** – Komunikacja Modbus RS485 z urządzeniami zewnętrznymi.
+6. **Port Ethernet (RJ45)** – Połączenie z siecią LAN.
+7. **Wejścia uniwersalne i interfejsy rozszerzeń** – Złącza I2C, 1-Wire i innych magistral.
+8. **Złącze USB-C** – Programowanie, konfiguracja i serwis.
+9. **Przycisk konfiguracji** – Przycisk serwisowy do konfiguracji i resetu.
+10. **Ekran OLED** – Wyświetlacz stanu, widoczny przez obudowę.
+11. **Wskaźniki LED** – Diody stanu wejść, wyjść i pracy – widoczne przez obudowę.
 
 ---
 ## Specyfikacja Techniczna
@@ -68,8 +78,6 @@ Urządzenie przeznaczone jest do montażu w rozdzielnicy i umożliwia centralne 
 | Parametr | Wartość |
 |---|---|
 | Moduł | ESP32 |
-| Zasilanie | 24V DC |
-| Pobór mocy | 3W – 15W |
 | Wejścia cyfrowe | 16 |
 | Napięcie wejść | 24V DC |
 | Wyjścia przekaźnikowe | 16 |
@@ -79,32 +87,29 @@ Urządzenie przeznaczone jest do montażu w rozdzielnicy i umożliwia centralne 
 | Interfejsy zewnętrzne | RS485, I2C, 1-Wire |
 | Komunikacja | Ethernet 10/100Mbit, Wi-Fi, USB-C |
 | Szerokość montażowa | 12 modułów DIN |
-| Obudowa | RT-212-24 Altinkaya|
+| Obudowa | RT-212-24 Altinkaya – 212 × 90 × 59 mm |
 | Stopień ochrony | IP20 |
-| Materiał obudowy | ABS UL-94-HB klasa V0|
-| Montaż | Szyna DIN 35 mm lub uchwyty na ścianę|
+| Materiał obudowy | ABS UL-94-HB klasa V0 |
+| Montaż | Szyna DIN 35 mm lub uchwyty na ścianę |
 | Temperatura pracy | 0°C – 55°C |
 | Wilgotność pracy | 5% – 95% bez kondensacji |
 
 ---
-
 ## Parametry zasilania
 
 | Parametr | Wartość |
 |---|---|
 | Znamionowe napięcie zasilania | 24V DC |
 | Zakres napięcia zasilania | 22V – 26V DC |
-| Maksymalny pobór prądu | 0.5A |
+| Pobór prądu (maks.) | 0,5 A (12 W) |
 | Zabezpieczenie | Bezpiecznik polimerowy (Polyfuse) |
 
 :::tip
-Wszystkie sterowniki SMARTBOB w jednej instalacji mogą być zasilane z tego samego zasilacza,
-o ile posiada on odpowiednią wydajność prądową i pozwalają na to warunki techniczne instalacji.
-Zalecane jest stosowanie dedykowanego zasilacza dla systemu SMARTBOB.
+Kilka sterowników SMARTBOB w jednej instalacji może korzystać z jednego zasilacza o odpowiedniej wydajności prądowej, ale zalecany jest osobny zasilacz.
 :::
+
 :::tip
-Przy zasilaniu tylko z USB nie będą działać poprawnie wejścia oraz wyjścia, sterownik jednak się uruchomi i podłączy do
-sieci
+Przy zasilaniu tylko z USB wejścia i wyjścia nie działają – sterownik uruchamia się i łączy z siecią.
 :::
 
 ---
@@ -130,75 +135,30 @@ sieci
 ---
 ## Oprogramowanie
 
-Sterownik SMARTBOB jest uniwersalną platformą kompatybilną z wieloma systemami automatyki budynkowej. Informacja o aktualnie zainstalowanym oprogramowaniu znajduje się na opakowaniu, obudowie lub jest przekazywana podczas składania zamówienia.
+Sterownik SMARTBOB to uniwersalna platforma – zainstalowane oprogramowanie jest podane na opakowaniu, na obudowie albo przy zamówieniu.
 
-W zależności od wersji urządzenie może współpracować m.in. z:
 - SUPLA
 - Home Assistant (ESPHome)
 - LOXONE
 - AMPIO
 - MQTT
-- Systemami oparte o ESP32
-Sposób konfiguracji może różnić się zależnie od zainstalowanego środowiska.
+- Systemy oparte o ESP32
 
----
-## Pierwsze kroki
-Sterowniki SMARTBOB mogą pracować z różnymi platformami automatyki budynkowej.
-Sposób pierwszej konfiguracji zależy od zainstalowanego oprogramowania.
+Konfiguracja zależy od wybranego środowiska.
 
-:::info
-Dla każdej platformy w pierwszym kroku podłącz zasilanie 24V DC lub 5V DC z USB
-( w trybie USB nie działają wejścia i wyjścia)
-:::
-
-# SUPLA
-1. Po uruchomieniu sterownika wyszukaj sieć Wi-Fi o nazwie:
-   - `SUPLA-XXX`
-2. Połącz się z nią z telefonu lub komputera.
-3. Otwórz przeglądarkę i przejdź na adres:
-   - `192.168.4.1`
-4. Skonfiguruj:
-   - dane sieci Wi-Fi/LAN
-   - dane konta SUPLA
-   - podstawowe ustawienia sterownika
-5. Po zapisaniu ustawień urządzenie połączy się z platformą SUPLA (włącz rejestrację urządzeń).
-
-# Home Assistant / ESPHome
-1. Podłącz sterownik do sieci lokalnej przewodem Ethernet (LAN).
-2. Odczytaj adres IP urządzenia i otwórz go w przeglądarce.
-3. Wejdź na adres IP sterownika w przeglądarce, aby sprawdzić poprawność działania urządzenia.
-4. W Home Assistant:
-   - dodaj integrację `ESPHome`
-   - dodaj nowe urządzenie
-   - skonfiguruj projekt na podstawie gotowego szablonu SMARTBOB
-5. Gotowe szablony konfiguracji:
-   - 👉 <a href="https://github.com/SmartbobAutomatyka/SmartbobAutomatyka-GIT/tree/main/ESPHOME" target="_blank">Szablony SMARTBOB ESPHome</a>
-
-# LOXONE
-1. Podłącz sterownik do sieci LAN.
-2. Odczytaj adres IP urządzenia i otwórz go w przeglądarce.
-3. Skonfiguruj:
-   - adres serwera LOXONE
-   - porty komunikacyjne
-   - parametry integracji
-4. Następnie wykonaj konfigurację zgodnie z poradnikiem wideo:
-   - 👉 <a href="https://youtu.be/zObzBJjrbxQ?si=pTFjHp6Gg5ECCzf3" target="_blank">Poradniki SMARTBOB YouTube</a>
+Pierwsze uruchomienie i konfiguracja na wybranej platformie (SUPLA, Home Assistant, LOXONE, AMPIO): [Platformy – instrukcje](/category/platformy)
 
 ---
 ## Bezpieczeństwo użytkowania
-Przed rozpoczęciem instalacji należy upewnić się, że na przewodach przyłączeniowych nie występuje napięcie.
-Instalacja urządzenia powinna być wykonywana zgodnie z obowiązującymi normami oraz wyłącznie przez wykwalifikowanych elektryków.
-Nie należy używać urządzenia bez obudowy lub z uszkodzoną obudową — grozi to porażeniem prądem elektrycznym.
-Zabronione jest przekraczanie dopuszczalnych parametrów pracy urządzenia, w szczególności maksymalnych obciążeń wyjść przekaźnikowych.
-Sterowniki SMARTBOB mogą wymagać do działania zewnętrznego serwera, chmury lub dodatkowego oprogramowania zależnie od używanej platformy.
+
+Przed montażem upewnij się, że przewody nie są pod napięciem. Montaż powinna wykonywać wyłącznie osoba z uprawnieniami, zgodnie z obowiązującymi normami. Nie używaj sterownika bez obudowy ani z uszkodzoną obudową. Nie przekraczaj parametrów pracy – zwłaszcza obciążenia przekaźników. Niektóre platformy wymagają zewnętrznego serwera, chmury lub dodatkowego oprogramowania.
 
 ---
 ## Deklaracja zgodności UE (CE)
-Dokumentacja zgodności urządzeń SMARTBOB dostępna jest do pobrania poniżej:
 
-👉 <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">Pobierz deklarację zgodności UE (PDF)</a>
+Sterownik spełnia wymagania dyrektyw UE. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">Pobierz deklarację zgodności UE (PDF)</a>
 
 ---
 ## Co dalej?
 
-Szczegółowe instrukcje konfiguracji, integracji oraz przykłady zastosowań znajdziesz na kolejnych podstronach dokumentacji SMARTBOB.
+Szczegóły podłączenia i konfiguracji znajdziesz na kolejnych stronach dokumentacji: [Instrukcje i linki](/Instrukcje%20i%20linki/Linki%20i%20pliki).

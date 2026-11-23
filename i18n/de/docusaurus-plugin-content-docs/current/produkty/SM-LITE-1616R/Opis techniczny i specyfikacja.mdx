@@ -1,0 +1,166 @@
+---
+sidebar_position: 1
+title: Technische Beschreibung und Spezifikation
+sidebar_label: Technische Beschreibung und Spezifikation
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Steuerung SM-LITE-1616R
+
+SM-LITE-1616R ist eine zentrale Gebäudeautomationseinheit auf Basis des ESP32-Moduls – 16 Eingänge und 16 Relaisausgänge zur Steuerung von Beleuchtung, Rollläden, Heizung und anderen Verbrauchern.
+
+👉 <a href="https://smartbob.pl/pl/lite-1-poziom/3-sm-lite-1616r.html" target="_blank">Steuerung hier kaufen</a>
+
+---
+## Aussehen der Steuerung
+
+<img src={useBaseUrl('/img/SM-LITE-1616R/gen/wyglad.jpg')} alt="SM-LITE-1616R" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px' }} />
+
+Eine Steuerung auf ESP32-Basis, bereit für offene Plattformen – SUPLA, Home Assistant, ESPHome.
+
+Eine universelle, skalierbare Zentrale – geeignet für gewerbliche Installationen ebenso wie für DIY-Projekte.
+
+<div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.2fr .6fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/widok-przod.svg')} alt="Vorderansicht" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Vorderansicht</figcaption></figure>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/widok-gora.svg')} alt="Draufsicht" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Draufsicht</figcaption></figure>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/widok-bok.svg')} alt="Seitenansicht" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Seitenansicht</figcaption></figure>
+</div>
+
+---
+## Hauptmerkmale
+
+- 16 Logikeingänge 24 V (GND- oder VCC-Signal)
+- 2 ADC-Kanäle bis 24 V
+- 16 unabhängige 10-A-Relais, potentialfreie Kontakte
+- Kommunikation per LAN oder WLAN
+- Zwei I2C-Busse (extern und intern)
+- RS485, 1-Wire und Bluetooth
+- 0,96"-OLED-Display
+- Zwei TMP102-Temperatursensoren – Überhitzungsschutz (bis 80 °C, in YAML einstellbar)
+- Versorgung 24 V DC (max. 0,5 A)
+- Service-Funktionen: USB-Programmer, Eingangstesttasten, Reset
+
+Die Steuerung ist für den Einbau in einen Elektroverteiler vorgesehen.
+
+---
+## Anwendungen
+
+- Automation des ganzen Hauses
+- Steuerung vieler Lichtkreise und Rollläden
+- Alarmintegration über Sensoren
+- Szenen und Zeitpläne
+- HVAC über RS485 / Modbus
+- Smart-Home-Integration (SUPLA, Home Assistant, MQTT)
+- Energie- und Parameterüberwachung
+
+---
+## Peripherie
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/peryferia-zamkniety-de.svg')} alt="Gehäuse geschlossen" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Gehäuse geschlossen</figcaption></figure>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/gen/peryferia-otwarty-de.svg')} alt="Gehäuse offen (ohne Deckel)" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}>Gehäuse offen (ohne Deckel)</figcaption></figure>
+</div>
+
+1. **Relaisausgänge** – Relaisausgänge zur Steuerung von Beleuchtung, Rollläden, Geräten und AC/DC-Kreisen.
+2. **Steuereingänge** – Digitale 24-V-Eingänge – Taster, Schalter, Sensoren.
+3. **Versorgungsanschluss (24V DC)** – Hauptversorgung der Steuerung.
+4. **ADC-Kanäle** – Analogeingänge – Spannungsmessung und analoge Sensoren (z. B. 0–10 V).
+5. **RS485-Schnittstelle** – Modbus-RS485-Kommunikation mit externen Geräten.
+6. **Ethernet-Port (RJ45)** – LAN-Verbindung.
+7. **Universaleingänge und Erweiterungsschnittstellen** – Anschlüsse für I2C, 1-Wire und andere Busse.
+8. **USB-C-Anschluss** – Programmierung, Konfiguration und Service.
+9. **Konfigurationstaste** – Servicetaste für Konfiguration und Reset.
+10. **OLED-Display** – Statusanzeige, durch das Gehäuse sichtbar.
+11. **LED-Anzeigen** – Status-LEDs für Eingänge, Ausgänge und Betrieb – durch das Gehäuse sichtbar.
+
+---
+## Technische Daten
+
+| Parameter | Wert |
+|---|---|
+| Modul | ESP32 |
+| Digitaleingänge | 16 |
+| Eingangsspannung | 24V DC |
+| Relaisausgänge | 16 |
+| Max. Ausgangsspannung | 230V AC / 30V DC |
+| Max. Ausgangsstrom | 10A |
+| Analogeingänge | 2x ADC bis 24V |
+| Externe Schnittstellen | RS485, I2C, 1-Wire |
+| Kommunikation | Ethernet 10/100Mbit, Wi-Fi, USB-C |
+| Einbaubreite | 12 DIN-Module |
+| Gehäuse | RT-212-24 Altinkaya – 212 × 90 × 59 mm |
+| Schutzart | IP20 |
+| Gehäusematerial | ABS UL-94-HB Klasse V0 |
+| Montage | 35-mm-Hutschiene oder Wandhalter |
+| Betriebstemperatur | 0°C – 55°C |
+| Betriebsfeuchte | 5% – 95% nicht kondensierend |
+
+---
+## Versorgungsparameter
+
+| Parameter | Wert |
+|---|---|
+| Nennversorgungsspannung | 24V DC |
+| Versorgungsspannungsbereich | 22V – 26V DC |
+| Stromaufnahme (max.) | 0,5 A (12 W) |
+| Absicherung | Polymersicherung (Polyfuse) |
+
+:::tip
+Mehrere SMARTBOB-Steuerungen in einer Installation können ein Netzteil mit ausreichender Stromstärke nutzen, empfohlen wird jedoch ein separates Netzteil.
+:::
+
+:::tip
+Bei Versorgung nur über USB funktionieren Ein- und Ausgänge nicht – die Steuerung startet und verbindet sich mit dem Netzwerk.
+:::
+
+---
+## Parameter der Relaisausgänge
+
+| Parameter | Wert |
+|---|---|
+| Steuerspannung | 0–250V AC / 0–30V DC |
+| Dauerlast eines einzelnen Ausgangs | 8A |
+| Kurzzeitlast (bis 30 min) | 10A |
+| Maximale Gesamtleistung | 20A oder 5000W |
+| Maximale Betriebstemperatur | 80°C (automatische Abschaltung der Ausgänge) |
+
+---
+## Kommunikation
+
+| Schnittstelle | Beschreibung |
+|---|---|
+| LAN | IEEE 802.3 10BASE-T / 100BASE-TX |
+| Wi-Fi | 802.11 b/g/n |
+| USB-C | Programmierung und Service |
+
+---
+## Software
+
+Die SMARTBOB-Steuerung ist eine universelle Plattform – die installierte Software ist auf der Verpackung, auf dem Gehäuse oder in der Bestellung angegeben.
+
+- SUPLA
+- Home Assistant (ESPHome)
+- LOXONE
+- AMPIO
+- MQTT
+- ESP32-basierte Systeme
+
+Die Konfiguration hängt von der gewählten Plattform ab.
+
+Erstinbetriebnahme und Konfiguration auf der gewählten Plattform (SUPLA, Home Assistant, LOXONE, AMPIO): [Plattformen – Anleitungen](/category/platformy)
+
+---
+## Sichere Verwendung
+
+Stellen Sie vor der Montage sicher, dass die Leitungen spannungsfrei sind. Die Montage darf nur von einer qualifizierten Person gemäß den geltenden Normen durchgeführt werden. Verwenden Sie die Steuerung nicht ohne Gehäuse oder mit beschädigtem Gehäuse. Überschreiten Sie die Betriebsparameter nicht – insbesondere die Relaislast. Einige Plattformen erfordern einen externen Server, eine Cloud oder zusätzliche Software.
+
+---
+## EU-Konformitätserklärung (CE)
+
+Die Steuerung erfüllt die Anforderungen der EU-Richtlinien. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">EU-Konformitätserklärung herunterladen (PDF)</a>
+
+---
+## Wie geht es weiter?
+
+Details zu Anschluss und Konfiguration finden Sie auf den folgenden Dokumentationsseiten: [Anleitungen und Links](/Instrukcje%20i%20linki/Linki%20i%20pliki).

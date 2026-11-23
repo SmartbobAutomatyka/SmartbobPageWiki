@@ -1,0 +1,38 @@
+---
+sidebar_position: 5
+---
+
+## Pierwsze uruchomienie
+
+Sterowniki SMARTBOB mogą pracować z różnymi platformami automatyki budynkowej. Sposób pierwszej konfiguracji zależy od zainstalowanego oprogramowania – informacja o nim jest na opakowaniu, na obudowie albo przy zamówieniu.
+
+:::info
+Dla każdej platformy w pierwszym kroku podłącz zasilanie 24 V DC albo 5 V DC z USB (w trybie USB wejścia i wyjścia nie działają).
+:::
+
+Opisy platform: [SUPLA](/platformy/SUPLA/Poznaj%20SUPLA) · [Home Assistant](/platformy/HOME%20ASSISTANT/Poznaj%20HOME%20ASSISTANT) · [LOXONE](/platformy/LOXONE/Poznaj%20LOXONE) · [AMPIO](/platformy/AMPIO/Poznaj%20AMPIO)
+
+---
+## SUPLA
+
+1. Po uruchomieniu sterownika wyszukaj sieć Wi-Fi o nazwie `SUPLA-XXX`.
+2. Połącz się z nią z telefonu lub komputera.
+3. Otwórz przeglądarkę i przejdź na adres `192.168.4.1`.
+4. Skonfiguruj dane sieci Wi-Fi / LAN, dane konta SUPLA i podstawowe ustawienia sterownika.
+5. Po zapisaniu ustawień urządzenie połączy się z platformą SUPLA (włącz rejestrację urządzeń).
+
+---
+## Home Assistant / ESPHome
+
+1. Podłącz sterownik do sieci lokalnej przewodem Ethernet (LAN).
+2. Odczytaj adres IP urządzenia i otwórz go w przeglądarce, aby sprawdzić, czy działa.
+3. W Home Assistant dodaj integrację `ESPHome`, dodaj nowe urządzenie i skonfiguruj je na podstawie gotowego szablonu SMARTBOB.
+4. Gotowe szablony konfiguracji: 👉 <a href="https://github.com/SmartbobAutomatyka/SmartbobAutomatyka-GIT/tree/main/ESPHOME" target="_blank">Szablony SMARTBOB ESPHome</a>
+
+---
+## LOXONE
+
+1. Podłącz sterownik do sieci LAN.
+2. Odczytaj adres IP urządzenia i otwórz go w przeglądarce.
+3. Skonfiguruj adres serwera LOXONE, porty komunikacyjne i parametry integracji.
+4. Dalej postępuj zgodnie z poradnikiem wideo: 👉 <a href="https://youtu.be/zObzBJjrbxQ?si=pTFjHp6Gg5ECCzf3" target="_blank">Poradniki SMARTBOB YouTube</a>
