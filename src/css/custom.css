@@ -273,3 +273,7 @@ table {
 [data-theme='dark'] .footer__copyright {
   color: #a1a1aa;
 }
+
+/* ikona języka – globus zamiast domyślnego znaku 文A */
+.navbar__item.dropdown svg[class*="iconLanguage"] { display: none; }
+.navbar__item.dropdown > .navbar__link[href="#"]::before { content: '🌐'; margin-right: 6px; font-size: 1.05em; }
