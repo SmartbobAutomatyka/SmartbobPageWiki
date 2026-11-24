@@ -3,6 +3,8 @@ sidebar_position: 1
 slug: /
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # Witamy w dokumentacji SMARTBOB! 👋
 
 <div style={{display: 'flex', gap: '20px', alignItems: 'center'}}>
@@ -42,6 +44,43 @@ i systemów automatyki SMARTBOB.
 
 SMARTBOB to seria uniwersalnych sterowników automatyki domowej przeznaczonych do montażu w rozdzielnicy oraz
 instalacji wykonywanych w topologii gwiazdy, przygotowanych do integracji z różnymi platformami smart home.
+
+{/* asystent-3d */}
+## Asystent techniczny 3D
+
+Sterowniki SMARTBOB możesz obejrzeć i poznać w przeglądarce – bez instalowania czegokolwiek. **Asystent techniczny 3D** pokazuje każdy model w 3D: opisy złączy i elementów po najechaniu myszką, widok wnętrza i samej płytki, wymiary, dokumentację oraz symulacje podłączenia klawiszy, oświetlenia, rolet i bramy.
+
+- model 3D każdego sterownika z opisem złączy i elementów
+- symulacje „jak podłączyć” – wejścia i wyjścia krok po kroku
+- porównanie modeli i dokumentacja techniczna do pobrania
+- rozdzielnica i budynek z okablowaniem (wersja **DEMO**)
+
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '16px', margin: '16px 0'}}>
+  <a href={useBaseUrl('/img/asystent-3d/ctrl.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/ctrl.webp')} alt="Sterownik w 3D" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Sterownik w 3D</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/cab.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/cab.webp')} alt="Rozdzielnica (DEMO)" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Rozdzielnica (DEMO)</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/house3d.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house3d.webp')} alt="Budynek 3D (DEMO)" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Budynek 3D (DEMO)</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/house2d.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house2d.webp')} alt="Rzut 2D z okablowaniem (DEMO)" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Rzut 2D z okablowaniem (DEMO)</div>
+  </a>
+</div>
+
+:::info[DEMO]
+Widoki **Rozdzielnica** i **Budynek** (projektowanie rozdzielnicy i instalacji w budynku) są na razie wersją demonstracyjną – rozwijamy je.
+:::
+
+**👉 [Otwórz Asystenta 3D](https://smartbobautomatyka.github.io/SmartBob3D/#lang=pl)**
+
+{/* asystent-3d koniec */}
 
 ## Funkcje sterowników
 - sterowanie oświetleniem AC

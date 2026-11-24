@@ -1,0 +1,163 @@
+---
+sidebar_position: 1
+title: Technický popis a špecifikácia
+sidebar_label: Technický popis a špecifikácia
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Riadiaca jednotka SM-LITE-1616R
+
+SM-LITE-1616R je srdce inteligentnej domácnosti v rozvádzači: 16 vstupov pre tlačidlá a senzory a 16 relé 10 A, ktoré zapnú svetlo, stiahnu rolety, otvoria bránu a spustia kúrenie – všetko z jedného modulu na lište DIN.
+
+👉 <a href="https://smartbob.pl/produkt/sm-lite-1616r/" target="_blank">Riadiacu jednotku kúpite tu</a>
+
+---
+## Vzhľad riadiacej jednotky
+
+<img src={useBaseUrl('/img/SM-LITE-1616R/render/wyglad.webp?v=mwuea2my')} alt="SM-LITE-1616R" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+
+Postavená na ESP32 pracuje cez LAN alebo Wi-Fi a hneď si rozumie s otvorenými platformami – SUPLA, Home Assistant (ESPHome), LOXONE a AMPIO. Bez uzavretého ekosystému a bez predplatného.
+
+Cez dymové sklo vidno stavové LED a displej OLED a rozpojiteľné svorky umožnia pripojiť alebo vymeniť jednotku bez odskrutkovania vodičov. Navrhnuté a vyrobené v Poľsku.
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/render/wymiary-sk.svg?v=mwuea2my')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+---
+## Kľúčové vlastnosti
+
+- 16 logických vstupov 24 V (signál GND alebo VCC)
+- 2 kanály ADC do 24 V
+- 16 nezávislých relé 10 A, bezpotenciálové kontakty
+- Komunikácia LAN alebo Wi-Fi
+- Dve zbernice I2C (vonkajšia a vnútorná)
+- RS485, 1-Wire a Bluetooth
+- Displej OLED 0,96"
+- Dva snímače teploty TMP102 – tepelná ochrana (do 80 °C, nastaviteľná v YAML)
+- Napájanie 24 V DC (max 0,5 A)
+- Servisné vybavenie: USB programátor, tlačidlá testu vstupov, reset
+
+Riadiaca jednotka je určená na montáž do elektrického rozvádzača.
+
+---
+## Použitie
+
+- Automatizácia celého domu
+- Ovládanie mnohých svetelných okruhov a roliet
+- Integrácia s alarmom cez senzory
+- Scény a harmonogramy
+- HVAC cez RS485 / Modbus
+- Integrácia inteligentnej domácnosti (SUPLA, Home Assistant, MQTT)
+- Monitorovanie energie a parametrov
+
+---
+## Periférie
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1616R/render/peryferia-sk.svg?v=mwuea2my')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+1. **Reléové výstupy** – Reléové výstupy na ovládanie osvetlenia, roliet, zariadení a obvodov AC/DC.
+2. **Ovládacie vstupy** – Digitálne vstupy 24 V – tlačidlá, vypínače, senzory.
+3. **Napájací konektor (24V DC)** – Hlavné napájanie riadiacej jednotky.
+4. **Kanály ADC** – Analógové vstupy – meranie napätia a analógové senzory (napr. 0–10 V).
+5. **Rozhranie RS485** – Komunikácia Modbus RS485 s externými zariadeniami.
+6. **Port Ethernet (RJ45)** – Pripojenie k sieti LAN.
+7. **Univerzálne vstupy a rozširujúce rozhrania** – Konektory I2C, 1-Wire a ďalších zberníc.
+8. **Konektor USB-C** – Programovanie, konfigurácia a servis.
+9. **Konfiguračné tlačidlo** – Servisné tlačidlo na konfiguráciu a reset.
+10. **Displej OLED** – Stavový displej, viditeľný cez kryt.
+11. **LED indikátory** – Stavové LED vstupov, výstupov a prevádzky – viditeľné cez kryt.
+
+---
+## Technická špecifikácia
+
+| Parameter | Value |
+|---|---|
+| Modul | ESP32 |
+| Digitálne vstupy | 16 |
+| Napätie vstupov | 24V DC |
+| Reléové výstupy | 16 |
+| Max. napätie výstupov | 230V AC / 30V DC |
+| Max. prúd výstupov | 10A |
+| Analógové vstupy | 2x ADC do 24V |
+| Externé rozhrania | RS485, I2C, 1-Wire |
+| Komunikácia | Ethernet 10/100Mbit, Wi-Fi, USB-C |
+| Montážna šírka | 12 modulov DIN |
+| Kryt | RT-212-24 Altinkaya – 212 × 90 × 59 mm |
+| Stupeň krytia | IP20 |
+| Materiál krytu | ABS UL-94-HB trieda V0 |
+| Montáž | Lišta DIN 35 mm alebo držiaky na stenu |
+| Prevádzková teplota | 0°C – 55°C |
+| Prevádzková vlhkosť | 5% – 95% bez kondenzácie |
+
+---
+## Parametre napájania
+
+| Parameter | Value |
+|---|---|
+| Menovité napájacie napätie | 24V DC |
+| Rozsah napájacieho napätia | 22V – 26V DC |
+| Odber prúdu (max.) | 0,5 A (12 W) |
+| Ochrana | Polymérová poistka (Polyfuse) |
+
+:::tip
+Niekoľko jednotiek SMARTBOB v jednej inštalácii môže zdieľať jeden zdroj s dostatočným prúdom, odporúča sa však samostatný zdroj.
+:::
+
+:::tip
+Pri napájaní iba z USB vstupy a výstupy nefungujú – jednotka sa spustí a pripojí k sieti.
+:::
+
+---
+## Parametre reléových výstupov
+
+| Parameter | Value |
+|---|---|
+| Ovládacie napätie | 0–250V AC / 0–30V DC |
+| Trvalé zaťaženie jedného výstupu | 8A |
+| Krátkodobé zaťaženie (do 30 min) | 10A |
+| Maximálny celkový výkon | 20A alebo 5000W |
+| Maximálna prevádzková teplota | 80°C (automatické odpojenie výstupov) |
+
+---
+## Komunikácia
+
+| Rozhranie | Description |
+|---|---|
+| LAN | IEEE 802.3 10BASE-T / 100BASE-TX |
+| Wi-Fi | 802.11 b/g/n |
+| USB-C | Programovanie a servis |
+
+---
+## Softvér
+
+Riadiaca jednotka SMARTBOB je univerzálna platforma – nainštalovaný softvér je uvedený na obale, na kryte alebo v objednávke.
+
+- [SUPLA](/platformy/SUPLA/Poznaj%20SUPLA)
+- [Home Assistant (ESPHome)](/platformy/HOME%20ASSISTANT/Poznaj%20HOME%20ASSISTANT)
+- [LOXONE](/platformy/LOXONE/Poznaj%20LOXONE)
+- [AMPIO](/platformy/AMPIO/Poznaj%20AMPIO)
+- MQTT
+- Systémy založené na ESP32
+
+Konfigurácia závisí od zvolenej platformy.
+
+Prvé spustenie a konfigurácia na zvolenej platforme (SUPLA, Home Assistant, LOXONE, AMPIO): [Prvé spustenie](/produkty/SM-LITE-1616R/Pierwsze%20uruchomienie)
+
+---
+## Bezpečnosť používania
+
+Pred montážou sa uistite, že vodiče nie sú pod napätím. Montáž smie vykonávať iba osoba s oprávnením v súlade s platnými normami. Nepoužívajte jednotku bez krytu ani s poškodeným krytom. Neprekračujte prevádzkové parametre – najmä zaťaženie relé. Niektoré platformy vyžadujú externý server, cloud alebo ďalší softvér.
+
+---
+## EÚ vyhlásenie o zhode (CE)
+
+Riadiaca jednotka spĺňa požiadavky smerníc EÚ. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">Stiahnuť EÚ vyhlásenie o zhode (PDF)</a>
+
+---
+## Čo ďalej?
+
+Podrobnosti o zapojení a konfigurácii nájdete na ďalších stranách dokumentácie: [Návody a odkazy](/Instrukcje%20i%20linki/Linki%20i%20pliki).

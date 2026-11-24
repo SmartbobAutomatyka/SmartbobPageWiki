@@ -1,0 +1,114 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Wprowadzenie": {
+    "message": "Úvod",
+    "description": "The label for category 'Wprowadzenie' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Wprowadzenie.link.generated-index.description": {
+    "message": "Úvod do SMARTBOB",
+    "description": "The generated-index page description for category 'Wprowadzenie' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Produkty": {
+    "message": "Produkty",
+    "description": "The label for category 'Produkty' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Produkty.link.generated-index.description": {
+    "message": "Dokumentácia ku každej riadiacej jednotke a expandéru",
+    "description": "The generated-index page description for category 'Produkty' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-LITE-1616R": {
+    "message": "SM-LITE-1616R",
+    "description": "The label for category 'SM-LITE-1616R' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-LITE-1616R.link.generated-index.description": {
+    "message": "Spoznajte SM-LITE-1616R – centrálna riadiaca jednotka SMARTBOB pre automatizáciu budov",
+    "description": "The generated-index page description for category 'SM-LITE-1616R' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-PRO-3236D": {
+    "message": "SM-PRO-3236D",
+    "description": "The label for category 'SM-PRO-3236D' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-PRO-3236D.link.generated-index.description": {
+    "message": "Spoznajte SM-PRO-3236D – vlajková 36-kanálová riadiaca jednotka SMARTBOB",
+    "description": "The generated-index page description for category 'SM-PRO-3236D' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-LITE-1624D": {
+    "message": "SM-LITE-1624D",
+    "description": "The label for category 'SM-LITE-1624D' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-LITE-1624D.link.generated-index.description": {
+    "message": "Spoznajte SM-LITE-1624D – 24-kanálová riadiaca jednotka SMARTBOB pre DC/LED PWM",
+    "description": "The generated-index page description for category 'SM-LITE-1624D' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-MINI-0808R": {
+    "message": "SM-MINI-0808R",
+    "description": "The label for category 'SM-MINI-0808R' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-MINI-0808R.link.generated-index.description": {
+    "message": "Spoznajte SM-MINI-0808R – kompaktná 8-kanálová riadiaca jednotka SMARTBOB",
+    "description": "The generated-index page description for category 'SM-MINI-0808R' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-GATE-0202R": {
+    "message": "SM-GATE-0202R",
+    "description": "The label for category 'SM-GATE-0202R' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-GATE-0202R.link.generated-index.description": {
+    "message": "Spoznajte SM-GATE-0202R – 2-kanálová riadiaca jednotka SMARTBOB pre brány a bránky",
+    "description": "The generated-index page description for category 'SM-GATE-0202R' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-EXP-16IN": {
+    "message": "SM-EXP-16IN",
+    "description": "The label for category 'SM-EXP-16IN' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SM-EXP-16IN.link.generated-index.description": {
+    "message": "Spoznajte SM-EXP-16IN – expandér 16 vstupov I2C pre riadiace jednotky SMARTBOB",
+    "description": "The generated-index page description for category 'SM-EXP-16IN' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Platformy": {
+    "message": "Platformy",
+    "description": "The label for category 'Platformy' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Platformy.link.generated-index.description": {
+    "message": "Spoznajte platformy, ktoré SMARTBOB podporuje, a vyberte si tú pravú:",
+    "description": "The generated-index page description for category 'Platformy' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SUPLA": {
+    "message": "SUPLA",
+    "description": "The label for category 'SUPLA' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SUPLA.link.generated-index.description": {
+    "message": "SUPLA – jednoduchá poľská platforma podporovaná mnohými výrobcami, nevyžaduje ďalší server",
+    "description": "The generated-index page description for category 'SUPLA' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.LOXONE": {
+    "message": "LOXONE",
+    "description": "The label for category 'LOXONE' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.LOXONE.link.generated-index.description": {
+    "message": "LOXONE – pokročilá rakúska prémiová platforma s mnohými integráciami, vyžaduje server a školenie",
+    "description": "The generated-index page description for category 'LOXONE' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.HOME ASSISTANT": {
+    "message": "HOME ASSISTANT",
+    "description": "The label for category 'HOME ASSISTANT' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.HOME ASSISTANT.link.generated-index.description": {
+    "message": "HOME ASSISTANT – najznámejšia otvorená platforma na svete, vyžaduje server a zaučenie",
+    "description": "The generated-index page description for category 'HOME ASSISTANT' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.AMPIO": {
+    "message": "AMPIO",
+    "description": "The label for category 'AMPIO' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.AMPIO.link.generated-index.description": {
+    "message": "AMPIO – poľská platforma automatizácie budov založená na zbernici CAN, vyžaduje riadiacu jednotku AMPIO",
+    "description": "The generated-index page description for category 'AMPIO' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Instrukcje i linki": {
+    "message": "Návody a odkazy",
+    "description": "The label for category 'Instrukcje i linki' in sidebar 'tutorialSidebar'"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "logo.alt": {
+    "message": "SmartBob",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Sklep": {
+    "message": "Obchod",
+    "description": "Navbar item with label Sklep"
+  }
+}
