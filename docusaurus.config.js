@@ -25,9 +25,9 @@ const config = {
 
   i18n: {
     defaultLocale: 'pl',
-    locales: ['pl', 'en', 'de', 'cs'],
+    locales: ['pl', 'en', 'de', 'cs', 'sk'],
     localeConfigs: {
-      pl: { label: 'Polski' }, en: { label: 'English' }, de: { label: 'Deutsch' }, cs: { label: 'Čeština' },
+      pl: { label: 'Polski' }, en: { label: 'English' }, de: { label: 'Deutsch' }, cs: { label: 'Čeština' }, sk: { label: 'Slovenčina' },
     },
   },
 
