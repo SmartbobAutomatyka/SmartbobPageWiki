@@ -3,6 +3,8 @@ sidebar_position: 1
 slug: /
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # Willkommen in der SMARTBOB-Dokumentation! 👋
 
 <div style={{display: 'flex', gap: '20px', alignItems: 'center'}}>
@@ -40,6 +42,43 @@ slug: /
 Hier finden Sie Schritt-für-Schritt-Anleitungen, Konfigurationshinweise und Informationen zu den SMARTBOB-Steuerungen und Automationssystemen.
 
 SMARTBOB ist eine Serie universeller Hausautomationssteuerungen für den Einbau in den Verteiler und für Installationen in Sterntopologie – bereit für die Integration mit verschiedenen Smart-Home-Plattformen.
+
+{/* asystent-3d */}
+## Technischer 3D-Assistent
+
+Die SMARTBOB-Steuerungen können Sie direkt im Browser ansehen – ohne Installation. Der **technische 3D-Assistent** zeigt jedes Modell in 3D: Beschreibungen der Anschlüsse und Bauteile beim Überfahren mit der Maus, das Innere und die Platine, Abmessungen, Dokumentation sowie Anschlusssimulationen für Taster, Beleuchtung, Rollläden und Tore.
+
+- 3D-Modell jeder Steuerung mit Beschreibung der Anschlüsse und Bauteile
+- Simulationen „Wie anschließen“ – Eingänge und Ausgänge Schritt für Schritt
+- Modellvergleich und technische Dokumentation zum Herunterladen
+- Verteiler und Gebäude mit Verkabelung (**DEMO**-Version)
+
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '16px', margin: '16px 0'}}>
+  <a href={useBaseUrl('/img/asystent-3d/ctrl.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/ctrl.webp')} alt="Steuerung in 3D" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Steuerung in 3D</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/cab.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/cab.webp')} alt="Verteiler (DEMO)" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Verteiler (DEMO)</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/house3d.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house3d.webp')} alt="Gebäude in 3D (DEMO)" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Gebäude in 3D (DEMO)</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/house2d.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house2d.webp')} alt="2D-Grundriss mit Verkabelung (DEMO)" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>2D-Grundriss mit Verkabelung (DEMO)</div>
+  </a>
+</div>
+
+:::info[DEMO]
+Die Ansichten **Verteiler** und **Gebäude** (Planung des Verteilers und der Gebäudeinstallation) sind vorerst eine Demoversion – wir entwickeln sie weiter.
+:::
+
+**👉 [3D-Assistent öffnen](https://smartbobautomatyka.github.io/SmartBob3D/#lang=de)**
+
+{/* asystent-3d koniec */}
 
 ## Funktionen der Steuerungen
 - Steuerung von AC-Beleuchtung

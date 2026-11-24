@@ -3,6 +3,8 @@ sidebar_position: 1
 slug: /
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # Welcome to the SMARTBOB documentation! 👋
 
 <div style={{display: 'flex', gap: '20px', alignItems: 'center'}}>
@@ -40,6 +42,43 @@ slug: /
 Here you will find step-by-step guides, configuration instructions and information about SMARTBOB controllers and automation systems.
 
 SMARTBOB is a series of universal home automation controllers designed for mounting in a distribution board and for star-topology installations, ready to integrate with various smart home platforms.
+
+{/* asystent-3d */}
+## 3D technical assistant
+
+You can explore SMARTBOB controllers right in your browser – nothing to install. The **3D technical assistant** shows every model in 3D: connector and component descriptions on mouse hover, the inside and the bare PCB, dimensions, documentation and wiring simulations for buttons, lighting, roller blinds and gates.
+
+- 3D model of every controller with connector and component descriptions
+- “How to connect” simulations – inputs and outputs step by step
+- model comparison and downloadable technical documentation
+- distribution board and building with wiring (**DEMO** version)
+
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '16px', margin: '16px 0'}}>
+  <a href={useBaseUrl('/img/asystent-3d/ctrl.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/ctrl.webp')} alt="Controller in 3D" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Controller in 3D</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/cab.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/cab.webp')} alt="Distribution board (DEMO)" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Distribution board (DEMO)</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/house3d.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house3d.webp')} alt="Building in 3D (DEMO)" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Building in 3D (DEMO)</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/house2d.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house2d.webp')} alt="2D floor plan with wiring (DEMO)" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>2D floor plan with wiring (DEMO)</div>
+  </a>
+</div>
+
+:::info[DEMO]
+The **Distribution board** and **Building** views (board and building installation design) are a demo version for now – we are developing them.
+:::
+
+**👉 [Open the 3D assistant](https://smartbobautomatyka.github.io/SmartBob3D/#lang=en)**
+
+{/* asystent-3d koniec */}
 
 ## Controller functions
 - AC lighting control

@@ -3,6 +3,8 @@ sidebar_position: 1
 slug: /
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # Vitajte v dokumentácii SMARTBOB! 👋
 
 <div style={{display: 'flex', gap: '20px', alignItems: 'center'}}>
@@ -40,6 +42,43 @@ slug: /
 Nájdete tu návody krok za krokom, pokyny na konfiguráciu a informácie o riadiacich jednotkách a automatizačných systémoch SMARTBOB.
 
 SMARTBOB je rad univerzálnych riadiacich jednotiek domácej automatizácie určených na montáž do rozvádzača a pre inštalácie v topológii hviezdy, pripravených na integráciu s rôznymi platformami inteligentnej domácnosti.
+
+{/* asystent-3d */}
+## Technický 3D asistent
+
+Riadiace jednotky SMARTBOB si môžete pozrieť priamo v prehliadači – bez inštalácie. **Technický 3D asistent** zobrazuje každý model v 3D: popisy konektorov a súčiastok po prejdení myšou, pohľad dovnútra aj na samotnú dosku, rozmery, dokumentáciu a simulácie zapojenia tlačidiel, osvetlenia, roliet a brány.
+
+- 3D model každej riadiacej jednotky s popisom konektorov a súčiastok
+- simulácie „ako zapojiť“ – vstupy a výstupy krok za krokom
+- porovnanie modelov a technická dokumentácia na stiahnutie
+- rozvádzač a budova s kabelážou (verzia **DEMO**)
+
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '16px', margin: '16px 0'}}>
+  <a href={useBaseUrl('/img/asystent-3d/ctrl.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/ctrl.webp')} alt="Riadiaca jednotka v 3D" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Riadiaca jednotka v 3D</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/cab.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/cab.webp')} alt="Rozvádzač (DEMO)" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Rozvádzač (DEMO)</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/house3d.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house3d.webp')} alt="Budova v 3D (DEMO)" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Budova v 3D (DEMO)</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/house2d.webp')} target="_blank" style={{flex: '1 1 300px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house2d.webp')} alt="2D pôdorys s kabelážou (DEMO)" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>2D pôdorys s kabelážou (DEMO)</div>
+  </a>
+</div>
+
+:::info[DEMO]
+Pohľady **Rozvádzač** a **Budova** (návrh rozvádzača a inštalácie v budove) sú zatiaľ demoverzia – ďalej ich vyvíjame.
+:::
+
+**👉 [Otvoriť 3D asistenta](https://smartbobautomatyka.github.io/SmartBob3D/#lang=sk)**
+
+{/* asystent-3d koniec */}
 
 ## Funkcie riadiacich jednotiek
 - ovládanie osvetlenia AC
