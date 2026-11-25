@@ -1,0 +1,124 @@
+---
+sidebar_position: 1
+title: Technický popis a specifikace
+sidebar_label: Technický popis a specifikace
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Řídicí jednotka SM-GATE-0202R
+
+SM-GATE-0202R je malá řídicí jednotka pro bránu a branku: 2 relé 10 A, 2 plně izolované vstupy a volitelný přijímač ovladačů MOBILUS 868 MHz – ve 4 modulech DIN.
+
+👉 <a href="https://smartbob.pl/produkt/sm-gate-0202r-z-opcja-radio-mobilus/" target="_blank">Řídicí jednotku koupíte zde</a>
+
+---
+## Vzhled řídicí jednotky
+
+<img src={useBaseUrl('/img/SM-GATE-0202R/render/wyglad.webp?v=mwwgzgcd')} alt="SM-GATE-0202R" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+
+Napájet ji můžete z 24 V AC nebo DC, i ze zdroje v pohonu brány, a izolované vstupy bezpečně přečtou koncové spínače, fotobuňky a stav brány.
+
+Otevírejte bránu z aplikace, dálkovým ovladačem nebo automaticky – jednotka pracuje samostatně nebo jako součást větší instalace SMARTBOB.
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-GATE-0202R/render/wymiary-cs.svg?v=mwwgzgcd')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+---
+## Klíčové vlastnosti
+
+- 2 plně izolované vstupy AC/DC (optočleny) – např. signál z pohonu brány, koncové spínače, fotobuňky
+- 2 kanály ADC do 24 V
+- 2 nezávislá relé 10 A, bezpotenciálové kontakty – mj. signál otevření brány
+- Komunikace LAN nebo Wi-Fi
+- Displej OLED 0,96"
+- Volitelný rádiový modul MOBILUS 868 MHz – dálkové ovladače brán
+- Napájení 24 V AC/DC (libovolná polarita)
+
+K montáži do rozvaděče nebo do skříňky u brány – ovládá bránu, branku nebo jiný obvod samostatně nebo jako rozšíření instalace.
+
+---
+## Použití
+
+- Vjezdové brány, branky a garážová vrata
+- Ovladače MOBILUS 868 MHz (verze s rádiovým modulem)
+- Malé samostatné ovládací body ve větší instalaci
+- Koncové spínače, jazýčkové kontakty a fotobuňky v alarmu a automatizaci
+- Scény a harmonogramy
+- Integrace chytré domácnosti (SUPLA, Home Assistant, LOXONE)
+
+---
+## Periferie
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-GATE-0202R/render/peryferia-cs.svg?v=mwwgzgcd')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+1. **Reléové výstupy** – Reléové výstupy pro ovládání osvětlení, rolet, zařízení a obvodů AC/DC.
+2. **Vstupy AC/DC (izolované)** – Dva izolované vstupy – signál AC nebo DC z pohonu brány, koncových spínačů nebo fotobuněk.
+3. **Napájecí konektor (24 V AC/DC)** – Napájení 24 V AC nebo DC – libovolná polarita (můstkový usměrňovač).
+4. **Kanály ADC** – Analogové vstupy – měření napětí a analogové senzory (např. 0–10 V).
+5. **Rozhraní RS485** – Komunikace Modbus RS485 s externími zařízeními.
+6. **Port Ethernet (RJ45)** – Připojení k síti LAN.
+7. **Univerzální vstupy a rozšiřující rozhraní** – Konektory I2C, 1-Wire a dalších sběrnic.
+8. **Konektor USB-C** – Programování, konfigurace a servis.
+9. **Rádiový modul MOBILUS 868 MHz** – Volitelný přijímač dálkových ovladačů brán MOBILUS.
+10. **Displej OLED** – Stavový displej, viditelný přes kryt.
+11. **LED indikátory** – Stavové LED vstupů, výstupů a provozu – viditelné přes kryt.
+
+---
+## Technická specifikace
+
+| Parametr | Hodnota |
+|---|---|
+| Vstupy | 2 (AC/DC, izolované) |
+| Výstupy | 2 × relé 10 A |
+| Typ výstupů | AC / DC (bezpotenciálové) |
+| Analogové vstupy | 2 (do 24 V) |
+| Komunikace | LAN, Wi-Fi, RS485, 1-Wire, I2C ×2 (volit. rádio 868 MHz) |
+| Kryt | 70 × 91 × 59 mm (s konektory: 70 × 115 × 59 mm) |
+
+---
+## Parametry napájení
+
+| Parametr | Hodnota |
+|---|---|
+| Napájecí napětí | 24 V AC/DC (20–30 V) |
+| Odběr proudu (max.) | 0,15 A (3,6 W) |
+| Napájecí vodič | LgY 1 mm² |
+
+:::tip
+Několik řídicích jednotek SMARTBOB v jedné instalaci může sdílet jeden zdroj s dostatečným proudem, doporučuje se však samostatný zdroj.
+:::
+
+---
+## Software
+
+Řídicí jednotka SMARTBOB je univerzální platforma – nainstalovaný software je uveden na obalu, na krytu nebo v objednávce.
+
+- [SUPLA](/platformy/SUPLA/Poznaj%20SUPLA)
+- [Home Assistant (ESPHome)](/platformy/HOME%20ASSISTANT/Poznaj%20HOME%20ASSISTANT)
+- [LOXONE](/platformy/LOXONE/Poznaj%20LOXONE)
+- [AMPIO](/platformy/AMPIO/Poznaj%20AMPIO)
+- MQTT
+- Systémy založené na ESP32
+
+Konfigurace závisí na zvolené platformě.
+
+První spuštění a konfigurace na zvolené platformě (SUPLA, Home Assistant, LOXONE, AMPIO): [První spuštění](/produkty/SM-GATE-0202R/Pierwsze%20uruchomienie)
+
+---
+## Bezpečnost používání
+
+Před montáží se ujistěte, že vodiče nejsou pod napětím. Montáž smí provádět pouze osoba s oprávněním v souladu s platnými normami. Nepoužívejte řídicí jednotku bez krytu ani s poškozeným krytem. Nepřekračujte provozní parametry – zejména zatížení relé. Některé platformy vyžadují externí server, cloud nebo další software.
+
+---
+## EU prohlášení o shodě (CE)
+
+Řídicí jednotka splňuje požadavky směrnic EU. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">Stáhnout EU prohlášení o shodě (PDF)</a>
+
+---
+## Co dál?
+
+Podrobnosti o zapojení a konfiguraci najdete na dalších stránkách dokumentace: [Návody a odkazy](/Instrukcje%20i%20linki/Linki%20i%20pliki).

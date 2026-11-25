@@ -1,0 +1,100 @@
+---
+sidebar_position: 3
+sidebar_label: Zapojenie vstupov
+title: Zapojenie vstupov
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Úvod
+Návod na pripojenie tlačidiel, vypínačov, snímačov a ďalších prvkov k riadiacim vstupom riadiacej jednotky
+
+---
+## Pripojenie tlačidla a režim činnosti
+Riadiaca jednotka SMARTBOB má 16 základných riadiacich vstupov vyvedených na dvoch zelených 8-pinových konektoroch.
+
+Pri každej riadiacej jednotke SMARTBOB je možné riadiaci vstup aktivovať privedením potenciálu:
+- GND/MÍNUS
+- VCC/24V DC
+
+Podľa verzie zariadenia sa konfigurácia vykonáva:
+- prepojkou na doske plošných spojov
+- alebo programovo v softvéri (novšie modely)
+
+:::tip
+Technicky je možná aj reakcia na obe hrany, tento režim sa však v štandardných inštaláciách neodporúča
+pre dvakrát vyššiu citlivosť na rušenie.
+:::
+
+### Režim ovládania GND/MÍNUS
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-minus-sk.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-minus-sk.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+### Režim ovládania VCC/24V DC
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-plus-sk.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-plus-sk.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+Najčastejším spôsobom pripojenia je ovládanie vstupu skratovaním na GND (alebo druhá možnosť plus 24V).
+- Jeden vodič tlačidla pripojte k zbernici GND (alebo druhá možnosť plus 24V),
+- druhý vodič k zvolenému vstupu riadiacej jednotky (napr. IN01).
+
+Stlačenie tlačidla skratuje vstup na zem (alebo druhá možnosť na plus 24V), čo sa vyhodnotí ako aktivácia vstupu.
+Pri aktivácii sa na riadiacej jednotke rozsvieti LED daného vstupu.
+
+### Tieto vstupy slúžia na pripojenie:
+- tlačidiel,
+- vypínačov,
+- jazýčkových kontaktov,
+- snímačov (napr. pohybu, alarmu),
+- relé,
+- a ďalších zariadení generujúcich riadiaci signál.
+
+### Typ spínacieho prvku:
+- mechanický kontakt,
+- tranzistorový/reléový signálový výstup, napr. výstup OTVORENÝ KOLEKTOR, OTVORENÝ EMITOR,
+- alebo elektronický obvod spínajúci signál na **GND** alebo **VCC**.
+
+Vďaka tomu je možné pripojiť mnoho rôznych typov ovládacích zariadení a snímačov.
+
+:::tip
+Riadiaca jednotka má aj ďalšie piny a rozhrania, ktoré môžu podľa konfigurácie slúžiť ako vstupy.
+Táto kapitola opisuje základné riadiace vstupy na zelených 8-pinových konektoroch.
+:::
+
+---
+
+## Pripojenie snímačov pohybu / požiaru a pod.
+
+K vstupom je možné pripojiť aj snímače s reléovým alebo tranzistorovým výstupom.
+### Ovládanie na **GND** (základná konfigurácia)
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-czujki-sk.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-czujki-sk.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+### Informácie o snímačoch
+- Snímač vyžaduje externé napájanie
+- Napájanie snímača môže mať iné napätie ako riadiaca jednotka, napr. snímač napájaný 12V a riadiaca jednotka 24V.
+Ak má snímač iný výstup ako relé alebo mechanický kontakt, napr. digitálny výstup, je potrebné prepojiť
+GND zdroja riadiacej jednotky s GND zdroja snímača
+- Vstupy SMARTBOB slúžia výhradne na detekciu riadiaceho signálu
+- Spôsob napájania snímačov závisí od ich modelu a výrobcu
+
+Pri typických alarmových snímačoch sa najčastejšie používa:
+- režim **NO** (Normally Open, spínací),
+- alebo **NC** (Normally Closed, rozpínací).
+
+Riadiaca jednotka SMARTBOB štandardne spolupracuje so snímačmi:
+- bez parametrizačných rezistorov,
+- bez konfigurácie EOL / 2EOL.
+
+Najčastejšie sa používa výstup snímača označený ako:
+- **ALARM**,
+- **OUT**,
+- alebo kontakt alarmového relé.
+
+Na overenie kompatibility snímača sa uistite, že jeho pracovný kontakt alebo výstup:
+- môže pracovať s napätím 24V DC (veľká časť snímačov pripúšťa 30–60V DC)
+- umožňuje prechod prúdu aspoň 3 mA (veľká časť snímačov pripúšťa 10–30 mA).
+
+:::tip
+Pri tranzistorových výstupoch ďalej overte, či typ výstupu (PNP/NPN/OC) zodpovedá konfigurácii vstupu riadiacej jednotky.
+:::

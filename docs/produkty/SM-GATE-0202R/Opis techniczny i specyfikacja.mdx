@@ -2,47 +2,121 @@
 sidebar_position: 1
 ---
 
-## Sterownik SM-GATE-0202R
-Uniwersalny, 2-kanałowy sterownik automatyki domowej przeznaczony przede wszystkim do sterowania bramami oraz
-obwodami AC/DC. Sterownik oparty o ESP32 posiada w pełni izolowane wejścia cyfrowe, wyjścia przekaźnikowe oraz
-opcjonalny moduł radiowy MOBILUS 868MHz. Współpracuje z Home Assistant, SUPLA oraz LOXONE.
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-👉 Sterownik kupisz tutaj:
-<a href="https://smartbob.pl/produkt/sm-gate-0202r-z-opcja-radio-mobilus/" target="_blank">SM-GATE-0202R</a>
+## Sterownik SM-GATE-0202R
+
+SM-GATE-0202R to mały sterownik do bramy i furtki: 2 przekaźniki 10 A, 2 w pełni izolowane wejścia i opcjonalny odbiornik pilotów MOBILUS 868 MHz – w 4 modułach DIN.
+
+👉 <a href="https://smartbob.pl/produkt/sm-gate-0202r-z-opcja-radio-mobilus/" target="_blank">Sterownik kupisz tutaj</a>
 
 ---
 ## Wygląd sterownika
-<a href="https://smartbob.pl/wp-content/uploads/2026/06/SM-GATE-0202R.png" target="_blank">
- <img src="https://smartbob.pl/wp-content/uploads/2026/06/SM-GATE-0202R.png" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
 
-SM-GATE-0202R to sterownik oparty o mikrokontroler ESP32, zaprojektowany przede wszystkim do sterowania
-bramami i furtkami oraz jako niewielkie, niezależne uzupełnienie większej instalacji SMARTBOB. Urządzenie
-dostępne jest opcjonalnie z modułem radiowym MOBILUS 868MHz.
+<img src={useBaseUrl('/img/SM-GATE-0202R/render/wyglad.webp?v=mwwgzg2y')} alt="SM-GATE-0202R" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
 
+Zasilisz go z 24 V AC albo DC, nawet z zasilacza w napędzie bramy, a izolowane wejścia bezpiecznie odczytają krańcówki, fotokomórki i stan bramy.
+
+Otwieraj bramę z aplikacji, z pilota albo automatycznie – sterownik pracuje samodzielnie lub jako część większej instalacji SMARTBOB.
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-GATE-0202R/render/wymiary-pl.svg?v=mwwgzg2y')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+---
 ## Kluczowe cechy
-- 2 w pełni izolowane wejścia sterujące – logika 24V (sygnał GND lub VCC), do odczytu stanu klawiszy, przełączników, czujników alarmowych itp.
-- Kanały pomiaru napięcia ADC do 24V – np. do czujników 0–10V lub jako dodatkowe wejścia sterujące
-- 2 niezależne przekaźniki 10A – bezpotencjałowe, do sterowania AC i DC, m.in. sygnałem otwarcia bramy
-- Komunikacja LAN lub Wi-Fi – elastyczna integracja systemowa
-- Zintegrowany wyświetlacz OLED 0.96” – podgląd statusu urządzenia w czasie rzeczywistym
-- Wbudowany czujnik temperatury TMP102 – sprzętowa ochrona termiczna
-- Opcjonalny moduł radiowy MOBILUS 868MHz – odbiór sygnału z pilotów bramowych
-- Zasilanie 24V DC (max 0.25A) – stabilna i energooszczędna praca
 
-Urządzenie przeznaczone jest do montażu w rozdzielnicy i umożliwia sterowanie bramą, furtką lub innym
-pojedynczym obwodem wykonawczym niezależnie od reszty instalacji lub jako jej rozszerzenie.
+- 2 w pełni izolowane wejścia AC/DC (transoptory) – np. sygnał z napędu bramy, krańcówki, fotokomórki
+- 2 kanały ADC do 24 V
+- 2 niezależne przekaźniki 10 A, styki bezpotencjałowe – m.in. sygnał otwarcia bramy
+- Komunikacja LAN lub Wi-Fi
+- Wyświetlacz OLED 0,96"
+- Opcjonalny moduł radiowy MOBILUS 868 MHz – piloty bramowe
+- Zasilanie 24 V AC/DC (dowolna polaryzacja)
 
+Sterownik do montażu w rozdzielnicy albo w skrzynce przy bramie – steruje bramą, furtką lub innym obwodem niezależnie od reszty instalacji albo jako jej rozszerzenie.
+
+---
 ## Zastosowania
-- Sterowanie bramami wjazdowymi, furtkami oraz drzwiami garażowymi
-- Odbiór sygnału z pilotów MOBILUS 868MHz (wersja z modułem radiowym)
-- Niewielkie, niezależne punkty sterowania jako uzupełnienie większej instalacji SMARTBOB
-- Integracja z systemami alarmowymi poprzez odczyt sygnałów z czujników krańcowych, kontaktronów czy fotokomórek
-- Tworzenie scenariuszy automatyki w oparciu o czujniki, harmonogramy oraz logikę systemową
-- Integracja z systemami smart home i platformami automatyki, takimi jak SUPLA, Home Assistant czy LOXONE
+
+- Bramy wjazdowe, furtki i bramy garażowe
+- Piloty MOBILUS 868 MHz (wersja z modułem radiowym)
+- Małe, niezależne punkty sterowania w większej instalacji
+- Krańcówki, kontaktrony i fotokomórki w alarmie i automatyce
+- Scenariusze i harmonogramy
+- Integracja smart home (SUPLA, Home Assistant, LOXONE)
 
 ---
 ## Peryferia
 
-:::info
-Szczegółowa dokumentacja techniczna, specyfikacja, opis peryferii oraz instrukcje podłączenia dla tego sterownika są w przygotowaniu.
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-GATE-0202R/render/peryferia-pl.svg?v=mwwgzg2y')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+1. **Wyjścia przekaźnikowe** – Wyjścia przekaźnikowe do sterowania oświetleniem, roletami, urządzeniami i obwodami AC/DC.
+2. **Wejścia AC/DC (izolowane)** – Dwa izolowane wejścia – sygnał AC lub DC z napędu bramy, krańcówek lub fotokomórek.
+3. **Złącze zasilania (24 V AC/DC)** – Zasilanie 24 V AC lub DC – dowolna polaryzacja (mostek prostowniczy).
+4. **Kanały ADC** – Wejścia analogowe – pomiar napięcia i czujniki analogowe (np. 0–10 V).
+5. **Interfejs RS485** – Komunikacja Modbus RS485 z urządzeniami zewnętrznymi.
+6. **Port Ethernet (RJ45)** – Połączenie z siecią LAN.
+7. **Wejścia uniwersalne i interfejsy rozszerzeń** – Złącza I2C, 1-Wire i innych magistral.
+8. **Złącze USB-C** – Programowanie, konfiguracja i serwis.
+9. **Moduł radiowy MOBILUS 868 MHz** – Opcjonalny odbiornik pilotów bramowych MOBILUS.
+10. **Ekran OLED** – Wyświetlacz stanu, widoczny przez obudowę.
+11. **Wskaźniki LED** – Diody stanu wejść, wyjść i pracy – widoczne przez obudowę.
+
+---
+## Specyfikacja Techniczna
+
+| Parametr | Wartość |
+|---|---|
+| Wejścia | 2 (AC/DC, izolowane) |
+| Wyjścia | 2 × przekaźnik 10 A |
+| Rodzaj wyjść | AC / DC (bezpotencjałowe) |
+| Wejścia analogowe | 2 (do 24 V) |
+| Komunikacja | LAN, Wi-Fi, RS485, 1-Wire, I2C ×2 (opc. radio 868 MHz) |
+| Obudowa | 70 × 91 × 59 mm (z konektorami: 70 × 115 × 59 mm) |
+
+---
+## Parametry zasilania
+
+| Parametr | Wartość |
+|---|---|
+| Napięcie zasilania | 24 V AC/DC (20–30 V) |
+| Pobór prądu (maks.) | 0,15 A (3,6 W) |
+| Przewód zasilający | LgY 1 mm² |
+
+:::tip
+Kilka sterowników SMARTBOB w jednej instalacji może korzystać z jednego zasilacza o odpowiedniej wydajności prądowej, ale zalecany jest osobny zasilacz.
 :::
+
+---
+## Oprogramowanie
+
+Sterownik SMARTBOB to uniwersalna platforma – zainstalowane oprogramowanie jest podane na opakowaniu, na obudowie albo przy zamówieniu.
+
+- [SUPLA](/platformy/SUPLA/Poznaj%20SUPLA)
+- [Home Assistant (ESPHome)](/platformy/HOME%20ASSISTANT/Poznaj%20HOME%20ASSISTANT)
+- [LOXONE](/platformy/LOXONE/Poznaj%20LOXONE)
+- [AMPIO](/platformy/AMPIO/Poznaj%20AMPIO)
+- MQTT
+- Systemy oparte o ESP32
+
+Konfiguracja zależy od wybranego środowiska.
+
+Pierwsze uruchomienie i konfiguracja na wybranej platformie (SUPLA, Home Assistant, LOXONE, AMPIO): [Pierwsze uruchomienie](/produkty/SM-GATE-0202R/Pierwsze%20uruchomienie)
+
+---
+## Bezpieczeństwo użytkowania
+
+Przed montażem upewnij się, że przewody nie są pod napięciem. Montaż powinna wykonywać wyłącznie osoba z uprawnieniami, zgodnie z obowiązującymi normami. Nie używaj sterownika bez obudowy ani z uszkodzoną obudową. Nie przekraczaj parametrów pracy – zwłaszcza obciążenia przekaźników. Niektóre platformy wymagają zewnętrznego serwera, chmury lub dodatkowego oprogramowania.
+
+---
+## Deklaracja zgodności UE (CE)
+
+Sterownik spełnia wymagania dyrektyw UE. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">Pobierz deklarację zgodności UE (PDF)</a>
+
+---
+## Co dalej?
+
+Szczegóły podłączenia i konfiguracji znajdziesz na kolejnych stronach dokumentacji: [Instrukcje i linki](/Instrukcje%20i%20linki/Linki%20i%20pliki).

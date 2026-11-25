@@ -1,0 +1,100 @@
+---
+sidebar_position: 3
+sidebar_label: Anschluss der Eingänge
+title: Anschluss der Eingänge
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Einführung
+Anleitung zum Anschluss von Tastern, Schaltern, Sensoren und anderen Elementen an die Steuereingänge der Steuerung
+
+---
+## Anschluss eines Tasters und Betriebsart
+Die SMARTBOB-Steuerung hat 16 Grund-Steuereingänge auf zwei grünen 8-poligen Steckklemmen.
+
+Bei jeder SMARTBOB-Steuerung kann ein Steuereingang durch Anlegen eines Potentials ausgelöst werden:
+- GND/MINUS
+- VCC/24V DC
+
+Je nach Geräteversion erfolgt die Konfiguration:
+- mit einer Steckbrücke auf der Platine
+- oder per Software (neuere Modelle)
+
+:::tip
+Technisch ist auch eine Reaktion auf beide Flanken möglich, dieser Modus wird in Standardinstallationen jedoch nicht empfohlen,
+da er doppelt so störempfindlich ist.
+:::
+
+### Ansteuerung mit GND/MINUS
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-minus-de.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-minus-de.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+### Ansteuerung mit VCC/24V DC
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-plus-de.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-plus-de.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+Am häufigsten wird der Eingang durch Kurzschluss nach GND angesteuert (oder als zweite Option mit Plus 24V).
+- Eine Leitung des Tasters wird an die GND-Schiene angeschlossen (oder als zweite Option an Plus 24V),
+- die zweite Leitung an den gewählten Eingang der Steuerung (z. B. IN01).
+
+Das Drücken des Tasters schließt den Eingang nach Masse kurz (oder als zweite Option nach Plus 24V), was als Aktivierung des Eingangs erkannt wird.
+Bei Aktivierung leuchtet an der Steuerung die LED des jeweiligen Eingangs.
+
+### Diese Eingänge dienen zum Anschluss von:
+- Tastern,
+- Schaltern,
+- Reedkontakten,
+- Sensoren (z. B. Bewegung, Alarm),
+- Relais,
+- und anderen Geräten, die ein Steuersignal erzeugen.
+
+### Art des schließenden Elements:
+- mechanischer Kontakt,
+- Transistor-/Relais-Signalausgang, z. B. OPEN-COLLECTOR- oder OPEN-EMITTER-Ausgang,
+- oder eine elektronische Schaltung, die das Signal nach **GND** oder **VCC** schaltet.
+
+So lassen sich viele verschiedene Arten von Steuergeräten und Sensoren anschließen.
+
+:::tip
+Die Steuerung hat außerdem zusätzliche Pins und Schnittstellen, die je nach Konfiguration als Eingänge dienen können.
+Dieses Kapitel beschreibt die Grund-Steuereingänge auf den grünen 8-poligen Klemmen.
+:::
+
+---
+
+## Anschluss von Bewegungs-, Brandmeldern usw.
+
+An die Eingänge können auch Sensoren mit Relais- oder Transistorausgang angeschlossen werden.
+### Ansteuerung nach **GND** (Grundkonfiguration)
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-czujki-de.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-czujki-de.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+### Hinweise zu Sensoren
+- Der Sensor benötigt eine externe Stromversorgung
+- Die Versorgung des Sensors kann eine andere Spannung als die Steuerung haben, z. B. Sensor mit 12V und Steuerung mit 24V.
+Hat der Sensor einen anderen Ausgang als ein Relais oder einen mechanischen Kontakt, z. B. einen Digitalausgang, muss GND
+des Steuerungsnetzteils mit GND des Sensornetzteils verbunden werden
+- Die SMARTBOB-Eingänge dienen ausschließlich zur Erkennung des Steuersignals
+- Die Art der Sensorversorgung hängt vom Modell und Hersteller ab
+
+Bei typischen Alarmmeldern wird am häufigsten verwendet:
+- Betriebsart **NO** (Normally Open, Schließer),
+- oder **NC** (Normally Closed, Öffner).
+
+Die SMARTBOB-Steuerung arbeitet standardmäßig mit Sensoren:
+- ohne Abschlusswiderstände,
+- ohne EOL- / 2EOL-Konfiguration.
+
+Meist wird der Sensorausgang mit folgender Bezeichnung verwendet:
+- **ALARM**,
+- **OUT**,
+- oder der Kontakt des Alarmrelais.
+
+Um die Kompatibilität eines Sensors zu prüfen, stellen Sie sicher, dass sein Arbeitskontakt oder Ausgang:
+- mit 24V DC arbeiten kann (viele Sensoren erlauben 30–60V DC)
+- einen Strom von mindestens 3 mA zulässt (viele Sensoren erlauben 10–30 mA).
+
+:::tip
+Bei Transistorausgängen zusätzlich prüfen, ob der Ausgangstyp (PNP/NPN/OC) zur Konfiguration des Steuerungseingangs passt.
+:::

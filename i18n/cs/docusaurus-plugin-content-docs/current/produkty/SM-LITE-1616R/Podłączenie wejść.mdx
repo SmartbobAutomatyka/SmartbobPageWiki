@@ -1,0 +1,100 @@
+---
+sidebar_position: 3
+sidebar_label: Zapojení vstupů
+title: Zapojení vstupů
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Úvod
+Návod k připojení tlačítek, vypínačů, čidel a dalších prvků k řídicím vstupům řídicí jednotky
+
+---
+## Připojení tlačítka a režim činnosti
+Řídicí jednotka SMARTBOB má 16 základních řídicích vstupů vyvedených na dvou zelených 8pinových konektorech.
+
+U každé řídicí jednotky SMARTBOB lze řídicí vstup aktivovat přivedením potenciálu:
+- GND/MINUS
+- VCC/24V DC
+
+Podle verze zařízení se konfigurace provádí:
+- propojkou na desce plošných spojů
+- nebo programově v softwaru (novější modely)
+
+:::tip
+Technicky je možná i reakce na obě hrany, tento režim se však ve standardních instalacích nedoporučuje
+kvůli dvakrát vyšší citlivosti na rušení.
+:::
+
+### Režim ovládání GND/MINUS
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-minus-cs.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-minus-cs.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+### Režim ovládání VCC/24V DC
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-plus-cs.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-plus-cs.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+Nejčastějším způsobem připojení je ovládání vstupu zkratováním na GND (nebo druhá možnost plus 24V).
+- Jeden vodič tlačítka připojte ke sběrnici GND (nebo druhá možnost plus 24V),
+- druhý vodič ke zvolenému vstupu řídicí jednotky (např. IN01).
+
+Stisk tlačítka zkratuje vstup na zem (nebo druhá možnost na plus 24V), což se vyhodnotí jako aktivace vstupu.
+Při aktivaci se na řídicí jednotce rozsvítí LED daného vstupu.
+
+### Tyto vstupy slouží k připojení:
+- tlačítek,
+- vypínačů,
+- jazýčkových kontaktů,
+- čidel (např. pohybu, alarmu),
+- relé,
+- a dalších zařízení generujících řídicí signál.
+
+### Typ spínacího prvku:
+- mechanický kontakt,
+- tranzistorový/reléový signálový výstup, např. výstup OTEVŘENÝ KOLEKTOR, OTEVŘENÝ EMITOR,
+- nebo elektronický obvod spínající signál na **GND** nebo **VCC**.
+
+Díky tomu lze připojit mnoho různých typů ovládacích zařízení a čidel.
+
+:::tip
+Řídicí jednotka má také další piny a rozhraní, které mohou podle konfigurace sloužit jako vstupy.
+Tato kapitola popisuje základní řídicí vstupy na zelených 8pinových konektorech.
+:::
+
+---
+
+## Připojení čidel pohybu / požáru apod.
+
+Ke vstupům lze připojit i čidla s reléovým nebo tranzistorovým výstupem.
+### Ovládání na **GND** (základní konfigurace)
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-czujki-cs.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-czujki-cs.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+### Informace o čidlech
+- Čidlo vyžaduje externí napájení
+- Napájení čidla může mít jiné napětí než řídicí jednotka, např. čidlo napájené 12V a řídicí jednotka 24V.
+Pokud má čidlo jiný výstup než relé nebo mechanický kontakt, např. digitální výstup, je nutné propojit
+GND zdroje řídicí jednotky s GND zdroje čidla
+- Vstupy SMARTBOB slouží výhradně k detekci řídicího signálu
+- Způsob napájení čidel závisí na jejich modelu a výrobci
+
+U typických alarmových čidel se nejčastěji používá:
+- režim **NO** (Normally Open, spínací),
+- nebo **NC** (Normally Closed, rozpínací).
+
+Řídicí jednotka SMARTBOB standardně spolupracuje s čidly:
+- bez parametrizačních rezistorů,
+- bez konfigurace EOL / 2EOL.
+
+Nejčastěji se používá výstup čidla označený jako:
+- **ALARM**,
+- **OUT**,
+- nebo kontakt alarmového relé.
+
+Pro ověření kompatibility čidla se ujistěte, že jeho pracovní kontakt nebo výstup:
+- může pracovat s napětím 24V DC (velká část čidel připouští 30–60V DC)
+- umožňuje průchod proudu alespoň 3 mA (velká část čidel připouští 10–30 mA).
+
+:::tip
+U tranzistorových výstupů dále ověřte, zda typ výstupu (PNP/NPN/OC) odpovídá konfiguraci vstupu řídicí jednotky.
+:::

@@ -1,0 +1,72 @@
+---
+sidebar_position: 4
+sidebar_label: Zapojení výstupů
+title: Zapojení výstupů
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Zapojení výstupů
+
+Návod k připojení osvětlení, rolet, řídicích signálů a dalších spotřebičů pomocí reléových
+výstupů řídicí jednotky.
+
+---
+## Reléové výstupy
+
+Řídicí jednotka SMARTBOB 1616R má 16 reléových výstupů vyvedených na 8 zelených 5pinových konektorech.
+Výstupy jsou rozděleny do párů po 2 relé.
+
+Parametry jednoho relé:
+
+| Parametr | Hodnota |
+|----------|----------|
+| Typ výstupu | Bezpotenciálový |
+| Maximální napětí AC | 230V AC |
+| Maximální napětí DC | 30V DC |
+| Maximální proud | 10A |
+| Typ kontaktu | NO nebo NO/NC |
+
+Díky tomu je možné jak běžné spínání spotřebičů, tak realizace složitějších
+řídicích obvodů vyžadujících přepínací kontakt, např. ovládání rolet (s ochranou proti současnému
+sepnutí obou směrů motoru).
+
+---
+## Připojení obvodů:
+
+### Konfigurace ovládání osvětlení
+Příklad konfigurace osvětlení:
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-swiatlo-cs.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-swiatlo-cs.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+### Konfigurace ovládání rolety
+Příklad konfigurace rolety:
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-roleta-cs.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-roleta-cs.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+:::tip
+Pro blokaci rolety nasaďte propojku mezi výstupy COM a NC
+:::
+
+### Příklad konfigurace signálu pro bránu
+Příklad konfigurace signálu pro ovládání brány:
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-brama-cs.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-brama-cs.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+:::tip
+Každý výstup může pracovat zcela nezávisle a spínat jiné napětí nebo obvod.
+Příklad konfigurace:
+- Relé 1 → Fáze 1 — osvětlení
+- Relé 2 → Fáze 2 — osvětlení
+- Relé 3 → Fáze 3 — osvětlení
+- Relé 4 + Relé 5 → Ovládání rolety nahoru/dolů
+- Relé 6 → Signál pro ovládání brány
+- Relé 7 → Elektromagnetický ventil 24V AC
+- Relé 8 → Cívka stykače 12V DC
+
+Díky bezpotenciálovým relé lze současně spínat:
+- obvody 24/230V AC,
+- 5/12/24V DC,
+- logické signály,
+- vstupy jiných řídicích jednotek a zařízení automatizace.
+:::

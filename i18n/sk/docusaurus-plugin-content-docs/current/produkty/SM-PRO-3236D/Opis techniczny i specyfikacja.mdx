@@ -1,0 +1,126 @@
+---
+sidebar_position: 1
+title: Technický popis a špecifikácia
+sidebar_label: Technický popis a špecifikácia
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Riadiaca jednotka SM-PRO-3236D
+
+SM-PRO-3236D je vlajková loď SMARTBOB: 32 vstupov a 36 tranzistorových výstupov s PWM v jednom module 12 DIN – pre veľké domy, kancelárie a objekty s naozaj veľkým množstvom LED osvetlenia a spotrebičov DC.
+
+👉 <a href="https://smartbob.pl/produkt/sm-pro-3236d/" target="_blank">Riadiacu jednotku kúpite tu</a>
+
+---
+## Vzhľad riadiacej jednotky
+
+<img src={useBaseUrl('/img/SM-PRO-3236D/render/wyglad.webp?v=mwwgzfzz')} alt="SM-PRO-3236D" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+
+Každý výstup N-MOSFET dáva až 7 A s plynulým stmievaním – LED pásy, ventilátory, motory DC, ventily a externé relé ovládate z jedného miesta.
+
+ESP32, LAN a Wi-Fi, RS485, I2C, 1-Wire a hodiny reálneho času – pripravená na zložité scenáre a integráciu s Home Assistant, SUPLA, LOXONE, AMPIO a HOMEY.
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-PRO-3236D/render/wymiary-sk.svg?v=mwwgzfzz')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+---
+## Kľúčové vlastnosti
+
+- 32 ovládacích vstupov 24 V (signál GND alebo VCC) – tlačidlá, vypínače, senzory
+- 36 nezávislých výstupov N-MOSFET s PWM – LED, ventilátory, motory DC, externé relé
+- 2 kanály ADC do 24 V
+- Komunikácia LAN alebo Wi-Fi
+- Dve zbernice I2C, RS485 a 1-Wire
+- Displej OLED 0,96"
+- Snímač teploty TMP102 – tepelná ochrana
+- Napájanie 24 V DC
+
+Na montáž do rozvádzača – centrálne ovládanie rozsiahlej inštalácie: LED osvetlenie, vetranie, pohony a externé relé.
+
+---
+## Použitie
+
+- Veľké domy, apartmány a komerčné objekty
+- Mnoho LED okruhov a pohonov DC z jednej jednotky
+- Stmievanie a svetelné scény (PWM)
+- Integrácia s alarmom cez senzory
+- Vetranie a technické zariadenia cez RS485 / Modbus
+- Integrácia inteligentnej domácnosti (SUPLA, Home Assistant, LOXONE, AMPIO, HOMEY)
+
+---
+## Periférie
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-PRO-3236D/render/peryferia-sk.svg?v=mwwgzfzz')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+1. **Tranzistorové výstupy (MOSFET)** – Výstupy N-MOSFET 5–50 V DC s PWM – LED pásy, ventilátory, elektroventily; mínus spotrebiča na OUT.
+2. **Svorky GND výstupov** – Spoločný mínus skupiny výstupov – zem zdroja spotrebičov DC.
+3. **Ovládacie vstupy** – Digitálne vstupy 24 V – tlačidlá, vypínače, senzory.
+4. **Napájací konektor (24V DC)** – Hlavné napájanie riadiacej jednotky.
+5. **Kanály ADC** – Analógové vstupy – meranie napätia a analógové senzory (napr. 0–10 V).
+6. **Rozhranie RS485** – Komunikácia Modbus RS485 s externými zariadeniami.
+7. **Port Ethernet (RJ45)** – Pripojenie k sieti LAN.
+8. **Univerzálne vstupy a rozširujúce rozhrania** – Konektory I2C, 1-Wire a ďalších zberníc.
+9. **Konektor USB-C** – Programovanie, konfigurácia a servis.
+10. **Konfiguračné tlačidlo** – Servisné tlačidlo na konfiguráciu a reset.
+11. **Displej OLED** – Stavový displej, viditeľný cez kryt.
+12. **LED indikátory** – Stavové LED vstupov, výstupov a prevádzky – viditeľné cez kryt.
+
+---
+## Technická špecifikácia
+
+| Parameter | Value |
+|---|---|
+| Vstupy | 32 |
+| Výstupy | 36 × N-MOSFET |
+| Typ výstupov | DC 5–50 V, PWM |
+| Analógové vstupy | 2 (up to 24 V) |
+| Komunikácia | LAN, Wi-Fi, RS485, 1-Wire, I2C ×2 |
+| Kryt | 212 × 90 × 59 mm (s konektormi: 212 × 115 × 59 mm) |
+
+---
+## Parametre napájania
+
+| Parameter | Value |
+|---|---|
+| Napájacie napätie | 24 V DC |
+| Odber prúdu (max.) | 0,2 A (4,8 W) |
+| Napájací vodič | LgY 1 mm² |
+
+:::tip
+Niekoľko jednotiek SMARTBOB v jednej inštalácii môže zdieľať jeden zdroj s dostatočným prúdom, odporúča sa však samostatný zdroj.
+:::
+
+---
+## Softvér
+
+Riadiaca jednotka SMARTBOB je univerzálna platforma – nainštalovaný softvér je uvedený na obale, na kryte alebo v objednávke.
+
+- [SUPLA](/platformy/SUPLA/Poznaj%20SUPLA)
+- [Home Assistant (ESPHome)](/platformy/HOME%20ASSISTANT/Poznaj%20HOME%20ASSISTANT)
+- [LOXONE](/platformy/LOXONE/Poznaj%20LOXONE)
+- [AMPIO](/platformy/AMPIO/Poznaj%20AMPIO)
+- MQTT
+- Systémy založené na ESP32
+
+Konfigurácia závisí od zvolenej platformy.
+
+Prvé spustenie a konfigurácia na zvolenej platforme (SUPLA, Home Assistant, LOXONE, AMPIO): [Prvé spustenie](/produkty/SM-PRO-3236D/Pierwsze%20uruchomienie)
+
+---
+## Bezpečnosť používania
+
+Pred montážou sa uistite, že vodiče nie sú pod napätím. Montáž smie vykonávať iba osoba s oprávnením v súlade s platnými normami. Nepoužívajte jednotku bez krytu ani s poškodeným krytom. Neprekračujte prevádzkové parametre – najmä zaťaženie relé. Niektoré platformy vyžadujú externý server, cloud alebo ďalší softvér.
+
+---
+## EÚ vyhlásenie o zhode (CE)
+
+Riadiaca jednotka spĺňa požiadavky smerníc EÚ. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">Stiahnuť EÚ vyhlásenie o zhode (PDF)</a>
+
+---
+## Čo ďalej?
+
+Podrobnosti o zapojení a konfigurácii nájdete na ďalších stranách dokumentácie: [Návody a odkazy](/Instrukcje%20i%20linki/Linki%20i%20pliki).

@@ -1,0 +1,107 @@
+---
+sidebar_position: 2
+sidebar_label: Grundanschluss
+title: Grundanschluss
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Anschluss der Steuerung
+Grundlagen der Stromversorgung, der Kommunikation und des richtigen Anschlusses der Leitungen an die Buchsen der Steuerung
+
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'flex-end', margin: '16px 0'}}>
+  <figure style={{flex: '2 1 420px', margin: 0, textAlign: 'center'}}><img src={useBaseUrl('/img/SM-LITE-1616R/render/wyglad.webp')} alt="SM-LITE-1616R" style={{width: '100%', height: 'auto', borderRadius: '8px'}} /><figcaption style={{fontSize: '.85em', opacity: .75}}>Steuerung SM-LITE-1616R – Eingangsklemmen oben, Relaisausgänge unten</figcaption></figure>
+  <figure style={{flex: '1 1 220px', margin: 0, textAlign: 'center'}}><img src={useBaseUrl('/img/SM-LITE-1616R/rozdzielnica.webp')} alt="" style={{width: '100%', maxWidth: '320px', height: 'auto', borderRadius: '8px'}} /><figcaption style={{fontSize: '.85em', opacity: .75}}>Beispielverteiler mit der Steuerung (3D-Assistent)</figcaption></figure>
+</div>
+
+Die Steuerung wird auf einer TH35-Hutschiene im Verteiler montiert – zusammen mit dem 24V-DC-Netzteil und den Leitungsschutzschaltern. Alle Anschlüsse können Sie im [technischen 3D-Assistenten](https://smartbobautomatyka.github.io/SmartBob3D/#dev=1616R&lang=de) aus der Nähe ansehen.
+
+---
+## Einführung in die Installation in Sterntopologie
+
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/gwiazda-de.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/gwiazda-de.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+SMARTBOB-Steuerungen sind für Installationen in Sterntopologie ausgelegt.
+
+> In einer herkömmlichen Installation läuft die Leitung, die das Licht versorgt, über den Wandschalter.
+
+> In einer Sterninstallation werden die Leitungen verlegt:
+> - separat vom Verteiler zum Taster (Steuersignal),
+> - separat vom Verteiler zur Leuchte / zum Beleuchtungskreis.
+
+So steuert die Steuerung Beleuchtung und Automatik zentral vom Verteiler aus,
+was die Erweiterung des Systems, die Smart-Home-Integration und das Erstellen von Automatikszenen erleichtert.
+
+---
+## Grundanschluss
+Um eine SMARTBOB-Steuerung in der Grundkonfiguration in Betrieb zu nehmen, sind eine Stromversorgung
+und Zugang zum lokalen Netzwerk erforderlich.
+
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/podlaczenie-de.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/podlaczenie-de.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+### Stromversorgung
+Die Steuerung benötigt eine **24V DC** Versorgung aus einem passend gewählten Netzteil.
+- Spannung: 24V DC
+- Mindeststrom: **0,5A pro Steuerung**, ein größeres Netzteil kann mehrere Steuerungen versorgen
+- Empfehlung: ein Netzteil mit Leistungsreserve verwenden (z. B. +0,25A mehr)
+
+Die Steuerung benötigt Zugang zum lokalen Netzwerk für die Konfiguration und die Kommunikation mit dem System.
+### Option 1: LAN (empfohlen)
+- Kabelgebundene Ethernet-Verbindung
+- Stabile und zuverlässige Kommunikation
+- Empfohlene Lösung für feste Installationen
+
+### Option 2: WLAN
+- Drahtlose Verbindung mit dem lokalen Netzwerk
+- Erleichtert die Installation dort, wo keine LAN-Verkabelung vorhanden ist
+- Erfordert eine ausreichende WLAN-Abdeckung
+
+---
+## Leitungsarten, Verkabelung und Steckklemmen
+
+Die SMARTBOB-Steuerung hat an den Ein- und Ausgängen **Steckklemmen**, mit denen das Gerät
+ohne Abklemmen einzelner Leitungen demontiert werden kann. Die Leitungsenden müssen vor der Montage
+entsprechend den geforderten Querschnitten und Abisolierlängen vorbereitet werden.
+
+### Empfohlene Leitungsquerschnitte und Anzugsmomente der Klemmen:
+| Buchsentyp | Leitungsquerschnitt | Abisolierlänge | Anzugsmoment |
+|------------|-------------------|----------------------|-----------------|
+| Relaisbuchse | 0,4–2,5 mm² | 7–8 mm | 0,4 Nm |
+| Eingangsbuchse | 0,4–2,5 mm² | 7–8 mm | 0,4 Nm |
+| Versorgungsbuchse | 0,4–2,5 mm² | 7–8 mm | 0,4 Nm |
+| Buchse Spannungsmessung | 0,4–1,5 mm² | 5–6 mm | 0,2 Nm |
+| RS485 | 0,3–1 mm² | 5–6 mm | 0,2 Nm |
+| 1-WIRE / I2C | 0,3–1 mm² | 5–6 mm | 0,2 Nm |
+
+Montagehinweise:
+- die Stecker **dürfen nicht unter Spannung abgezogen werden**,
+- alle losen Leitungen müssen gegen versehentlichen Kurzschluss oder Beschädigung gesichert sein,
+- ein beschädigter Stecker oder eine beschädigte Buchse ist **sofort auszutauschen**.
+
+Für den Anschluss des Geräts sind Leitungen zu verwenden, die den Installationsbedingungen entsprechen.
+
+### Leitungsarten und empfohlene Entfernungen:
+| Buchsentyp | Empfohlene Leitungsart | Empfohlene Entfernung |
+|------------|--------------------------|----------------------|
+| Relaisbuchse | NYM + H07V-K im Verteiler | Keine Hinweise, gemäß Planung |
+| Eingangsbuchse | NYM + (H07V-K oder Cat5/6/7-Kabel / Alarmkabel) | Keine Hinweise, gemäß Planung |
+| Versorgungsbuchse | H07V-K | bis 5 m |
+| Buchse Spannungsmessung | H07V-K / Cat5/6/7-Kabel / Alarmkabel | bis 5 m |
+| RS485 | Cat5/6/7-Kabel oder Busleitung | bis 50 m |
+| 1-WIRE | Cat5/6/7-Kabel oder Alarmkabel | bis 10 m |
+| I2C | Cat5/6/7-Kabel oder Alarmkabel | bis 2 m |
+
+Hinweise zur Verlegung:
+- Signalleitungen von 230V-Leitungen trennen,
+- Signalleitungen nicht parallel zu Versorgungsleitungen führen,
+- Leitungswege bereits bei der Planung der Installation festlegen,
+- für verschiedene Signalarten getrennte Kanäle oder Rohre verwenden
+
+:::info
+Eine falsche Verkabelung kann führen zu:
+- Übertragungsstörungen,
+- fehlerhaften Messwerten,
+- instabilem Betrieb der Steuerung.
+:::

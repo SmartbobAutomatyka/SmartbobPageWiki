@@ -1,0 +1,126 @@
+---
+sidebar_position: 1
+title: Technische Beschreibung und Spezifikation
+sidebar_label: Technische Beschreibung und Spezifikation
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Steuerung SM-LITE-1624D
+
+SM-LITE-1624D ist die Steuerung für LED-Beleuchtung und DC-Verbraucher: 24 Transistorausgänge mit stufenloser PWM-Dimmung (5–50 V DC) und 16 Eingänge für Taster und Sensoren – LED-Streifen, Lüfter, Magnetventile und DC-Antriebe in einem Modul.
+
+👉 <a href="https://smartbob.pl/produkt/sm-lite-1624d/" target="_blank">Steuerung hier kaufen</a>
+
+---
+## Aussehen der Steuerung
+
+<img src={useBaseUrl('/img/SM-LITE-1624D/render/wyglad.webp?v=mwwgzei4')} alt="SM-LITE-1624D" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+
+Der Zwilling der SM-LITE-1616R – gleiches Gehäuse, ESP32, LAN und WLAN, aber statt Relais schnelle N-MOSFET-Ausgänge bis 7 A. Lichtszenen und stufenloses Dimmen ohne zusätzliche Dimmer.
+
+Arbeitet mit Home Assistant, SUPLA, LOXONE, AMPIO und HOMEY.
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1624D/render/wymiary-de.svg?v=mwwgzei4')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+---
+## Hauptmerkmale
+
+- 16 Steuereingänge 24 V (GND- oder VCC-Signal) – Taster, Schalter, Sensoren
+- 24 unabhängige N-MOSFET-Ausgänge 5–50 V DC mit PWM – LEDs, Lüfter, Motoren, Magnetventile
+- 2 ADC-Kanäle bis 24 V
+- Kommunikation per LAN oder WLAN
+- RS485, I2C und 1-Wire
+- 0,96"-OLED-Display
+- Versorgung 24 V DC
+
+Für den Einbau in den Verteiler – zentrale Steuerung von DC-Installationen: von LED-Beleuchtung über Lüftung bis zu Antrieben und Magnetventilen.
+
+---
+## Anwendungen
+
+- Automation von Häusern und Wohnungen mit LED-Beleuchtung
+- Viele LED-Kreise und DC-Antriebe mit einer Steuerung
+- Dimmen und Lichtszenen (PWM)
+- Alarmintegration über Sensoren
+- Szenen und Zeitpläne
+- Magnetventile, Lüfter und andere DC-Verbraucher
+- Smart-Home-Integration (SUPLA, Home Assistant, LOXONE, AMPIO, HOMEY)
+
+---
+## Peripherie
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1624D/render/peryferia-de.svg?v=mwwgzei4')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+1. **Transistorausgänge (MOSFET)** – N-MOSFET-Ausgänge 5–50 V DC mit PWM – LED-Streifen, Lüfter, Magnetventile; Minus des Verbrauchers an OUT.
+2. **GND-Klemmen der Ausgänge** – Gemeinsames Minus der Ausgangsgruppe – Masse des Netzteils der DC-Verbraucher.
+3. **Steuereingänge** – Digitale 24-V-Eingänge – Taster, Schalter, Sensoren.
+4. **Versorgungsanschluss (24V DC)** – Hauptversorgung der Steuerung.
+5. **ADC-Kanäle** – Analogeingänge – Spannungsmessung und analoge Sensoren (z. B. 0–10 V).
+6. **RS485-Schnittstelle** – Modbus-RS485-Kommunikation mit externen Geräten.
+7. **Ethernet-Port (RJ45)** – LAN-Verbindung.
+8. **Universaleingänge und Erweiterungsschnittstellen** – Anschlüsse für I2C, 1-Wire und andere Busse.
+9. **USB-C-Anschluss** – Programmierung, Konfiguration und Service.
+10. **Konfigurationstaste** – Servicetaste für Konfiguration und Reset.
+11. **OLED-Display** – Statusanzeige, durch das Gehäuse sichtbar.
+12. **LED-Anzeigen** – Status-LEDs für Eingänge, Ausgänge und Betrieb – durch das Gehäuse sichtbar.
+
+---
+## Technische Daten
+
+| Parameter | Wert |
+|---|---|
+| Eingänge | 16 |
+| Ausgänge | 24 × N-MOSFET |
+| Ausgangsart | DC 5–50 V, PWM |
+| Analogeingänge | 2 (bis 24 V) |
+| Kommunikation | LAN, Wi-Fi, RS485, 1-Wire, I2C ×2 |
+| Gehäuse | 212 × 90 × 59 mm (mit Steckern: 212 × 115 × 59 mm) |
+
+---
+## Versorgungsparameter
+
+| Parameter | Wert |
+|---|---|
+| Versorgungsspannung | 24 V DC |
+| Stromaufnahme (max.) | 0,1 A (2,4 W) |
+| Versorgungsleitung | LgY 1 mm² |
+
+:::tip
+Mehrere SMARTBOB-Steuerungen in einer Installation können ein Netzteil mit ausreichender Stromstärke nutzen, empfohlen wird jedoch ein separates Netzteil.
+:::
+
+---
+## Software
+
+Die SMARTBOB-Steuerung ist eine universelle Plattform – die installierte Software ist auf der Verpackung, auf dem Gehäuse oder in der Bestellung angegeben.
+
+- [SUPLA](/platformy/SUPLA/Poznaj%20SUPLA)
+- [Home Assistant (ESPHome)](/platformy/HOME%20ASSISTANT/Poznaj%20HOME%20ASSISTANT)
+- [LOXONE](/platformy/LOXONE/Poznaj%20LOXONE)
+- [AMPIO](/platformy/AMPIO/Poznaj%20AMPIO)
+- MQTT
+- ESP32-basierte Systeme
+
+Die Konfiguration hängt von der gewählten Plattform ab.
+
+Erstinbetriebnahme und Konfiguration auf der gewählten Plattform (SUPLA, Home Assistant, LOXONE, AMPIO): [Erste Inbetriebnahme](/produkty/SM-LITE-1624D/Pierwsze%20uruchomienie)
+
+---
+## Sichere Verwendung
+
+Stellen Sie vor der Montage sicher, dass die Leitungen spannungsfrei sind. Die Montage darf nur von einer qualifizierten Person gemäß den geltenden Normen durchgeführt werden. Verwenden Sie die Steuerung nicht ohne Gehäuse oder mit beschädigtem Gehäuse. Überschreiten Sie die Betriebsparameter nicht – insbesondere die Relaislast. Einige Plattformen erfordern einen externen Server, eine Cloud oder zusätzliche Software.
+
+---
+## EU-Konformitätserklärung (CE)
+
+Die Steuerung erfüllt die Anforderungen der EU-Richtlinien. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">EU-Konformitätserklärung herunterladen (PDF)</a>
+
+---
+## Wie geht es weiter?
+
+Details zu Anschluss und Konfiguration finden Sie auf den folgenden Dokumentationsseiten: [Anleitungen und Links](/Instrukcje%20i%20linki/Linki%20i%20pliki).

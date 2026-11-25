@@ -1,0 +1,107 @@
+---
+sidebar_position: 2
+sidebar_label: Basic connection
+title: Basic connection
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Connecting the controller
+Basics of power supply, communication and correct connection of wires to the controller sockets
+
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'flex-end', margin: '16px 0'}}>
+  <figure style={{flex: '2 1 420px', margin: 0, textAlign: 'center'}}><img src={useBaseUrl('/img/SM-LITE-1616R/render/wyglad.webp')} alt="SM-LITE-1616R" style={{width: '100%', height: 'auto', borderRadius: '8px'}} /><figcaption style={{fontSize: '.85em', opacity: .75}}>SM-LITE-1616R controller – input connectors at the top, relay outputs at the bottom</figcaption></figure>
+  <figure style={{flex: '1 1 220px', margin: 0, textAlign: 'center'}}><img src={useBaseUrl('/img/SM-LITE-1616R/rozdzielnica.webp')} alt="" style={{width: '100%', maxWidth: '320px', height: 'auto', borderRadius: '8px'}} /><figcaption style={{fontSize: '.85em', opacity: .75}}>Example distribution board with the controller (3D assistant)</figcaption></figure>
+</div>
+
+The controller is mounted on a TH35 rail in the distribution board – together with the 24V DC power supply and circuit breakers. You can look at all connectors up close in the [3D technical assistant](https://smartbobautomatyka.github.io/SmartBob3D/#dev=1616R&lang=en).
+
+---
+## Introduction to star topology installation
+
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/gwiazda-en.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/gwiazda-en.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+SMARTBOB controllers are designed for installations wired in a star topology.
+
+> In a traditional installation the cable powering the light runs through the wall switch.
+
+> In a star installation the cables run:
+> - separately from the distribution board to the button (control signal),
+> - separately from the distribution board to the lamp / lighting circuit.
+
+This way the controller centrally manages lighting and automation from the distribution board,
+which makes it easier to extend the system, integrate smart home and create automation scenes.
+
+---
+## Basic connection
+To start a SMARTBOB controller in the basic configuration you need to provide power
+and access to the local network.
+
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/podlaczenie-en.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/podlaczenie-en.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+### Power supply
+The controller requires **24V DC** power from a properly selected power supply.
+- Voltage: 24V DC
+- Minimum current: **0.5A per controller**, one larger power supply can feed several controllers
+- Recommendation: use a power supply with a reserve (e.g. +0.25A more)
+
+The controller needs access to the local network for configuration and communication with the system.
+### Option 1: LAN (recommended)
+- Wired Ethernet connection
+- Stable and reliable communication
+- Recommended solution for permanent installations
+
+### Option 2: WiFi
+- Wireless connection to the local network
+- Makes installation easier where there is no LAN cabling
+- Requires good WiFi coverage
+
+---
+## Cable types, wiring and plug-in connectors
+
+The SMARTBOB controller has **plug-in connectors** on its inputs and outputs, which allow the device to be removed
+without disconnecting individual wires. Wire ends must be properly prepared before mounting,
+according to the required cross-sections and stripping lengths.
+
+### Recommended wire cross-sections and terminal tightening torque:
+| Socket type | Wire cross-section | Stripping length | Tightening torque |
+|------------|-------------------|----------------------|-----------------|
+| Relay socket | 0.4–2.5 mm² | 7–8 mm | 0.4 Nm |
+| Input socket | 0.4–2.5 mm² | 7–8 mm | 0.4 Nm |
+| Power socket | 0.4–2.5 mm² | 7–8 mm | 0.4 Nm |
+| Voltage measurement socket | 0.4–1.5 mm² | 5–6 mm | 0.2 Nm |
+| RS485 | 0.3–1 mm² | 5–6 mm | 0.2 Nm |
+| 1-WIRE / I2C | 0.3–1 mm² | 5–6 mm | 0.2 Nm |
+
+Mounting recommendations:
+- the plugs **must not be disconnected under voltage**,
+- all loose wires must be protected against accidental short circuit or damage,
+- a damaged plug or socket must be **replaced immediately**.
+
+Use cables suited to the installation conditions to connect the device.
+
+### Cable types and recommended distances:
+| Socket type | Recommended cable type | Recommended distance |
+|------------|--------------------------|----------------------|
+| Relay socket | YDY (NYM) + LgY (H07V-K) in the distribution board | No remarks, according to the design |
+| Input socket | YDY (NYM) + (LgY (H07V-K) or Cat5/6/7 twisted pair / alarm cable) | No remarks, according to the design |
+| Power socket | LgY | up to 5 m |
+| Voltage measurement socket | LgY / Cat5/6/7 twisted pair / alarm cable | up to 5 m |
+| RS485 | Cat5/6/7 twisted pair or bus cable | up to 50 m |
+| 1-WIRE | Cat5/6/7 twisted pair or alarm cable | up to 10 m |
+| I2C | Cat5/6/7 twisted pair or alarm cable | up to 2 m |
+
+Cabling recommendations:
+- separate signal cables from 230V cables,
+- avoid running signal cables parallel to power cables,
+- plan cable routes already at the installation design stage,
+- use separate trays or conduits for different signal types
+
+:::info
+Incorrect cabling may result in:
+- transmission interference,
+- incorrect readings,
+- unstable controller operation.
+:::
