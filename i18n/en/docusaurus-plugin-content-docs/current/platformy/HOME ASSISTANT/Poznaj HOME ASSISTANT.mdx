@@ -1,0 +1,54 @@
+---
+sidebar_position: 4
+sidebar_label: Getting to know HOME ASSISTANT
+title: Getting to know HOME ASSISTANT
+---
+
+## The HOME ASSISTANT platform
+
+Home Assistant is one of the most popular open-source home automation platforms in the world.
+It integrates thousands of devices from different manufacturers into one central management system.
+
+# The platform lets you control, monitor and automate, among others:
+- Lighting
+- Roller blinds and shutters
+- Heating
+- Air conditioning
+- Ventilation
+- Alarms
+- Monitoring
+- IoT devices
+- Photovoltaic installations
+- Energy storage
+
+SMARTBOB works with Home Assistant as an actuator controller, input/output system or integration module,
+making it possible to build advanced smart home installations based on various protocols and open standards.
+
+:::tip
+One of the biggest advantages of Home Assistant is that devices of many manufacturers can be combined
+into one automation system. Most Home Assistant functions run locally,
+so automations do not depend on cloud services.
+:::
+:::warning
+Home Assistant requires knowledge of various programming techniques and may be too demanding for a beginner.
+:::
+
+## SMARTBOB + Home Assistant
+
+SMARTBOB was designed for easy integration with Home Assistant.
+The integration uses the **ESPHome** project, which Home Assistant supports natively.
+We have prepared ready-made ESPHome configuration templates for SMARTBOB controllers,
+so starting a device is quick and does not require writing a configuration from scratch.
+
+The integration usually looks like this:
+
+1. Download the template for your SMARTBOB controller and add it to ESPHOME BUILDER.
+2. Fill in the basic network settings and adapt it to your needs.
+3. Compile and upload it to the controller via USB or OTA.
+4. Add the controller to HOME ASSISTANT through the ESPHOME integration.
+
+### ESPHOME templates
+All current templates, example projects and technical documentation are available in our GitHub repository:
+
+**SMARTBOB GitHub**
+https://github.com/SmartbobAutomatyka/SmartbobAutomatyka-GIT

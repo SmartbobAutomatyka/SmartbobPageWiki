@@ -1,0 +1,50 @@
+---
+sidebar_position: 5
+sidebar_label: Spoznajte AMPIO
+title: Spoznajte AMPIO
+---
+
+## Platforma AMPIO
+
+AMPIO je poľská platforma automatizácie budov založená na zbernici CAN a vlastných riadiacich jednotkách a moduloch
+(okrem iného UCM, M-SERV). Systém vyvíja poľský výrobca a je veľmi obľúbený
+v rezidenčných aj komerčných inštaláciách realizovaných integrátormi.
+
+# Platforma umožňuje ovládať, monitorovať a automatizovať okrem iného:
+- Osvetlenie
+- Rolety a žalúzie
+- Kúrenie a klimatizáciu
+- Vetranie
+- Alarm a kontrolu prístupu
+- Multimédiá a audio
+- Monitoring spotreby energie
+
+:::tip
+AMPIO je plne poľské riešenie s technickou podporou a dokumentáciou v poľštine,
+čo výrazne uľahčuje nasadenie aj neskorší servis inštalácie.
+:::
+:::warning
+Plné využitie možností AMPIO vyžaduje systémovú riadiacu jednotku (napr. UCM) a základnú
+znalosť konfigurácie zbernice CAN.
+:::
+
+---
+
+## SMARTBOB + AMPIO
+
+SMARTBOB sa s AMPIO integruje pomocou protokolu **MQTT**. Riadiaca jednotka SMARTBOB publikuje a
+odoberá príslušné témy (topiky) na brokeri MQTT, takže stavy vstupov a výstupov SMARTBOB možno
+v reálnom čase čítať a ovládať zo systému AMPIO.
+
+Vďaka tomu môže SMARTBOB slúžiť ako ďalší systém vstupov/výstupov nezávislý od zbernice CAN
+a rozšíriť inštaláciu AMPIO bez ďalších systémových modulov výrobcu.
+
+### Softvér SMARTBOBSOFT
+Integrácia s AMPIO, rovnako ako s LOXONE, vychádza z rovnakého vlastného softvéru riadiacich jednotiek SMARTBOB
+nazvaného **SMARTBOBSOFT**. Na rozdiel od integrácie s Home Assistant (založenej na ESPHome)
+je SMARTBOBSOFT vlastný firmvér SMARTBOB nahrávaný priamo do riadiacej jednotky.
+
+Aktuálne verzie softvéru pre jednotlivé modely SMARTBOB sú v repozitári GitHub:
+
+**SMARTBOBSOFT — GitHub**
+https://github.com/SmartbobAutomatyka/SmartbobAutomatyka-GIT/tree/main/SMARTBOBSOFT
