@@ -4,6 +4,9 @@ sidebar_label: Čo je SMARTBOB
 title: Čo je SMARTBOB
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+
 ## Čo je SMARTBOB?
 
 SMARTBOB je otvorený systém automatizácie budov a inteligentnej domácnosti vyvíjaný v Poľsku, navrhnutý pre moderné káblové inštalácie a integráciu s obľúbenými platformami automatizácie. SMARTBOB začínal ako projekt DIY nadšencov do automatizácie a elektroniky a postupne sa z neho stal plnohodnotný komerčný systém.
@@ -40,3 +43,22 @@ SMARTBOB môže pracovať okrem iného s:
 Konečná funkčnosť závisí od zvolenej nadradenej platformy a spôsobu konfigurácie automatizácie. Bez ohľadu na použitý systém zostáva základný princíp rovnaký – SMARTBOB fyzicky ovláda zariadenia a poskytuje rozhranie na ďalšiu automatizáciu.
 
 Vďaka tomu možno inštaláciu začať ešte pred výberom cieľovej platformy inteligentnej domácnosti. Najprv môžete urobiť kabeláž a namontovať riadiace jednotky SMARTBOB a až neskôr sa rozhodnúť, aký systém automatizácie použijete.
+
+---
+
+{/* modele */}
+## Modely a porovnanie
+
+Rad SMARTBOB má tri série: **MINI** a **GATE** pre menšie úlohy, **LITE** ako hlavnú riadiacu jednotku domu a **PRO** pre veľké inštalácie. Verzie **R** majú reléové výstupy (bezpotenciálové, 230 V AC alebo DC), verzie **D** tranzistorové výstupy MOSFET 24 V s PWM pre LED pásy a relé 24 V. Všetky sa montujú na lištu TH35 v rozvádzači a expandér SM-EXP-16IN pridáva ďalšie vstupy.
+
+| Model | Vstupy | Výstupy | Komunikácia | Šírka | Použitie |
+|---|---|---|---|---|---|
+| <a href={useBaseUrl('/category/sm-gate-0202r')}>**SM-GATE-0202R**</a> | 2 (AC/DC, izolované) | 2 × relé 10 A | LAN, Wi-Fi, RS485, 1-Wire, I2C (radio 868 MHz) | 4 mod. DIN | brána, bránka |
+| <a href={useBaseUrl('/category/sm-mini-0808r')}>**SM-MINI-0808R**</a> | 8 | 8 × relé 10 A | LAN, Wi-Fi, 1-Wire, I2C | 7 mod. DIN | byt, garáž, rozšírenie |
+| <a href={useBaseUrl('/category/sm-lite-1616r')}>**SM-LITE-1616R**</a> | 16 | 16 × relé 10 A | LAN, Wi-Fi, RS485, CAN, 1-Wire, I2C | 12 mod. DIN | dom – osvetlenie, rolety, brána |
+| <a href={useBaseUrl('/category/sm-lite-1624d')}>**SM-LITE-1624D**</a> | 16 | 24 × MOSFET (PWM) | LAN, Wi-Fi, RS485, 1-Wire, I2C | 12 mod. DIN | LED pásy, relé 24 V |
+| <a href={useBaseUrl('/category/sm-pro-3236d')}>**SM-PRO-3236D**</a> | 32 | 36 × MOSFET (PWM) | LAN, Wi-Fi, RS485, 1-Wire, I2C | 12 mod. DIN | veľké LED inštalácie |
+| <a href={useBaseUrl('/produkty/SM-PRO-3222R/Opis techniczny i specyfikacja')}>**SM-PRO-3222R**</a> | 32 | 22 × relé 10 A | LAN, Wi-Fi, RS485, CAN, 1-Wire, I2C | 12 mod. DIN | veľké inštalácie (od 2027) |
+| <a href={useBaseUrl('/category/sm-exp-16in')}>**SM-EXP-16IN**</a> | 16 | — | I2C | 4 mod. DIN | ďalšie vstupy |
+
+Úplné porovnanie vrátane napájania a analógových vstupov nájdete v [technickom 3D asistentovi (tlačidlo „Porovnať modely“)](https://smartbobautomatyka.github.io/SmartBob3D/#lang=sk).

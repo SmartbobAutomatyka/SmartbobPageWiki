@@ -2,6 +2,52 @@
 sidebar_position: 3
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+
+{/* start */}
+## Od czego zacząć?
+
+Automatykę najłatwiej i najtaniej zaplanować, zanim w ścianach pojawią się przewody. Później dołożenie przewodu do klawisza czy rolety oznacza kucie tynku – dlatego warto przejść te kroki już na etapie projektu domu:
+
+1. **Spisz potrzeby** – pokój po pokoju: oświetlenie, rolety, ogrzewanie, brama, czujniki, gniazda sterowane.
+2. **Zaplanuj instalację w gwieździe** – każdy klawisz i każdy odbiornik osobnym przewodem do rozdzielnicy (patrz „Podłączenie podstawy” przy sterownikach).
+3. **Dobierz sterowniki** – policz wejścia (klawisze, czujniki) i wyjścia (lampy, rolety, LED) i wybierz modele z zapasem ok. 20%.
+4. **Zaplanuj rozdzielnicę** – miejsce na sterowniki, zasilacz 24 V, zabezpieczenia i listwy; najlepiej z rezerwą na rozbudowę.
+5. **Wybierz platformę** – SUPLA, Home Assistant, Loxone, Ampio lub MQTT; możesz to zrobić nawet po wykonaniu okablowania.
+
+## Asystent techniczny 3D – zobacz, zanim zbudujesz
+
+Żeby łatwiej było to sobie wyobrazić, przygotowaliśmy **Asystenta technicznego 3D**. W przeglądarce, bez instalowania programów, pokazuje cały budynek z okablowaniem w gwieździe, rzut 2D z trasami przewodów, rozdzielnicę ze sterownikami oraz każdy sterownik z opisem złączy i symulacjami podłączeń.
+
+- **Budynek 3D i rzut 2D** – gdzie idą przewody od klawiszy, lamp i rolet do rozdzielnicy
+- **Rozdzielnica** – projekt obudowy Zenergy OM: wymiary, rzędy, osłony, zestawienie elementów i wycena
+- **Sterowniki** – modele 3D, opisy złączy, dokumentacja i porównanie modeli
+- **Symulacje „jak podłączyć”** – klawisze, oświetlenie, rolety, brama, taśmy LED
+
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '14px', margin: '14px 0'}}>
+  <a href={useBaseUrl('/img/asystent-3d/house3d.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house3d.webp')} alt="Budynek 3D z okablowaniem" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Budynek 3D z okablowaniem</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/house2d.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house2d.webp')} alt="Rzut 2D z trasami przewodów" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Rzut 2D z trasami przewodów</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/cab.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/cab.webp')} alt="Rozdzielnica ze sterownikiem" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Rozdzielnica ze sterownikiem</div>
+  </a>
+</div>
+
+:::info[DEMO]
+Widoki **Budynek** i **Rozdzielnica** są na razie wersją demonstracyjną – stale je rozwijamy.
+:::
+
+**👉 [Otwórz Asystenta 3D](https://smartbobautomatyka.github.io/SmartBob3D/#lang=pl)**
+
+---
+
 ## Planowanie instalacji Smart Home
 
 Dobrze zaplanowana instalacja sprawia, że im więcej elementów uwzględnisz już na etapie projektu,

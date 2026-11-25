@@ -4,6 +4,52 @@ sidebar_label: Building a house – how to start
 title: Building a house – how to start
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+
+{/* start */}
+## Where to start?
+
+Automation is easiest and cheapest to plan before cables go into the walls. Adding a cable to a button or a blind later means breaking plaster – so it is worth going through these steps already at the house design stage:
+
+1. **List your needs** – room by room: lighting, blinds, heating, gate, sensors, controlled sockets.
+2. **Plan a star installation** – every button and every load with its own cable to the distribution board (see “Basic connection” for the controllers).
+3. **Choose the controllers** – count inputs (buttons, sensors) and outputs (lamps, blinds, LED) and pick models with about 20% reserve.
+4. **Plan the distribution board** – space for controllers, 24 V power supply, breakers and terminal strips, ideally with room to expand.
+5. **Choose the platform** – SUPLA, Home Assistant, Loxone, Ampio or MQTT; you can decide even after the cabling is done.
+
+## 3D technical assistant – see it before you build
+
+To make it easier to imagine, we created the **3D technical assistant**. In the browser, with nothing to install, it shows the whole building with star cabling, a 2D floor plan with cable routes, the distribution board with controllers, and every controller with connector descriptions and wiring simulations.
+
+- **3D building and 2D floor plan** – where cables run from buttons, lamps and blinds to the distribution board
+- **Distribution board** – Zenergy OM enclosure design: dimensions, rows, covers, parts list and quote
+- **Controllers** – 3D models, connector descriptions, documentation and model comparison
+- **“How to connect” simulations** – buttons, lighting, blinds, gate, LED strips
+
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '14px', margin: '14px 0'}}>
+  <a href={useBaseUrl('/img/asystent-3d/house3d.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house3d.webp')} alt="3D building with cabling" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>3D building with cabling</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/house2d.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house2d.webp')} alt="2D floor plan with cable routes" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>2D floor plan with cable routes</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/cab.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/cab.webp')} alt="Distribution board with a controller" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Distribution board with a controller</div>
+  </a>
+</div>
+
+:::info[DEMO]
+The **Building** and **Distribution board** views are a demo version for now – we keep developing them.
+:::
+
+**👉 [Open the 3D assistant](https://smartbobautomatyka.github.io/SmartBob3D/#lang=en)**
+
+---
+
 ## Planning a smart home installation
 
 A well-planned installation means that the more elements you include at the design stage, the easier and cheaper it will be to expand your smart home system later.
