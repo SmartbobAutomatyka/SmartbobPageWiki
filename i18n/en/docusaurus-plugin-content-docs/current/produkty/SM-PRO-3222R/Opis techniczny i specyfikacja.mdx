@@ -1,0 +1,94 @@
+---
+sidebar_position: 1
+title: Technical description and specification
+sidebar_label: Technical description and specification
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Controller SM-PRO-3222R
+
+32 inputs / 22 relay outputs
+
+---
+## Controller appearance
+
+<img src={useBaseUrl('/img/SM-PRO-3222R/render/wyglad.webp?v=mwwgzfb9')} alt="SM-PRO-3222R" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-PRO-3222R/render/wymiary-en.svg?v=mwwgzfb9')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+---
+## Peripherals
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-PRO-3222R/render/peryferia-en.svg?v=mwwgzfb9')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+1. **Outputs** – Controller outputs.
+2. **Inputs** – 24 V inputs.
+3. **Power supply** – Controller power supply.
+4. **ADC channels** – Analog inputs.
+5. **RS485** – RS485 bus.
+6. **Ethernet port (RJ45)** – LAN.
+7. **I2C / 1-Wire** – Expansion connectors.
+8. **USB-C connector** – Programming and service.
+9. **OLED display** – Status display.
+10. **LED indicators** – Status LEDs.
+
+---
+## Technical specification
+
+| Parameter | Value |
+|---|---|
+| Inputs | 32 |
+| Outputs | 22 × relay |
+| Output type | AC / DC (potential-free) |
+| Analog inputs | 2 (up to 24 V) |
+| Communication | LAN, Wi-Fi, RS485, CAN, 1-Wire, I2C |
+| Enclosure | 212 × 90 × 59 mm (with connectors: 212 × 116 × 59 mm) |
+
+---
+## Power supply parameters
+
+| Parameter | Value |
+|---|---|
+| Supply voltage | 24 V DC |
+| Current consumption (max.) | 0,75 A (18 W) |
+| Power cable | LgY 1 mm² |
+
+:::tip
+Several SMARTBOB controllers in one installation can share one power supply with sufficient current capacity, but a separate power supply is recommended.
+:::
+
+---
+## Software
+
+The SMARTBOB controller is a universal platform – the installed software is stated on the packaging, on the housing or in the order.
+
+- [SUPLA](/platformy/SUPLA/Poznaj%20SUPLA)
+- [Home Assistant (ESPHome)](/platformy/HOME%20ASSISTANT/Poznaj%20HOME%20ASSISTANT)
+- [LOXONE](/platformy/LOXONE/Poznaj%20LOXONE)
+- [AMPIO](/platformy/AMPIO/Poznaj%20AMPIO)
+- MQTT
+- ESP32-based systems
+
+The configuration depends on the chosen platform.
+
+First start-up and configuration on the chosen platform (SUPLA, Home Assistant, LOXONE, AMPIO): [Platforms – guides](/category/platformy)
+
+---
+## Safe use
+
+Before installation make sure the wires are not live. Installation should only be carried out by a qualified person in accordance with applicable standards. Do not use the controller without a housing or with a damaged housing. Do not exceed the operating parameters – especially the relay load. Some platforms require an external server, cloud or additional software.
+
+---
+## EU declaration of conformity (CE)
+
+The controller meets the requirements of EU directives. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">Download the EU declaration of conformity (PDF)</a>
+
+---
+## What next?
+
+Connection and configuration details can be found on the following documentation pages: [Manuals and links](/Instrukcje%20i%20linki/Linki%20i%20pliki).

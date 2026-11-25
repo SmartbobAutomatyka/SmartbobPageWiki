@@ -2,45 +2,123 @@
 sidebar_position: 1
 ---
 
-## Sterownik SM-LITE-1624D
-Uniwersalny, 24-kanałowy sterownik automatyki domowej montowany na szynie DIN, przeznaczony do sterowania
-obwodami DC oraz wyjściami LED PWM. Kompatybilny z Home Assistant, SUPLA, LOXONE, AMPIO oraz HOMEY, obsługuje
-oświetlenie LED, wentylatory, silniki i elektrozawory.
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-👉 Sterownik kupisz tutaj:
-<a href="https://smartbob.pl/produkt/sm-lite-1624d/" target="_blank">SM-LITE-1624D</a>
+## Sterownik SM-LITE-1624D
+
+SM-LITE-1624D to sterownik dla oświetlenia LED i odbiorników DC: 24 wyjścia tranzystorowe z płynnym ściemnianiem PWM (5–50 V DC) i 16 wejść na klawisze i czujniki – taśmy LED, wentylatory, elektrozawory i napędy DC w jednym module.
+
+👉 <a href="https://smartbob.pl/produkt/sm-lite-1624d/" target="_blank">Sterownik kupisz tutaj</a>
 
 ---
 ## Wygląd sterownika
-<a href="https://smartbob.pl/wp-content/uploads/2026/04/SM-LITE-1624D.png" target="_blank">
- <img src="https://smartbob.pl/wp-content/uploads/2026/04/SM-LITE-1624D.png" style={{ width: '700px', maxWidth: '100%', height: 'auto', borderRadius: '8px', cursor: 'pointer' }} /> </a>
 
-SM-LITE-1624D to sterownik oparty o mikrokontroler ESP32, będący odpowiednikiem SM-LITE-1616R przystosowanym
-do sterowania obwodami DC oraz LED zamiast klasycznych wyjść przekaźnikowych. Dzięki otwartej architekturze
-sterownik może być stosowany zarówno w instalacjach komercyjnych, jak i projektach DIY.
+<img src={useBaseUrl('/img/SM-LITE-1624D/render/wyglad.webp?v=mwwgzec3')} alt="SM-LITE-1624D" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
 
+Bliźniak SM-LITE-1616R – ta sama obudowa, ESP32, LAN i Wi-Fi, ale zamiast przekaźników ma szybkie wyjścia N-MOSFET do 7 A. Sceny świetlne i płynne ściemnianie bez dodatkowych ściemniaczy.
+
+Współpracuje z Home Assistant, SUPLA, LOXONE, AMPIO i HOMEY.
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1624D/render/wymiary-pl.svg?v=mwwgzec3')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+---
 ## Kluczowe cechy
-- 16 wejść sterujących – logika 24V (sygnał GND lub VCC), do odczytu stanu klawiszy, przełączników, czujników alarmowych itp.
-- 24 niezależne wyjścia cyfrowe N-MOSFET – napięcie wyjściowe 5–50V DC, sterowanie oświetleniem LED, wentylatorami, silnikami oraz elektrozaworami
-- Komunikacja LAN lub Wi-Fi – elastyczna integracja systemowa
-- Zintegrowany wyświetlacz OLED 0.96” – podgląd statusu urządzenia w czasie rzeczywistym
-- Zasilanie 24V DC – stabilna i energooszczędna praca
 
-Urządzenie przeznaczone jest do montażu w rozdzielnicy i umożliwia centralne zarządzanie instalacją domową
-opartą o obwody DC — od oświetlenia LED, przez wentylację, aż po napędy i elektrozawory.
+- 16 wejść sterujących 24 V (sygnał GND lub VCC) – klawisze, przełączniki, czujniki
+- 24 niezależne wyjścia N-MOSFET 5–50 V DC z PWM – LED, wentylatory, silniki, elektrozawory
+- 2 kanały ADC do 24 V
+- Komunikacja LAN lub Wi-Fi
+- RS485, I2C i 1-Wire
+- Wyświetlacz OLED 0,96"
+- Zasilanie 24 V DC
 
+Sterownik do montażu w rozdzielnicy – centralne sterowanie instalacją opartą o obwody DC: od oświetlenia LED, przez wentylację, po napędy i elektrozawory.
+
+---
 ## Zastosowania
-- Kompleksowa automatyzacja domów jednorodzinnych, apartamentów oraz instalacji opartych o oświetlenie LED
-- Sterowanie wieloma obwodami LED oraz napędami DC z jednego systemu
-- Regulacja jasności i sceny świetlne dzięki wyjściom PWM
-- Integracja z systemami alarmowymi poprzez odczyt sygnałów z czujników ruchu, kontaktronów, czujników zalania czy pożaru
-- Tworzenie zaawansowanych scenariuszy automatyki w oparciu o czujniki, harmonogramy oraz logikę systemową
-- Sterowanie elektrozaworami, wentylatorami oraz innymi odbiornikami DC
-- Integracja z systemami smart home i platformami automatyki, takimi jak SUPLA, Home Assistant, LOXONE, AMPIO czy HOMEY
+
+- Automatyka domów i mieszkań z oświetleniem LED
+- Wiele obwodów LED i napędów DC z jednego sterownika
+- Ściemnianie i sceny świetlne (PWM)
+- Integracja z alarmem przez czujniki
+- Scenariusze i harmonogramy
+- Elektrozawory, wentylatory i inne odbiorniki DC
+- Integracja smart home (SUPLA, Home Assistant, LOXONE, AMPIO, HOMEY)
 
 ---
 ## Peryferia
 
-:::info
-Szczegółowa dokumentacja techniczna, specyfikacja, opis peryferii oraz instrukcje podłączenia dla tego sterownika są w przygotowaniu.
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-LITE-1624D/render/peryferia-pl.svg?v=mwwgzec3')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+1. **Wyjścia tranzystorowe (MOSFET)** – Wyjścia N-MOSFET 5–50 V DC z PWM – taśmy LED, wentylatory, elektrozawory; minus odbiornika na OUT.
+2. **Zaciski GND wyjść** – Wspólny minus grupy wyjść – masa zasilacza odbiorników DC.
+3. **Wejścia sterujące** – Wejścia cyfrowe 24 V – przyciski, łączniki, czujniki.
+4. **Złącze zasilania (24V DC)** – Główne zasilanie sterownika.
+5. **Kanały ADC** – Wejścia analogowe – pomiar napięcia i czujniki analogowe (np. 0–10 V).
+6. **Interfejs RS485** – Komunikacja Modbus RS485 z urządzeniami zewnętrznymi.
+7. **Port Ethernet (RJ45)** – Połączenie z siecią LAN.
+8. **Wejścia uniwersalne i interfejsy rozszerzeń** – Złącza I2C, 1-Wire i innych magistral.
+9. **Złącze USB-C** – Programowanie, konfiguracja i serwis.
+10. **Przycisk konfiguracji** – Przycisk serwisowy do konfiguracji i resetu.
+11. **Ekran OLED** – Wyświetlacz stanu, widoczny przez obudowę.
+12. **Wskaźniki LED** – Diody stanu wejść, wyjść i pracy – widoczne przez obudowę.
+
+---
+## Specyfikacja Techniczna
+
+| Parametr | Wartość |
+|---|---|
+| Wejścia | 16 |
+| Wyjścia | 24 × N-MOSFET |
+| Rodzaj wyjść | DC 5–50 V, PWM |
+| Wejścia analogowe | 2 (do 24 V) |
+| Komunikacja | LAN, Wi-Fi, RS485, 1-Wire, I2C ×2 |
+| Obudowa | 212 × 90 × 59 mm (z konektorami: 212 × 115 × 59 mm) |
+
+---
+## Parametry zasilania
+
+| Parametr | Wartość |
+|---|---|
+| Napięcie zasilania | 24 V DC |
+| Pobór prądu (maks.) | 0,1 A (2,4 W) |
+| Przewód zasilający | LgY 1 mm² |
+
+:::tip
+Kilka sterowników SMARTBOB w jednej instalacji może korzystać z jednego zasilacza o odpowiedniej wydajności prądowej, ale zalecany jest osobny zasilacz.
 :::
+
+---
+## Oprogramowanie
+
+Sterownik SMARTBOB to uniwersalna platforma – zainstalowane oprogramowanie jest podane na opakowaniu, na obudowie albo przy zamówieniu.
+
+- [SUPLA](/platformy/SUPLA/Poznaj%20SUPLA)
+- [Home Assistant (ESPHome)](/platformy/HOME%20ASSISTANT/Poznaj%20HOME%20ASSISTANT)
+- [LOXONE](/platformy/LOXONE/Poznaj%20LOXONE)
+- [AMPIO](/platformy/AMPIO/Poznaj%20AMPIO)
+- MQTT
+- Systemy oparte o ESP32
+
+Konfiguracja zależy od wybranego środowiska.
+
+Pierwsze uruchomienie i konfiguracja na wybranej platformie (SUPLA, Home Assistant, LOXONE, AMPIO): [Pierwsze uruchomienie](/produkty/SM-LITE-1624D/Pierwsze%20uruchomienie)
+
+---
+## Bezpieczeństwo użytkowania
+
+Przed montażem upewnij się, że przewody nie są pod napięciem. Montaż powinna wykonywać wyłącznie osoba z uprawnieniami, zgodnie z obowiązującymi normami. Nie używaj sterownika bez obudowy ani z uszkodzoną obudową. Nie przekraczaj parametrów pracy – zwłaszcza obciążenia przekaźników. Niektóre platformy wymagają zewnętrznego serwera, chmury lub dodatkowego oprogramowania.
+
+---
+## Deklaracja zgodności UE (CE)
+
+Sterownik spełnia wymagania dyrektyw UE. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">Pobierz deklarację zgodności UE (PDF)</a>
+
+---
+## Co dalej?
+
+Szczegóły podłączenia i konfiguracji znajdziesz na kolejnych stronach dokumentacji: [Instrukcje i linki](/Instrukcje%20i%20linki/Linki%20i%20pliki).

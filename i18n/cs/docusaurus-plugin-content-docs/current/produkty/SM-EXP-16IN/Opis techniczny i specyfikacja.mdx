@@ -1,0 +1,75 @@
+---
+sidebar_position: 1
+title: Technický popis a specifikace
+sidebar_label: Technický popis a specifikace
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Řídicí jednotka SM-EXP-16IN
+
+Ekspander 16 wejść 24 V (I2C) do sterowników SMARTBOB
+
+---
+## Vzhled řídicí jednotky
+
+<img src={useBaseUrl('/img/SM-EXP-16IN/render/wyglad.webp?v=mwwgzn3i')} alt="SM-EXP-16IN" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-EXP-16IN/render/wymiary-cs.svg?v=mwwgzn3i')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+---
+## Periferie
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-EXP-16IN/render/peryferia-cs.svg?v=mwwgzn3i')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+1. **Výstupy** – Výstupy řídicí jednotky.
+2. **Vstupy** – Vstupy 24 V.
+3. **Napájení** – Napájení řídicí jednotky.
+4. **Kanály ADC** – Analogové vstupy.
+5. **RS485** – Sběrnice RS485.
+6. **Port Ethernet (RJ45)** – LAN.
+7. **I2C / 1-Wire** – Rozšiřující konektory.
+8. **Konektor USB-C** – Programování a servis.
+9. **Displej OLED** – Stavový displej.
+10. **LED indikátory** – Stavové LED.
+
+---
+## Technická specifikace
+
+| Parametr | Hodnota |
+|---|---|
+
+---
+## Software
+
+Řídicí jednotka SMARTBOB je univerzální platforma – nainstalovaný software je uveden na obalu, na krytu nebo v objednávce.
+
+- [SUPLA](/platformy/SUPLA/Poznaj%20SUPLA)
+- [Home Assistant (ESPHome)](/platformy/HOME%20ASSISTANT/Poznaj%20HOME%20ASSISTANT)
+- [LOXONE](/platformy/LOXONE/Poznaj%20LOXONE)
+- [AMPIO](/platformy/AMPIO/Poznaj%20AMPIO)
+- MQTT
+- Systémy založené na ESP32
+
+Konfigurace závisí na zvolené platformě.
+
+První spuštění a konfigurace na zvolené platformě (SUPLA, Home Assistant, LOXONE, AMPIO): [Platformy – návody](/category/platformy)
+
+---
+## Bezpečnost používání
+
+Před montáží se ujistěte, že vodiče nejsou pod napětím. Montáž smí provádět pouze osoba s oprávněním v souladu s platnými normami. Nepoužívejte řídicí jednotku bez krytu ani s poškozeným krytem. Nepřekračujte provozní parametry – zejména zatížení relé. Některé platformy vyžadují externí server, cloud nebo další software.
+
+---
+## EU prohlášení o shodě (CE)
+
+Řídicí jednotka splňuje požadavky směrnic EU. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">Stáhnout EU prohlášení o shodě (PDF)</a>
+
+---
+## Co dál?
+
+Podrobnosti o zapojení a konfiguraci najdete na dalších stránkách dokumentace: [Návody a odkazy](/Instrukcje%20i%20linki/Linki%20i%20pliki).

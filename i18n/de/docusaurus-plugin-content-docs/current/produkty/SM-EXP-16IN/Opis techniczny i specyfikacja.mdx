@@ -1,0 +1,75 @@
+---
+sidebar_position: 1
+title: Technische Beschreibung und Spezifikation
+sidebar_label: Technische Beschreibung und Spezifikation
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Steuerung SM-EXP-16IN
+
+Ekspander 16 wejść 24 V (I2C) do sterowników SMARTBOB
+
+---
+## Aussehen der Steuerung
+
+<img src={useBaseUrl('/img/SM-EXP-16IN/render/wyglad.webp?v=mwwgzn0v')} alt="SM-EXP-16IN" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-EXP-16IN/render/wymiary-de.svg?v=mwwgzn0v')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+---
+## Peripherie
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-EXP-16IN/render/peryferia-de.svg?v=mwwgzn0v')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+1. **Ausgänge** – Ausgänge der Steuerung.
+2. **Eingänge** – 24-V-Eingänge.
+3. **Versorgung** – Versorgung der Steuerung.
+4. **ADC-Kanäle** – Analogeingänge.
+5. **RS485** – RS485-Bus.
+6. **Ethernet-Port (RJ45)** – LAN.
+7. **I2C / 1-Wire** – Erweiterungsanschlüsse.
+8. **USB-C-Anschluss** – Programmierung und Service.
+9. **OLED-Display** – Statusanzeige.
+10. **LED-Anzeigen** – Status-LEDs.
+
+---
+## Technische Daten
+
+| Parameter | Wert |
+|---|---|
+
+---
+## Software
+
+Die SMARTBOB-Steuerung ist eine universelle Plattform – die installierte Software ist auf der Verpackung, auf dem Gehäuse oder in der Bestellung angegeben.
+
+- [SUPLA](/platformy/SUPLA/Poznaj%20SUPLA)
+- [Home Assistant (ESPHome)](/platformy/HOME%20ASSISTANT/Poznaj%20HOME%20ASSISTANT)
+- [LOXONE](/platformy/LOXONE/Poznaj%20LOXONE)
+- [AMPIO](/platformy/AMPIO/Poznaj%20AMPIO)
+- MQTT
+- ESP32-basierte Systeme
+
+Die Konfiguration hängt von der gewählten Plattform ab.
+
+Erstinbetriebnahme und Konfiguration auf der gewählten Plattform (SUPLA, Home Assistant, LOXONE, AMPIO): [Plattformen – Anleitungen](/category/platformy)
+
+---
+## Sichere Verwendung
+
+Stellen Sie vor der Montage sicher, dass die Leitungen spannungsfrei sind. Die Montage darf nur von einer qualifizierten Person gemäß den geltenden Normen durchgeführt werden. Verwenden Sie die Steuerung nicht ohne Gehäuse oder mit beschädigtem Gehäuse. Überschreiten Sie die Betriebsparameter nicht – insbesondere die Relaislast. Einige Plattformen erfordern einen externen Server, eine Cloud oder zusätzliche Software.
+
+---
+## EU-Konformitätserklärung (CE)
+
+Die Steuerung erfüllt die Anforderungen der EU-Richtlinien. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">EU-Konformitätserklärung herunterladen (PDF)</a>
+
+---
+## Wie geht es weiter?
+
+Details zu Anschluss und Konfiguration finden Sie auf den folgenden Dokumentationsseiten: [Anleitungen und Links](/Instrukcje%20i%20linki/Linki%20i%20pliki).

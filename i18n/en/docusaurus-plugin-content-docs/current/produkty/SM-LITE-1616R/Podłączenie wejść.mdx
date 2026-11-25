@@ -1,0 +1,100 @@
+---
+sidebar_position: 3
+sidebar_label: Connecting inputs
+title: Connecting inputs
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Introduction
+Instructions for connecting buttons, switches, sensors and other elements to the controller's control inputs
+
+---
+## Connecting a button and operating mode
+The SMARTBOB controller has 16 basic control inputs on two green 8-pin plug-in connectors.
+
+In every SMARTBOB controller a control input can be triggered by applying the potential:
+- GND/MINUS
+- VCC/24V DC
+
+Depending on the device version, the configuration is done:
+- with a jumper on the PCB
+- or in the software (newer models)
+
+:::tip
+Technically it is also possible to react to both edges, but this mode is not recommended in standard installations
+because of 2x higher sensitivity to interference.
+:::
+
+### GND/MINUS control mode
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-minus-en.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-minus-en.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+### VCC/24V DC control mode
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-plus-en.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-plus-en.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+The most common way of connecting is to control the input by shorting it to GND (or the second option, plus 24V).
+- Connect one wire of the button to the GND rail (or the second option, plus 24V),
+- Connect the other wire to the selected controller input (e.g. IN01).
+
+Pressing the button shorts the input to ground (or the second option, plus 24V), which is detected as input activation.
+When the input is activated, the LED indicator of that input lights up on the controller.
+
+### These inputs are used to connect:
+- buttons,
+- switches,
+- reed switches,
+- sensors (e.g. motion, alarm),
+- relays,
+- and other devices generating a control signal.
+
+### Type of the shorting element:
+- mechanical contact,
+- transistor/relay signal output, e.g. OPEN COLLECTOR, OPEN EMITTER output,
+- or an electronic circuit shorting the signal to **GND** or **VCC**.
+
+This makes it possible to connect many different types of control devices and sensors.
+
+:::tip
+The controller also has additional pins and interfaces which, depending on the configuration, can work as inputs.
+This chapter describes the basic control inputs available on the green 8-pin connectors.
+:::
+
+---
+
+## Connecting motion / fire sensors etc.
+
+Sensors with a relay or transistor output can also be connected to the inputs.
+### Control to **GND** (basic configuration)
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-czujki-en.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wejscia-czujki-en.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+### Sensor information
+- The sensor requires an external power supply
+- The sensor supply can have a different voltage than the controller, e.g. the sensor powered with 12V and the controller with 24V.
+If the sensor has an output other than a relay or mechanical contact, e.g. a digital output, the GND of the controller power supply
+must be connected with the GND of the sensor power supply
+- SMARTBOB inputs are used only to detect the control signal
+- The way of powering the sensors depends on their model and manufacturer
+
+For typical alarm sensors the most common is:
+- **NO** mode (Normally Open),
+- or **NC** (Normally Closed).
+
+The SMARTBOB controller works by default with sensors:
+- without parametrizing resistors,
+- without EOL / 2EOL configuration.
+
+The most commonly used sensor output is marked as:
+- **ALARM**,
+- **OUT**,
+- or the alarm relay contact.
+
+To check sensor compatibility, make sure its working contact or output:
+- Can work with 24V DC (many sensors allow 30–60V DC)
+- Allows a current of at least 3 mA (many sensors allow 10–30 mA).
+
+:::tip
+For transistor outputs also check that the output type (PNP/NPN/OC) matches the controller input configuration.
+:::

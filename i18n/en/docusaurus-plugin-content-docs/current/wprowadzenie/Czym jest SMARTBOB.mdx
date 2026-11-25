@@ -4,6 +4,9 @@ sidebar_label: What is SMARTBOB
 title: What is SMARTBOB
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+
 ## What is SMARTBOB?
 
 SMARTBOB is an open building automation and smart home system made in Poland, designed for modern wired installations and integration with popular automation platforms. SMARTBOB started as a DIY project developed by automation and electronics enthusiasts and over time became a fully fledged commercial system.
@@ -40,3 +43,22 @@ SMARTBOB can work with, among others:
 The final functionality depends on the chosen master platform and how the automation is configured. Regardless of the system used, the basic principle stays the same – SMARTBOB physically controls the devices and provides an interface for further automation.
 
 This means you can start the installation before choosing the target smart home platform. You can first do the wiring and mount the SMARTBOB controllers, and only later decide which automation system to use.
+
+---
+
+{/* modele */}
+## Models and comparison
+
+The SMARTBOB line has three series: **MINI** and **GATE** for smaller tasks, **LITE** as the main house controller and **PRO** for large installations. **R** versions have relay outputs (potential-free, 230 V AC or DC), **D** versions have 24 V MOSFET transistor outputs with PWM for LED strips and 24 V relays. All of them mount on a TH35 rail in the distribution board, and the SM-EXP-16IN expander adds more inputs.
+
+| Model | Inputs | Outputs | Communication | Width | Use |
+|---|---|---|---|---|---|
+| <a href={useBaseUrl('/category/sm-gate-0202r')}>**SM-GATE-0202R**</a> | 2 (AC/DC, isolated) | 2 × relay 10 A | LAN, Wi-Fi, RS485, 1-Wire, I2C (radio 868 MHz) | 4 DIN mod. | gate, wicket |
+| <a href={useBaseUrl('/category/sm-mini-0808r')}>**SM-MINI-0808R**</a> | 8 | 8 × relay 10 A | LAN, Wi-Fi, 1-Wire, I2C | 7 DIN mod. | flat, garage, extension |
+| <a href={useBaseUrl('/category/sm-lite-1616r')}>**SM-LITE-1616R**</a> | 16 | 16 × relay 10 A | LAN, Wi-Fi, RS485, CAN, 1-Wire, I2C | 12 DIN mod. | house – lighting, blinds, gate |
+| <a href={useBaseUrl('/category/sm-lite-1624d')}>**SM-LITE-1624D**</a> | 16 | 24 × MOSFET (PWM) | LAN, Wi-Fi, RS485, 1-Wire, I2C | 12 DIN mod. | LED strips, 24 V relays |
+| <a href={useBaseUrl('/category/sm-pro-3236d')}>**SM-PRO-3236D**</a> | 32 | 36 × MOSFET (PWM) | LAN, Wi-Fi, RS485, 1-Wire, I2C | 12 DIN mod. | large LED installations |
+| <a href={useBaseUrl('/produkty/SM-PRO-3222R/Opis techniczny i specyfikacja')}>**SM-PRO-3222R**</a> | 32 | 22 × relay 10 A | LAN, Wi-Fi, RS485, CAN, 1-Wire, I2C | 12 DIN mod. | large installations (from 2027) |
+| <a href={useBaseUrl('/category/sm-exp-16in')}>**SM-EXP-16IN**</a> | 16 | — | I2C | 4 DIN mod. | additional inputs |
+
+A full comparison, including power supply and analog inputs, is in the [3D technical assistant (“Compare models” button)](https://smartbobautomatyka.github.io/SmartBob3D/#lang=en).

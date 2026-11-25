@@ -2,6 +2,9 @@
 sidebar_position: 2
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+
 ## Czym jest SMARTBOB?
 
 SMARTBOB to otwarty system automatyki budynkowej i smart home tworzony w Polsce, zaprojektowany z myślą o
@@ -48,3 +51,22 @@ SMARTBOB realizuje fizyczne sterowanie urządzeniami i udostępnia interfejs do 
 Dzięki temu możliwe jest rozpoczęcie instalacji jeszcze przed wyborem docelowej platformy smart home.
 Użytkownik może najpierw wykonać okablowanie oraz zamontować sterowniki SMARTBOB, a dopiero później zdecydować,
 z jakiego systemu automatyki chce korzystać.
+
+---
+
+{/* modele */}
+## Modele i porównanie
+
+Linia SMARTBOB obejmuje trzy serie: **MINI** i **GATE** do mniejszych zadań, **LITE** jako główny sterownik domu oraz **PRO** do dużych instalacji. Wersje **R** mają wyjścia przekaźnikowe (bezpotencjałowe, 230 V AC lub DC), wersje **D** – wyjścia tranzystorowe MOSFET 24 V z PWM do taśm LED i przekaźników 24 V. Wszystkie montuje się na szynie TH35 w rozdzielnicy, a ekspander SM-EXP-16IN dokłada kolejne wejścia.
+
+| Model | Wejścia | Wyjścia | Komunikacja | Szerokość | Zastosowanie |
+|---|---|---|---|---|---|
+| <a href={useBaseUrl('/category/sm-gate-0202r')}>**SM-GATE-0202R**</a> | 2 (AC/DC, izolowane) | 2 × przekaźnik 10 A | LAN, Wi-Fi, RS485, 1-Wire, I2C (radio 868 MHz) | 4 mod. DIN | brama, furtka |
+| <a href={useBaseUrl('/category/sm-mini-0808r')}>**SM-MINI-0808R**</a> | 8 | 8 × przekaźnik 10 A | LAN, Wi-Fi, 1-Wire, I2C | 7 mod. DIN | mieszkanie, garaż, rozbudowa |
+| <a href={useBaseUrl('/category/sm-lite-1616r')}>**SM-LITE-1616R**</a> | 16 | 16 × przekaźnik 10 A | LAN, Wi-Fi, RS485, CAN, 1-Wire, I2C | 12 mod. DIN | dom – oświetlenie, rolety, brama |
+| <a href={useBaseUrl('/category/sm-lite-1624d')}>**SM-LITE-1624D**</a> | 16 | 24 × MOSFET (PWM) | LAN, Wi-Fi, RS485, 1-Wire, I2C | 12 mod. DIN | taśmy LED, przekaźniki 24 V |
+| <a href={useBaseUrl('/category/sm-pro-3236d')}>**SM-PRO-3236D**</a> | 32 | 36 × MOSFET (PWM) | LAN, Wi-Fi, RS485, 1-Wire, I2C | 12 mod. DIN | duże instalacje LED |
+| <a href={useBaseUrl('/produkty/SM-PRO-3222R/Opis techniczny i specyfikacja')}>**SM-PRO-3222R**</a> | 32 | 22 × przekaźnik 10 A | LAN, Wi-Fi, RS485, CAN, 1-Wire, I2C | 12 mod. DIN | duże instalacje (od 2027) |
+| <a href={useBaseUrl('/category/sm-exp-16in')}>**SM-EXP-16IN**</a> | 16 | — | I2C | 4 mod. DIN | dodatkowe wejścia |
+
+Pełne porównanie, w tym zasilanie i wejścia analogowe, znajdziesz w [Asystencie technicznym 3D (przycisk „Porównaj modele”)](https://smartbobautomatyka.github.io/SmartBob3D/#lang=pl).

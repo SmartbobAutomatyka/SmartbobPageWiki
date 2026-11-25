@@ -4,6 +4,52 @@ sidebar_label: Stavím dům – jak začít
 title: Stavím dům – jak začít
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+
+{/* start */}
+## Kde začít?
+
+Automatizaci je nejsnazší a nejlevnější naplánovat dříve, než se do zdí položí kabely. Dodatečné přivedení kabelu k tlačítku nebo roletě znamená sekání omítky – proto se vyplatí projít tyto kroky už ve fázi projektu domu:
+
+1. **Sepište potřeby** – místnost po místnosti: osvětlení, rolety, vytápění, brána, čidla, ovládané zásuvky.
+2. **Naplánujte hvězdicovou instalaci** – každé tlačítko a každý spotřebič vlastním kabelem do rozvaděče (viz „Základní zapojení“ u řídicích jednotek).
+3. **Zvolte řídicí jednotky** – spočítejte vstupy (tlačítka, čidla) a výstupy (svítidla, rolety, LED) a vyberte modely s rezervou cca 20 %.
+4. **Naplánujte rozvaděč** – místo pro řídicí jednotky, zdroj 24 V, jističe a svorkovnice, nejlépe s rezervou.
+5. **Zvolte platformu** – SUPLA, Home Assistant, Loxone, Ampio nebo MQTT; rozhodnout se můžete i po dokončení kabeláže.
+
+## Technický 3D asistent – uvidíte to dřív, než postavíte
+
+Abyste si to snáze představili, připravili jsme **technického 3D asistenta**. V prohlížeči, bez instalace, ukazuje celou budovu s hvězdicovou kabeláží, 2D půdorys s trasami kabelů, rozvaděč s řídicími jednotkami a každou řídicí jednotku s popisem konektorů a simulacemi zapojení.
+
+- **Budova 3D a půdorys 2D** – kudy vedou kabely od tlačítek, svítidel a rolet do rozvaděče
+- **Rozvaděč** – návrh skříně Zenergy OM: rozměry, řady, kryty, soupis prvků a cenová nabídka
+- **Řídicí jednotky** – 3D modely, popisy konektorů, dokumentace a porovnání modelů
+- **Simulace „jak zapojit“** – tlačítka, osvětlení, rolety, brána, LED pásky
+
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '14px', margin: '14px 0'}}>
+  <a href={useBaseUrl('/img/asystent-3d/house3d.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house3d.webp')} alt="Budova 3D s kabeláží" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Budova 3D s kabeláží</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/house2d.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house2d.webp')} alt="Půdorys 2D s trasami kabelů" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Půdorys 2D s trasami kabelů</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/cab.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/cab.webp')} alt="Rozvaděč s řídicí jednotkou" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Rozvaděč s řídicí jednotkou</div>
+  </a>
+</div>
+
+:::info[DEMO]
+Pohledy **Budova** a **Rozvaděč** jsou zatím demoverze – průběžně je vyvíjíme.
+:::
+
+**👉 [Otevřít 3D asistenta](https://smartbobautomatyka.github.io/SmartBob3D/#lang=cs)**
+
+---
+
 ## Plánování instalace chytré domácnosti
 
 U dobře naplánované instalace platí: čím více prvků zahrnete již ve fázi projektu, tím snazší a levnější bude pozdější rozšíření systému chytré domácnosti.

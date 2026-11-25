@@ -1,0 +1,126 @@
+---
+sidebar_position: 1
+title: Technical description and specification
+sidebar_label: Technical description and specification
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Controller SM-PRO-3236D
+
+SM-PRO-3236D is the SMARTBOB flagship: 32 inputs and 36 transistor outputs with PWM in one 12-DIN module – for large houses, offices and buildings with a lot of LED lighting and DC loads.
+
+👉 <a href="https://smartbob.pl/produkt/sm-pro-3236d/" target="_blank">Buy the controller here</a>
+
+---
+## Controller appearance
+
+<img src={useBaseUrl('/img/SM-PRO-3236D/render/wyglad.webp?v=mwwgzfqy')} alt="SM-PRO-3236D" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+
+Every N-MOSFET output delivers up to 7 A with smooth dimming – control LED strips, fans, DC motors, valves and external relays from one place.
+
+ESP32, LAN and Wi-Fi, RS485, I2C, 1-Wire and a real-time clock – ready for complex scenes and integration with Home Assistant, SUPLA, LOXONE, AMPIO and HOMEY.
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-PRO-3236D/render/wymiary-en.svg?v=mwwgzfqy')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+---
+## Key features
+
+- 32 control inputs 24 V (GND or VCC signal) – push buttons, switches, sensors
+- 36 independent N-MOSFET outputs with PWM – LEDs, fans, DC motors, external relays
+- 2 ADC channels up to 24 V
+- LAN or Wi-Fi communication
+- Two I2C buses, RS485 and 1-Wire
+- 0.96" OLED display
+- TMP102 temperature sensor – thermal protection
+- 24 V DC supply
+
+Designed for a distribution board – central control of a large installation: LED lighting, ventilation, drives and external relays.
+
+---
+## Applications
+
+- Large houses, apartments and commercial buildings
+- Many LED circuits and DC drives from one controller
+- Dimming and light scenes (PWM)
+- Alarm integration via sensors
+- Ventilation and technical equipment via RS485 / Modbus
+- Smart home integration (SUPLA, Home Assistant, LOXONE, AMPIO, HOMEY)
+
+---
+## Peripherals
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-PRO-3236D/render/peryferia-en.svg?v=mwwgzfqy')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+1. **Transistor outputs (MOSFET)** – N-MOSFET outputs 5–50 V DC with PWM – LED strips, fans, solenoid valves; load minus to OUT.
+2. **Output GND terminals** – Common minus of the output group – ground of the DC load supply.
+3. **Control inputs** – 24 V digital inputs – push buttons, switches, sensors.
+4. **Power connector (24V DC)** – Main power supply of the controller.
+5. **ADC channels** – Analog inputs – voltage measurement and analog sensors (e.g. 0–10 V).
+6. **RS485 interface** – Modbus RS485 communication with external devices.
+7. **Ethernet port (RJ45)** – LAN connection.
+8. **Universal inputs and expansion interfaces** – I2C, 1-Wire and other bus connectors.
+9. **USB-C connector** – Programming, configuration and service.
+10. **Configuration button** – Service button for configuration and reset.
+11. **OLED display** – Status display, visible through the housing.
+12. **LED indicators** – Input, output and operation status LEDs – visible through the housing.
+
+---
+## Technical specification
+
+| Parameter | Value |
+|---|---|
+| Inputs | 32 |
+| Outputs | 36 × N-MOSFET |
+| Output type | DC 5–50 V, PWM |
+| Analog inputs | 2 (up to 24 V) |
+| Communication | LAN, Wi-Fi, RS485, 1-Wire, I2C ×2 |
+| Enclosure | 212 × 90 × 59 mm (with connectors: 212 × 115 × 59 mm) |
+
+---
+## Power supply parameters
+
+| Parameter | Value |
+|---|---|
+| Supply voltage | 24 V DC |
+| Current consumption (max.) | 0,2 A (4,8 W) |
+| Power cable | LgY 1 mm² |
+
+:::tip
+Several SMARTBOB controllers in one installation can share one power supply with sufficient current capacity, but a separate power supply is recommended.
+:::
+
+---
+## Software
+
+The SMARTBOB controller is a universal platform – the installed software is stated on the packaging, on the housing or in the order.
+
+- [SUPLA](/platformy/SUPLA/Poznaj%20SUPLA)
+- [Home Assistant (ESPHome)](/platformy/HOME%20ASSISTANT/Poznaj%20HOME%20ASSISTANT)
+- [LOXONE](/platformy/LOXONE/Poznaj%20LOXONE)
+- [AMPIO](/platformy/AMPIO/Poznaj%20AMPIO)
+- MQTT
+- ESP32-based systems
+
+The configuration depends on the chosen platform.
+
+First start-up and configuration on the chosen platform (SUPLA, Home Assistant, LOXONE, AMPIO): [First start-up](/produkty/SM-PRO-3236D/Pierwsze%20uruchomienie)
+
+---
+## Safe use
+
+Before installation make sure the wires are not live. Installation should only be carried out by a qualified person in accordance with applicable standards. Do not use the controller without a housing or with a damaged housing. Do not exceed the operating parameters – especially the relay load. Some platforms require an external server, cloud or additional software.
+
+---
+## EU declaration of conformity (CE)
+
+The controller meets the requirements of EU directives. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">Download the EU declaration of conformity (PDF)</a>
+
+---
+## What next?
+
+Connection and configuration details can be found on the following documentation pages: [Manuals and links](/Instrukcje%20i%20linki/Linki%20i%20pliki).

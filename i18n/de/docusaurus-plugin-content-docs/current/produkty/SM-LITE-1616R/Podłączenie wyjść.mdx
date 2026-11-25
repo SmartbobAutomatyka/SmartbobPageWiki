@@ -1,0 +1,72 @@
+---
+sidebar_position: 4
+sidebar_label: Anschluss der Ausgänge
+title: Anschluss der Ausgänge
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Anschluss der Ausgänge
+
+Anleitung zum Anschluss von Beleuchtung, Rollläden, Steuersignalen und anderen Verbrauchern über die
+Relaisausgänge der Steuerung.
+
+---
+## Relaisausgänge
+
+Die SMARTBOB-Steuerung 1616R hat 16 Relaisausgänge auf 8 grünen 5-poligen Steckklemmen.
+Die Ausgänge sind in Paare zu je 2 Relais aufgeteilt.
+
+Parameter eines einzelnen Relais:
+
+| Parameter | Wert |
+|----------|----------|
+| Ausgangstyp | Potentialfrei |
+| Max. Wechselspannung | 230V AC |
+| Max. Gleichspannung | 30V DC |
+| Max. Strom | 10A |
+| Kontaktart | NO oder NO/NC |
+
+Dadurch ist sowohl das normale Schalten von Verbrauchern möglich als auch der Aufbau komplexerer
+Steuerungen, die einen Wechselkontakt benötigen, z. B. die Rollladensteuerung (mit Schutz gegen gleichzeitiges
+Einschalten beider Motorrichtungen).
+
+---
+## Anschluss der Stromkreise:
+
+### Konfiguration der Beleuchtungssteuerung
+Beispielkonfiguration der Beleuchtung:
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-swiatlo-de.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-swiatlo-de.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+### Konfiguration der Rollladensteuerung
+Beispielkonfiguration eines Rollladens:
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-roleta-de.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-roleta-de.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+:::tip
+Für die Rollladenverriegelung eine Brücke zwischen den Ausgängen COM und NC setzen
+:::
+
+### Beispielkonfiguration der Ansteuerung eines Tores
+Beispielkonfiguration des Torsignals:
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-brama-de.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-brama-de.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+:::tip
+Jeder Ausgang kann völlig unabhängig arbeiten und eine andere Spannung oder einen anderen Stromkreis schalten.
+Beispielkonfiguration:
+- Relais 1 → Phase 1 — Beleuchtung
+- Relais 2 → Phase 2 — Beleuchtung
+- Relais 3 → Phase 3 — Beleuchtung
+- Relais 4 + Relais 5 → Rollladensteuerung auf/ab
+- Relais 6 → Torsignal
+- Relais 7 → Magnetventil 24V AC
+- Relais 8 → Schützspule 12V DC
+
+Dank potentialfreier Relais können gleichzeitig geschaltet werden:
+- Stromkreise 24/230V AC,
+- 5/12/24V DC,
+- Logiksignale,
+- Eingänge anderer Steuerungen und Automatisierungsgeräte.
+:::

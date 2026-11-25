@@ -4,6 +4,52 @@ sidebar_label: Ich baue ein Haus – wie anfangen
 title: Ich baue ein Haus – wie anfangen
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+
+{/* start */}
+## Wo anfangen?
+
+Automation lässt sich am einfachsten und günstigsten planen, bevor die Leitungen in die Wände kommen. Eine Leitung zu einem Taster oder Rollladen später nachzurüsten bedeutet Stemmarbeiten – deshalb lohnt es sich, diese Schritte schon bei der Hausplanung durchzugehen:
+
+1. **Bedarf auflisten** – Raum für Raum: Beleuchtung, Rollläden, Heizung, Tor, Sensoren, geschaltete Steckdosen.
+2. **Sterninstallation planen** – jeder Taster und jeder Verbraucher mit eigener Leitung zum Verteiler (siehe „Grundanschluss“ bei den Steuerungen).
+3. **Steuerungen wählen** – Eingänge (Taster, Sensoren) und Ausgänge (Leuchten, Rollläden, LED) zählen und Modelle mit ca. 20 % Reserve wählen.
+4. **Verteiler planen** – Platz für Steuerungen, 24-V-Netzteil, Schutzschalter und Klemmen, am besten mit Reserve.
+5. **Plattform wählen** – SUPLA, Home Assistant, Loxone, Ampio oder MQTT; das geht auch noch nach der Verkabelung.
+
+## Technischer 3D-Assistent – sehen, bevor Sie bauen
+
+Damit man es sich leichter vorstellen kann, haben wir den **technischen 3D-Assistenten** erstellt. Im Browser, ohne Installation, zeigt er das ganze Gebäude mit Sternverkabelung, einen 2D-Grundriss mit Leitungswegen, den Verteiler mit Steuerungen sowie jede Steuerung mit Anschlussbeschreibung und Anschlusssimulationen.
+
+- **3D-Gebäude und 2D-Grundriss** – wo die Leitungen von Tastern, Leuchten und Rollläden zum Verteiler verlaufen
+- **Verteiler** – Planung des Gehäuses Zenergy OM: Maße, Reihen, Abdeckungen, Stückliste und Angebot
+- **Steuerungen** – 3D-Modelle, Anschlussbeschreibungen, Dokumentation und Modellvergleich
+- **Simulationen „Wie anschließen“** – Taster, Beleuchtung, Rollläden, Tor, LED-Streifen
+
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '14px', margin: '14px 0'}}>
+  <a href={useBaseUrl('/img/asystent-3d/house3d.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house3d.webp')} alt="3D-Gebäude mit Verkabelung" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>3D-Gebäude mit Verkabelung</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/house2d.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house2d.webp')} alt="2D-Grundriss mit Leitungswegen" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>2D-Grundriss mit Leitungswegen</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/cab.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/cab.webp')} alt="Verteiler mit Steuerung" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Verteiler mit Steuerung</div>
+  </a>
+</div>
+
+:::info[DEMO]
+Die Ansichten **Gebäude** und **Verteiler** sind vorerst eine Demoversion – wir entwickeln sie ständig weiter.
+:::
+
+**👉 [3D-Assistent öffnen](https://smartbobautomatyka.github.io/SmartBob3D/#lang=de)**
+
+---
+
 ## Planung einer Smart-Home-Installation
 
 Bei einer gut geplanten Installation gilt: Je mehr Elemente Sie schon in der Planung berücksichtigen, desto einfacher und günstiger ist die spätere Erweiterung des Smart-Home-Systems.

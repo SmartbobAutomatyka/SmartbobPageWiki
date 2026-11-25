@@ -4,6 +4,52 @@ sidebar_label: Staviam dom – ako začať
 title: Staviam dom – ako začať
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+
+{/* start */}
+## Kde začať?
+
+Automatizáciu je najjednoduchšie a najlacnejšie naplánovať skôr, ako sa do stien uložia káble. Dodatočné privedenie kábla k tlačidlu alebo rolete znamená sekanie omietky – preto sa oplatí prejsť tieto kroky už vo fáze projektu domu:
+
+1. **Spíšte potreby** – miestnosť po miestnosti: osvetlenie, rolety, kúrenie, brána, snímače, ovládané zásuvky.
+2. **Naplánujte hviezdicovú inštaláciu** – každé tlačidlo a každý spotrebič vlastným káblom do rozvádzača (pozri „Základné zapojenie“ pri riadiacich jednotkách).
+3. **Zvoľte riadiace jednotky** – spočítajte vstupy (tlačidlá, snímače) a výstupy (svietidlá, rolety, LED) a vyberte modely s rezervou cca 20 %.
+4. **Naplánujte rozvádzač** – miesto pre riadiace jednotky, zdroj 24 V, ističe a svorkovnice, najlepšie s rezervou.
+5. **Zvoľte platformu** – SUPLA, Home Assistant, Loxone, Ampio alebo MQTT; rozhodnúť sa môžete aj po dokončení kabeláže.
+
+## Technický 3D asistent – uvidíte to skôr, ako postavíte
+
+Aby ste si to ľahšie predstavili, pripravili sme **technického 3D asistenta**. V prehliadači, bez inštalácie, ukazuje celú budovu s hviezdicovou kabelážou, 2D pôdorys s trasami káblov, rozvádzač s riadiacimi jednotkami a každú riadiacu jednotku s popisom konektorov a simuláciami zapojenia.
+
+- **Budova 3D a pôdorys 2D** – kade vedú káble od tlačidiel, svietidiel a roliet do rozvádzača
+- **Rozvádzač** – návrh skrinky Zenergy OM: rozmery, rady, kryty, súpis prvkov a cenová ponuka
+- **Riadiace jednotky** – 3D modely, popisy konektorov, dokumentácia a porovnanie modelov
+- **Simulácie „ako zapojiť“** – tlačidlá, osvetlenie, rolety, brána, LED pásy
+
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '14px', margin: '14px 0'}}>
+  <a href={useBaseUrl('/img/asystent-3d/house3d.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house3d.webp')} alt="Budova 3D s kabelážou" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Budova 3D s kabelážou</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/house2d.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/house2d.webp')} alt="Pôdorys 2D s trasami káblov" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Pôdorys 2D s trasami káblov</div>
+  </a>
+  <a href={useBaseUrl('/img/asystent-3d/cab.webp')} target="_blank" style={{flex: '1 1 240px', textAlign: 'center'}}>
+    <img src={useBaseUrl('/img/asystent-3d/cab.webp')} alt="Rozvádzač s riadiacou jednotkou" style={{width: '100%', borderRadius: '8px', border: '1px solid #3a3e44'}} />
+    <div style={{fontSize: '0.85em', opacity: 0.8}}>Rozvádzač s riadiacou jednotkou</div>
+  </a>
+</div>
+
+:::info[DEMO]
+Pohľady **Budova** a **Rozvádzač** sú zatiaľ demoverzia – priebežne ich vyvíjame.
+:::
+
+**👉 [Otvoriť 3D asistenta](https://smartbobautomatyka.github.io/SmartBob3D/#lang=sk)**
+
+---
+
 ## Plánovanie inštalácie inteligentnej domácnosti
 
 Pri dobre naplánovanej inštalácii platí: čím viac prvkov zahrniete už vo fáze projektu, tým jednoduchšie a lacnejšie bude neskoršie rozšírenie systému inteligentnej domácnosti.

@@ -1,0 +1,92 @@
+---
+sidebar_position: 1
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Sterownik SM-PRO-3222R
+
+32 wejścia / 22 wyjścia przekaźnikowe
+
+---
+## Wygląd sterownika
+
+<img src={useBaseUrl('/img/SM-PRO-3222R/render/wyglad.webp?v=mwwgzf7q')} alt="SM-PRO-3222R" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-PRO-3222R/render/wymiary-pl.svg?v=mwwgzf7q')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+---
+## Peryferia
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px', alignItems: 'end' }}>
+  <figure style={{ margin: 0, textAlign: 'center' }}><img src={useBaseUrl('/img/SM-PRO-3222R/render/peryferia-pl.svg?v=mwwgzf7q')} alt="" style={{ width: '100%', height: 'auto' }} /><figcaption style={{ fontSize: '.85em', opacity: .75 }}></figcaption></figure>
+</div>
+
+1. **Wyjścia** – Wyjścia sterownika.
+2. **Wejścia** – Wejścia 24 V.
+3. **Zasilanie** – Zasilanie sterownika.
+4. **Kanały ADC** – Wejścia analogowe.
+5. **RS485** – Magistrala RS485.
+6. **Port Ethernet (RJ45)** – LAN.
+7. **I2C / 1-Wire** – Złącza rozszerzeń.
+8. **Złącze USB-C** – Programowanie i serwis.
+9. **Ekran OLED** – Wyświetlacz stanu.
+10. **Wskaźniki LED** – Diody stanu.
+
+---
+## Specyfikacja Techniczna
+
+| Parametr | Wartość |
+|---|---|
+| Wejścia | 32 |
+| Wyjścia | 22 × przekaźnik |
+| Rodzaj wyjść | AC / DC (bezpotencjałowe) |
+| Wejścia analogowe | 2 (do 24 V) |
+| Komunikacja | LAN, Wi-Fi, RS485, CAN, 1-Wire, I2C |
+| Obudowa | 212 × 90 × 59 mm (z konektorami: 212 × 116 × 59 mm) |
+
+---
+## Parametry zasilania
+
+| Parametr | Wartość |
+|---|---|
+| Napięcie zasilania | 24 V DC |
+| Pobór prądu (maks.) | 0,75 A (18 W) |
+| Przewód zasilający | LgY 1 mm² |
+
+:::tip
+Kilka sterowników SMARTBOB w jednej instalacji może korzystać z jednego zasilacza o odpowiedniej wydajności prądowej, ale zalecany jest osobny zasilacz.
+:::
+
+---
+## Oprogramowanie
+
+Sterownik SMARTBOB to uniwersalna platforma – zainstalowane oprogramowanie jest podane na opakowaniu, na obudowie albo przy zamówieniu.
+
+- [SUPLA](/platformy/SUPLA/Poznaj%20SUPLA)
+- [Home Assistant (ESPHome)](/platformy/HOME%20ASSISTANT/Poznaj%20HOME%20ASSISTANT)
+- [LOXONE](/platformy/LOXONE/Poznaj%20LOXONE)
+- [AMPIO](/platformy/AMPIO/Poznaj%20AMPIO)
+- MQTT
+- Systemy oparte o ESP32
+
+Konfiguracja zależy od wybranego środowiska.
+
+Pierwsze uruchomienie i konfiguracja na wybranej platformie (SUPLA, Home Assistant, LOXONE, AMPIO): [Platformy – instrukcje](/category/platformy)
+
+---
+## Bezpieczeństwo użytkowania
+
+Przed montażem upewnij się, że przewody nie są pod napięciem. Montaż powinna wykonywać wyłącznie osoba z uprawnieniami, zgodnie z obowiązującymi normami. Nie używaj sterownika bez obudowy ani z uszkodzoną obudową. Nie przekraczaj parametrów pracy – zwłaszcza obciążenia przekaźników. Niektóre platformy wymagają zewnętrznego serwera, chmury lub dodatkowego oprogramowania.
+
+---
+## Deklaracja zgodności UE (CE)
+
+Sterownik spełnia wymagania dyrektyw UE. <a href="https://drive.google.com/drive/u/1/folders/14wF7Mvl9EYGiVtJTSkJ30Z57h0zurGWA" target="_blank">Pobierz deklarację zgodności UE (PDF)</a>
+
+---
+## Co dalej?
+
+Szczegóły podłączenia i konfiguracji znajdziesz na kolejnych stronach dokumentacji: [Instrukcje i linki](/Instrukcje%20i%20linki/Linki%20i%20pliki).

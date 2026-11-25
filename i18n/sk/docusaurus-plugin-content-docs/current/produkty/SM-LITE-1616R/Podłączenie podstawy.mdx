@@ -1,0 +1,107 @@
+---
+sidebar_position: 2
+sidebar_label: Základné zapojenie
+title: Základné zapojenie
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Zapojenie riadiacej jednotky
+Základy napájania, komunikácie a správneho pripojenia vodičov k svorkám riadiacej jednotky
+
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'flex-end', margin: '16px 0'}}>
+  <figure style={{flex: '2 1 420px', margin: 0, textAlign: 'center'}}><img src={useBaseUrl('/img/SM-LITE-1616R/render/wyglad.webp')} alt="SM-LITE-1616R" style={{width: '100%', height: 'auto', borderRadius: '8px'}} /><figcaption style={{fontSize: '.85em', opacity: .75}}>Riadiaca jednotka SM-LITE-1616R – svorky vstupov hore, reléové výstupy dole</figcaption></figure>
+  <figure style={{flex: '1 1 220px', margin: 0, textAlign: 'center'}}><img src={useBaseUrl('/img/SM-LITE-1616R/rozdzielnica.webp')} alt="" style={{width: '100%', maxWidth: '320px', height: 'auto', borderRadius: '8px'}} /><figcaption style={{fontSize: '.85em', opacity: .75}}>Príklad rozvádzača s riadiacou jednotkou (3D asistent)</figcaption></figure>
+</div>
+
+Riadiaca jednotka sa montuje na lištu TH35 v rozvádzači – spolu so zdrojom 24V DC a ističmi obvodov. Všetky konektory si môžete pozrieť zblízka v [technickom 3D asistentovi](https://smartbobautomatyka.github.io/SmartBob3D/#dev=1616R&lang=sk).
+
+---
+## Úvod do inštalácie v topológii hviezdy
+
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/gwiazda-sk.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/gwiazda-sk.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+Riadiace jednotky SMARTBOB sú navrhnuté pre inštalácie zapojené v topológii hviezdy.
+
+> V tradičnej inštalácii vedie vodič napájajúci svetlo cez nástenný vypínač.
+
+> V hviezdicovej inštalácii sú vodiče vedené:
+> - zvlášť z rozvádzača k tlačidlu (riadiaci signál),
+> - zvlášť z rozvádzača k svietidlu / svetelnému obvodu.
+
+Riadiaca jednotka tak centrálne riadi osvetlenie a automatiku z rozvádzača,
+čo uľahčuje rozširovanie systému, integráciu inteligentnej domácnosti a vytváranie automatických scén.
+
+---
+## Základné zapojenie
+Na spustenie riadiacej jednotky SMARTBOB v základnej konfigurácii je potrebné zabezpečiť napájanie
+a prístup k lokálnej sieti.
+
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/podlaczenie-sk.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/podlaczenie-sk.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+### Napájanie
+Riadiaca jednotka vyžaduje napájanie **24V DC** z vhodne zvoleného zdroja.
+- Napätie: 24V DC
+- Minimálny prúd: **0,5A na jednu riadiacu jednotku**, jeden väčší zdroj môže napájať niekoľko jednotiek
+- Odporúčanie: použiť zdroj s rezervou výkonu (napr. o 0,25A viac)
+
+Riadiaca jednotka potrebuje prístup k lokálnej sieti kvôli konfigurácii a komunikácii so systémom.
+### Možnosť 1: LAN (odporúčané)
+- Káblové pripojenie Ethernet
+- Stabilná a spoľahlivá komunikácia
+- Odporúčané riešenie pre pevné inštalácie
+
+### Možnosť 2: WiFi
+- Bezdrôtové pripojenie k lokálnej sieti
+- Uľahčuje inštaláciu tam, kde nie je kabeláž LAN
+- Vyžaduje dobrý signál WiFi
+
+---
+## Typy vodičov, kabeláž a konektory
+
+Riadiaca jednotka SMARTBOB má na vstupoch a výstupoch **odnímateľné konektory**, ktoré umožňujú demontáž zariadenia
+bez odpájania jednotlivých vodičov. Konce vodičov treba pred montážou správne pripraviť
+podľa požadovaných prierezov a dĺžok odizolovania.
+
+### Odporúčané prierezy vodičov a uťahovacie momenty svoriek:
+| Typ svorky | Prierez vodiča | Dĺžka odizolovania | Uťahovací moment |
+|------------|-------------------|----------------------|-----------------|
+| Svorka relé | 0,4–2,5 mm² | 7–8 mm | 0,4 Nm |
+| Svorka vstupov | 0,4–2,5 mm² | 7–8 mm | 0,4 Nm |
+| Svorka napájania | 0,4–2,5 mm² | 7–8 mm | 0,4 Nm |
+| Svorka merania napätia | 0,4–1,5 mm² | 5–6 mm | 0,2 Nm |
+| RS485 | 0,3–1 mm² | 5–6 mm | 0,2 Nm |
+| 1-WIRE / I2C | 0,3–1 mm² | 5–6 mm | 0,2 Nm |
+
+Odporúčania pre montáž:
+- konektory **sa nesmú odpájať pod napätím**,
+- všetky voľné vodiče musia byť chránené pred náhodným skratom alebo poškodením,
+- poškodený konektor alebo svorku je nutné **okamžite vymeniť**.
+
+Na pripojenie zariadenia používajte vodiče zodpovedajúce podmienkam inštalácie.
+
+### Typy vodičov a odporúčané vzdialenosti:
+| Typ svorky | Odporúčaný typ vodiča | Odporúčaná vzdialenosť |
+|------------|--------------------------|----------------------|
+| Svorka relé | CYKY + CY v rozvádzači | Bez poznámok, podľa projektu |
+| Svorka vstupov | CYKY + (CY alebo krútená dvojlinka Cat5/6/7 / alarmový kábel) | Bez poznámok, podľa projektu |
+| Svorka napájania | CY | do 5 m |
+| Svorka merania napätia | CY / krútená dvojlinka Cat5/6/7 / alarmový kábel | do 5 m |
+| RS485 | krútená dvojlinka Cat5/6/7 alebo zbernicový kábel | do 50 m |
+| 1-WIRE | krútená dvojlinka Cat5/6/7 alebo alarmový kábel | do 10 m |
+| I2C | krútená dvojlinka Cat5/6/7 alebo alarmový kábel | do 2 m |
+
+Odporúčania pre pokládku:
+- oddeľte signálové vodiče od vodičov 230V,
+- neveďte signálové káble súbežne s napájacími,
+- plánujte trasy vodičov už vo fáze projektu inštalácie,
+- pre rôzne typy signálov používajte samostatné žľaby alebo rúrky
+
+:::info
+Nesprávne vedenie kabeláže môže spôsobiť:
+- rušenie prenosu,
+- chybné odčítania,
+- nestabilnú prevádzku riadiacej jednotky.
+:::

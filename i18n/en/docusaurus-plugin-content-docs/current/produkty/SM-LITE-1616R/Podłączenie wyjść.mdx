@@ -1,0 +1,72 @@
+---
+sidebar_position: 4
+sidebar_label: Connecting outputs
+title: Connecting outputs
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+## Connecting outputs
+
+Instructions for connecting lighting, roller blinds, control signals and other loads using the controller's
+relay outputs.
+
+---
+## Relay outputs
+
+The SMARTBOB 1616R controller has 16 relay outputs on 8 green 5-pin plug-in connectors.
+The outputs are divided into pairs of 2 relays.
+
+Parameters of a single relay:
+
+| Parameter | Value |
+|----------|----------|
+| Output type | Potential-free |
+| Maximum AC voltage | 230V AC |
+| Maximum DC voltage | 30V DC |
+| Maximum current | 10A |
+| Contact type | NO or NO/NC |
+
+This allows both standard switching of loads and more advanced control circuits
+requiring a changeover contact, e.g. roller blind control (with protection against switching on
+both motor directions at the same time).
+
+---
+## Connecting circuits:
+
+### Lighting control configuration
+Example lighting configuration:
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-swiatlo-en.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-swiatlo-en.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+### Roller blind control configuration
+Example roller blind configuration:
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-roleta-en.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-roleta-en.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+:::tip
+To make the roller blind interlock, put a jumper between the COM and NC outputs
+:::
+
+### Example configuration of a gate control signal
+Example configuration of a gate control signal:
+<a href={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-brama-en.webp?v=mwui1lg4')} target="_blank">
+<img src={useBaseUrl('/img/SM-LITE-1616R/schemat/wyjscia-brama-en.webp?v=mwui1lg4')} style={{ width: '100%', maxWidth: '900px', height: 'auto', borderRadius: '8px', border: '1px solid #e3e5e8', cursor: 'pointer' }} /></a>
+
+:::tip
+Each output can work completely independently and control a different voltage or circuit.
+Example configuration:
+- Relay 1 → Phase 1 — lighting
+- Relay 2 → Phase 2 — lighting
+- Relay 3 → Phase 3 — lighting
+- Relay 4 + Relay 5 → Roller blind control up/down
+- Relay 6 → Gate control signal
+- Relay 7 → 24V AC solenoid valve
+- Relay 8 → 12V DC contactor coil
+
+Thanks to potential-free relays it is possible to control at the same time:
+- 24/230V AC circuits,
+- 5/12/24V DC,
+- logic signals,
+- inputs of other controllers and automation devices.
+:::

@@ -4,6 +4,9 @@ sidebar_label: Was ist SMARTBOB
 title: Was ist SMARTBOB
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+
 ## Was ist SMARTBOB?
 
 SMARTBOB ist ein offenes Gebäudeautomations- und Smart-Home-System aus Polen, entwickelt für moderne kabelgebundene Installationen und die Integration mit gängigen Automationsplattformen. SMARTBOB begann als DIY-Projekt von Automations- und Elektronikbegeisterten und wurde mit der Zeit zu einem vollwertigen kommerziellen System.
@@ -40,3 +43,22 @@ SMARTBOB arbeitet unter anderem mit:
 Die endgültige Funktionalität hängt von der gewählten übergeordneten Plattform und der Konfiguration der Automation ab. Unabhängig vom System bleibt das Grundprinzip gleich – SMARTBOB steuert die Geräte physisch und stellt eine Schnittstelle für weitere Automation bereit.
 
 So kann die Installation schon vor der Wahl der Smart-Home-Plattform beginnen. Sie können zuerst verkabeln und die SMARTBOB-Steuerungen montieren und erst später entscheiden, welches Automationssystem Sie nutzen möchten.
+
+---
+
+{/* modele */}
+## Modelle und Vergleich
+
+Die SMARTBOB-Linie umfasst drei Serien: **MINI** und **GATE** für kleinere Aufgaben, **LITE** als Hauptsteuerung des Hauses und **PRO** für große Installationen. **R**-Versionen haben Relaisausgänge (potentialfrei, 230 V AC oder DC), **D**-Versionen 24-V-MOSFET-Transistorausgänge mit PWM für LED-Streifen und 24-V-Relais. Alle werden auf einer TH35-Hutschiene im Verteiler montiert, die Erweiterung SM-EXP-16IN bringt zusätzliche Eingänge.
+
+| Modell | Eingänge | Ausgänge | Kommunikation | Breite | Einsatz |
+|---|---|---|---|---|---|
+| <a href={useBaseUrl('/category/sm-gate-0202r')}>**SM-GATE-0202R**</a> | 2 (AC/DC, isoliert) | 2 × Relais 10 A | LAN, Wi-Fi, RS485, 1-Wire, I2C (radio 868 MHz) | 4 TE | Tor, Pforte |
+| <a href={useBaseUrl('/category/sm-mini-0808r')}>**SM-MINI-0808R**</a> | 8 | 8 × Relais 10 A | LAN, Wi-Fi, 1-Wire, I2C | 7 TE | Wohnung, Garage, Erweiterung |
+| <a href={useBaseUrl('/category/sm-lite-1616r')}>**SM-LITE-1616R**</a> | 16 | 16 × Relais 10 A | LAN, Wi-Fi, RS485, CAN, 1-Wire, I2C | 12 TE | Haus – Licht, Rollläden, Tor |
+| <a href={useBaseUrl('/category/sm-lite-1624d')}>**SM-LITE-1624D**</a> | 16 | 24 × MOSFET (PWM) | LAN, Wi-Fi, RS485, 1-Wire, I2C | 12 TE | LED-Streifen, 24-V-Relais |
+| <a href={useBaseUrl('/category/sm-pro-3236d')}>**SM-PRO-3236D**</a> | 32 | 36 × MOSFET (PWM) | LAN, Wi-Fi, RS485, 1-Wire, I2C | 12 TE | große LED-Installationen |
+| <a href={useBaseUrl('/produkty/SM-PRO-3222R/Opis techniczny i specyfikacja')}>**SM-PRO-3222R**</a> | 32 | 22 × Relais 10 A | LAN, Wi-Fi, RS485, CAN, 1-Wire, I2C | 12 TE | große Installationen (ab 2027) |
+| <a href={useBaseUrl('/category/sm-exp-16in')}>**SM-EXP-16IN**</a> | 16 | — | I2C | 4 TE | zusätzliche Eingänge |
+
+Den vollständigen Vergleich, inkl. Versorgung und Analogeingänge, finden Sie im [technischen 3D-Assistenten (Schaltfläche „Modelle vergleichen“)](https://smartbobautomatyka.github.io/SmartBob3D/#lang=de).
