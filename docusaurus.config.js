@@ -31,6 +31,8 @@ const config = {
     },
   },
 
+  // statystyki odwiedzin: GoatCounter (bez cookies; ta sama strona co Asystent 3D)
+  scripts: [{ src: 'https://gc.zgo.at/count.js', async: true, 'data-goatcounter': 'https://smartbobautomatyka.goatcounter.com/count' }],
   presets: [
     [
       'classic',
