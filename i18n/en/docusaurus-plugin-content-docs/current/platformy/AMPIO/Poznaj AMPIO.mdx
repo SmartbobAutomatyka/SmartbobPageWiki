@@ -1,0 +1,50 @@
+---
+sidebar_position: 5
+sidebar_label: Getting to know AMPIO
+title: Getting to know AMPIO
+---
+
+## The AMPIO platform
+
+AMPIO is a Polish building automation platform based on the CAN bus and its own controllers and modules
+(e.g. UCM, M-SERV). The system is developed by a Polish manufacturer and is very popular
+in residential and commercial installations carried out by integrators.
+
+# The platform lets you control, monitor and automate, among others:
+- Lighting
+- Roller blinds and shutters
+- Heating and air conditioning
+- Ventilation
+- Alarm and access control
+- Multimedia and audio
+- Energy consumption monitoring
+
+:::tip
+AMPIO is a fully Polish solution with technical support and documentation in Polish,
+which makes deployment and later servicing much easier.
+:::
+:::warning
+Using the full potential of AMPIO requires a system controller (e.g. UCM) and basic
+knowledge of CAN bus configuration.
+:::
+
+---
+
+## SMARTBOB + AMPIO
+
+SMARTBOB integrates with AMPIO via the **MQTT** protocol. The SMARTBOB controller publishes and
+subscribes to the appropriate topics on the MQTT broker, so the states of SMARTBOB inputs and outputs can be
+read and controlled in real time from the AMPIO system.
+
+Thanks to this integration, SMARTBOB can act as an additional input/output system independent of the CAN bus,
+extending an AMPIO installation without additional system modules of the manufacturer.
+
+### SMARTBOBSOFT software
+The integration with AMPIO, like the one with LOXONE, is based on the same dedicated SMARTBOB controller software
+called **SMARTBOBSOFT**. Unlike the Home Assistant integration (based on ESPHome),
+SMARTBOBSOFT is SMARTBOB's own firmware, uploaded directly to the controller.
+
+Current software versions for each SMARTBOB controller model are available in the GitHub repository:
+
+**SMARTBOBSOFT — GitHub**
+https://github.com/SmartbobAutomatyka/SmartbobAutomatyka-GIT/tree/main/SMARTBOBSOFT
